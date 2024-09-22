@@ -1,0 +1,83 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.header-top {
+    height: 95px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background-color: #fff
+}
+.navbar {
+    background-color: black;
+}
+
+.navbar-brand h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logo {
+    padding-right: 30px;
+}
+
+
+.slider {
+    height: 550px;
+}
+
+.carousel-item {
+    margin-bottom: 63px;
+    width: 100% !important;
+}
+.about-area {
+    height: 300px;
+    margin-top: 250px;
+    margin-left: 560px;
+    padding-bottom: 50px;
+    background-color: black;
+}
+.about-area1{margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding-top: 200px;
+    background-color: black;
+}
+
+.about-area2{
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-bottom: 50PX;
+    background-color: black;
+}
+
+.about-area3{
+    margin-left: 200px;
+    margin-top: 100px;
+    background-color: black;
+}
+.footer-area {
+    height: auto;
+    background-color: #0C3246;
+}
+
+.footer_f img {
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.footer_f p {
+    font-size: 15px;
+}
+
+.footer_f a {
+    color: #fff;
+    text-decoration: none !important;
+    display: block;
+    line-height: 30px;
+}
+
+.footer_f a:hover {
+    color: #CF592E;
+}
