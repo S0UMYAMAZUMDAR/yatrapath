@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatra Path</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Oswald:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        .navbar-brand h3 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .logo {
+            padding-right: 30px;
+        }
+
+        .hero {
+            background: url('TOUR IMAGE/BGHOME.jpg') center/cover no-repeat;
+        }
+
+        .service-box i {
+            color: #007bff;
+        }
+
+        .service-box h4 {
+            margin-top: 10px;
+        }
+
+        .count {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .carousel-item p {
+            font-size: 1.2rem;
+        }
+
+        #contact input,
+        #contact textarea {
+            border-radius: 0;
+        }
+
+        footer {
+            background: #333;
+        }
+
+        .first-caption,
+        .first-cost {
+
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            text-shadow: none;
+            margin-bottom: 20px;
+
+        }
+
+        .first-caption {
+            padding: 12px 24px;
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: green;
+        }
+
+        .first-caption span {
+            color: orange;
+            font-size: 50px;
+        }
+
+        .first-cost {
+            padding: 10px 20px;
+            font-size: 25px;
+            font-weight: 350;
+        }
+
+        .first-cost span {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        #span2 {
+            color: #fff;
+        }
+
+        .blue-head {
+            color: #007bff;
+            font-weight: 800;
+        }
+
+        .about-img {
+            border-radius: 50px;
+        }
+
+        .textover {
+            position: relative;
+        }
+
+        .text {
+            font-size: large;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: .5s ease;
+            font: 1em sans-serif;
+            transition: .5s ease;
+        }
+
+        .textover:hover .overlay {
+            opacity: 1;
+        }
+
+        .textover:hover img {
+            opacity: 0.3;
+        }
+
+        .text1 {
+            color: rgb(52, 35, 208);
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: medium;
+        }
+
+        .getintouch a {
+            color: #000;
+            text-decoration: none !important;
+            display: block;
+            line-height: 30px;
+        }
+
+        .getintouch a:hover {
+            color: #007bff;
+        }
+
+        .service-box a{
+            text-decoration: none;
+        }
+
+        .testimonial-img{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img class="logo" src="TOUR IMAGE/YATRA PATH.jpeg " alt="" height="50px">
+            <a class="navbar-brand" href="#">
+                <h3>Yatra Path</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DESTINATION.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero bg-dark text-white d-flex align-items-center" style="height: 100vh;">
+        <div class="container text-center">
+            <h3 class="first-caption" data-aos="fade-down-right" data-aos-duration="3000"><span>World</span><span
+                    id="span2"> Tour</span>
+                Packages!</h3>
+            <br>
+            <p class="first-cost" data-aos="fade-left" data-aos-duration="3000">Starting at
+                <span>INR 5,299
+                    <s> INR 10,598</s>
+                </span>
+            </p>
+            <div class="carousel-action">
+                <a href="DESTINATION.html" class="btn btn-primary" data-aos="fade-up" data-aos-duration="3000">Learn
+                    More</a>
+                <a href="destination_book.html" class="btn btn-success" data-aos="fade-up"
+                    data-aos-duration="3000">Connect With an
+                    Expert</a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="https://purewander.com/wp-content/uploads/2019/08/more-groups-on-cliff-over-ocean.jpg"
+                        alt="About Us" class="img-fluid about-img">
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+                    <h2 class="blue-head pt-2">About Us</h2>
+                    <br>
+                    <p class="text text-justify">We are a leading travel agency offering best packages and services to
+                        explore India at low costs.Our aim is to provide excellent services ensuring a memorable journey
+                        for our customers. we're on a grand quest to transform the landscape of travel experiences. Our
+                        aspiration goes beyond destinations—we endeavor to spark passion, carve everlasting memories,
+                        and lead the way in crafting adventures that echo in the hearts of every explorer. Join us on
+                        this epic journey, where the essence of adventure is infused into every expedition!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="number-counts" class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-3 mt-5 mb-5">
+                    <h3 class="count" data-count="1500">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="col-md-3 mt-5 mb-5">
+                    <h3 class="count" data-count="300">0</h3>
+                    <p>Tour Packages</p>
+                </div>
+                <div class="col-md-3 mt-5 mb-5">
+                    <h3 class="count" data-count="100">0</h3>
+                    <p>Destinations</p>
+                </div>
+                <div class="col-md-3 mt-5 mb-5">
+                    <h3 class="count" data-count="20">0</h3>
+                    <p>Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center blue-head">Our Services</h2>
+            <div class="row text-center mt-4">
+                <div class="col-md-4" data-aos="fade-down-right" data-aos-duration="1000">
+                    <img src="https://cdn.zeebiz.com/sites/default/files/2023/08/10/255764-air-india-new-logo.jpg"
+                        alt="" height="190px" width="290px" class="rounded">
+                    <div class="service-box">
+                        <i class="fas fa-plane fa-3x mb-3 mt-3"></i>
+                        <a href="air.html">
+                            <H4>Air Tours</H4>
+                        </a>
+                        <p>Book flights at unbeatable prices</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in-down" data-aos-duration="1000">
+                    <img src="https://1.bp.blogspot.com/-Udu2nUF8V1g/UH5cWXEmt9I/AAAAAAAAASM/_JjSGeD-mds/s1600/Maharaja_Express_India.jpg"
+                        class="rounded" alt="" height="190px" width="290px">
+                    <div class="service-box">
+                        <i class="fas fa-train-subway fa-3x mb-3 mt-3"></i>
+                        <a href="train.html">
+                            <h4>Train Tours</h4>
+                        </a>
+                        <p>Enjoy comfortable train tours</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down-left" data-aos-duration="1000">
+                    <img src="https://sassytownhouseliving.com/wp-content/uploads/2019/01/5-Luxury-Hotel-Inspired-Ways-to-Upgrade-Your-Bedroom-12.jpg"
+                        alt="" height="190px" width="290px" class="rounded">
+                    <div class="service-box">
+                        <i class="fas fa-hotel fa-3x mb-3 mt-3"></i>
+                        <a href="hotel.html">
+                            <h4>Hotel Booking</h4>
+                        </a>
+                        <p>Luxury hotel accommodation at affordable prices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center blue-head">Gallery</h2>
+            <div class="row mt-4" data-aos="fade-up" data-aos-duration="800">
+                <div class="col-md-3 pb-4 textover">
+                    <img src="https://media1.thrillophilia.com/filestore/qm6o0911db6gwm57ygqss1biabyd_new-delhi-india-gate-147623366844-orijgp.jpg?w=400&dpr=2"
+                        class="img-fluid rounded" alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> India Gate, New Delhi</div>
+                    </div>
+                </div>
+                <div class="col-md-3 pb-4 textover">
+                    <img src="https://media1.thrillophilia.com/filestore/n9vsvjztua2k219qasmf2au4rup6_1591873689_taj_mahal.jpg"
+                        class="img-fluid rounded" alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> Tajmahal, Agra</div>
+                    </div>
+                </div>
+                <div class="col-md-3 pb-4 textover">
+                    <img src="http://assets.serenity.co.uk/37000-37999/37819/1296x864.jpg" class="img-fluid rounded"
+                        alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> Sea Beach, Andaman & Nicobar</div>
+                    </div>
+                </div>
+                <div class="col-md-3 pb-4 textover">
+                    <img src="https://media2.thrillophilia.com/images/photos/000/200/738/original/1585143772_3.jpg?"
+                        class="img-fluid rounded" alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> Tea Garden, Assam</div>
+                    </div>
+                </div>
+                <div class="col-md-3 pb-4 textover">
+                    <img src="https://img.veenaworld.com/wp-content/uploads/2023/01/shutterstock_2044050407-scaled.jpg"
+                        class="img-fluid rounded" alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> Dal Lake, Kashmir</div>
+                    </div>
+                </div>
+                <div class="col-md-3 pb-4 textover">
+                    <img src="https://tuindoekenshop.nl/wp-content/uploads/2021/04/indian-camel-sand-dunes-thar-desert-sunset-jaisalmer-rajasthan-india-scaled.jpg"
+                        class="img-fluid rounded" alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> Thar Desert, Rajastan</div>
+                    </div>
+                </div>
+                <div class="col-md-3 pb-4 textover">
+                    <img src="https://voraraj.files.wordpress.com/2015/08/dudhsagar.jpg" class="img-fluid rounded"
+                        alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> Dudhsagar Waterfall, Goa</div>
+                    </div>
+                </div>
+                <div class="col-md-3 pb-4 textover">
+                    <img src="https://www.tripsavvy.com/thmb/Ic7gDNeYB08uCoFYGTJdmJ8TbFY=/2119x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-539139678-5c085590c9e77c00018b67f8.jpg"
+                        class="img-fluid rounded" alt="Gallery" class="image">
+                    <div class="overlay">
+                        <div class="text1"><i class="fas fa-map-marker-alt"></i> Darjeeling, West Bengal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="py-5">
+        <div class="container text-center">
+            <h2 class="blue-head">What Our Clients Say</h2>
+        <div class="container mt-5 mb-5">
+            <div class="row g-2">
+                <div class="col-md-4">
+                    <div class="card p-3 text-center px-4">
+                        
+                        <div class="user-image">
+                            
+                    <img src="TOUR IMAGE/binoy.png" class="rounded-circle" width="80"
+                            >
+                            
+                        </div>
+                        
+                        <div class="user-content">
+                            <h5 class="mb-0">Binoy Sarkar</h5>
+                            <p>My family and I recently had the pleasure of visiting the Andaman Islands, and it turned out to be an experience we will cherish forever. Traveling with my wife and our two-year-old child, we were initially curious about how the trip would go, but it surpassed all our expectations.</p>
+                        </div>
+                        <div class="ratings">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 text-center px-4">
+                        <div class="user-image">
+                    <img src="TOUR IMAGE/neha.jpeg.jpg" class="rounded-circle" width="80">
+                            
+                        </div>
+                        
+                        <div class="user-content">
+                            
+                            <h5 class="mb-0">Neha Kumari</h5>
+                            <p>Excellent experience of Thailand trip and specially appreciation for Navigation Asia team and Parul Sigh who helped a lot and managed the things very smoothly. Thank you for your support.</p>
+                        </div>
+                        <div class="ratings">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>      
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 text-center px-4">
+                        <div class="user-image">
+                    <img src="TOUR IMAGE/somnath.png" class="rounded-circle" width="80">
+                        </div>
+                        <div class="user-content">
+                            <h5 class="mb-0">Somnath Das</h5>
+                            <p>We planned our trip to Paris and Switzerland through Wise Yatra and it was amazing, everything was planned with our recommendation being considered.</p>
+                        </div>      
+                        <div class="ratings">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+    <section id="features" class="py-5">
+        <div class="container text-center" data-aos="flip-up" data-aos-duration="1000">
+            <h2 class="blue-head">Our Features</h2>
+            <p>We offer a variety of features to make your travel easy, comfortable, and affordable</p>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <i class="fas fa-wallet fa-4x mb-5 mt-5"></i>
+                    <h4>Budget Friendly</h4>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-calendar-alt fa-4x mb-5 mt-5"></i>
+                    <h4>Flexible Booking</h4>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-user-shield fa-4x mb-5 mt-5"></i>
+                    <h4>100% Security</h4>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-headset fa-4x mb-5 mt-5"></i>
+                    <h4>24/7 Customer Support</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center blue-head">Contact Us</h2>
+            <div class="col-md-12 col-sm-12 getintouch">
+                <h5 class="text-dark pt-2">Get In Touch</h5>
+
+                <a href="#"> <i class="fas fa-phone"></i> +91- 97334 74642</a>
+                <a href="#"> <i class="fas fa-phone"></i> +91- 91634 94739</a>
+                <a href="#"> <i class="fas fa-envelope"></i> yatrapathtourism@gmail.com</a>
+            </div>
+            <form class="mt-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="name" class="form-control" placeholder="Your First Name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="name" class="form-control" placeholder="Your Last Name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="phone" class="form-control" placeholder="Your Phone Number">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                </div>
+                <textarea class="form-control mb-3" rows="5" placeholder="Message"></textarea>
+                <button type="submit" class="btn btn-primary">Request a Call Back</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
+    </footer>
+
+</body>
+<script>
+    const counters = document.querySelectorAll('.count');
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const speed = 5000;
+
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+    AOS.init();
+    </script>
+
+</html>

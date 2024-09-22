@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Destination Booking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images5.alphacoders.com/361/thumb-1920-361643.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: black;
+            padding: 15px 0;
+        }
+
+        .navbar-brand h3 {
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007BFF;
+        }
+
+        /* Booking Form */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 50px 0;
+        }
+
+        .booking-form {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 10px;
+            color: white;
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .booking-form h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .booking-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .booking-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            padding: 15px 0;
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="TOUR IMAGE/YATRA PATH.jpeg" alt="" height="50px">
+                <h3>Yatra Path</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="yatra_new.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DESTINATION.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#contact">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Form -->
+    <div class="form-container">
+        <div class="booking-form" data-aos="fade-up">
+            <h2>Travel Destination Booking</h2>
+            <form id="bookingForm">
+                <!-- Personal Information -->
+                <h4>Personal Information</h4>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="passportNumber">Passport Number (Optional)</label>
+                    <input type="text" class="form-control" id="passportNumber" placeholder="Enter your passport number (if applicable)">
+                </div>
+
+                <!-- Travel Details -->
+                <h4>Travel Details</h4>
+                <div class="form-group">
+                    <label for="departureCity">Departure City/Airport</label>
+                    <input type="text" class="form-control" id="departureCity" placeholder="Enter departure city or airport" required>
+                </div>
+                <div class="form-group">
+                    <label for="destinationCity">Destination City/Airport</label>
+                    <input type="text" class="form-control" id="destinationCity" placeholder="Enter destination city or airport" required>
+                </div>
+                <div class="form-group">
+                    <label for="departureDate">Departure Date</label>
+                    <input type="date" class="form-control" id="departureDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="returnDate">Return Date (Optional)</label>
+                    <input type="date" class="form-control" id="returnDate">
+                </div>
+                <div class="form-group">
+                    <label for="multiCity">Multi-city Option (Optional)</label>
+                    <input type="text" class="form-control" id="multiCity" placeholder="Enter additional destinations">
+                </div>
+
+                <!-- Flight Preferences -->
+                <h4>Flight Preferences</h4>
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select class="form-control" id="class" required>
+                        <option value="" disabled selected>Select class</option>
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                        <option value="firstClass">First Class</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="numPassengers">Number of Passengers</label>
+                    <input type="number" class="form-control" id="numPassengers" placeholder="Enter number of passengers" required>
+                </div>
+                <div class="form-group">
+                    <label for="seatPreference">Seat Preference</label>
+                    <select class="form-control" id="seatPreference">
+                        <option value="" disabled selected>Select seat preference</option>
+                        <option value="window">Window</option>
+                        <option value="aisle">Aisle</option>
+                        <option value="middle">Middle</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Travel Booking. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS for animations
+
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const fullName = document.getElementById('fullName').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.getElementById('gender').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const passportNumber = document.getElementById('passportNumber').value;
+            const departureCity = document.getElementById('departureCity').value;
+            const destinationCity = document.getElementById('destinationCity').value;
+            const departureDate = document.getElementById('departureDate').value;
+            const returnDate = document.getElementById('returnDate').value;
+            const multiCity = document.getElementById('multiCity').value;
+            const flightClass = document.getElementById('class').value;
+            const numPassengers = document.getElementById('numPassengers').value;
+            const seatPreference = document.getElementById('seatPreference').value;
+
+            // Show form submission details
+            alert(`Booking details:\nFull Name: ${fullName}\nDate of Birth: ${dob}\nGender: ${gender}\nEmail: ${email}\nPhone: ${phone}\nPassport Number: ${passportNumber}\nDeparture City: ${departureCity}\nDestination City: ${destinationCity}\nDeparture Date: ${departureDate}\nReturn Date: ${returnDate}\nMulti-city Destinations: ${multiCity}\nClass: ${flightClass}\nNumber of Passengers: ${numPassengers}\nSeat Preference: ${seatPreference}`);
+        });
+    </script>
+
+</body>
+
+</html>
