@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARIS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Oswald:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .header-top {
+            height: 95px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            background-color: #fff
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color:rgb(86, 19, 202) ;
+        }
+
+        .navbar-brand h3 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .logo {
+            padding-right: 30px;
+        }
+
+
+        .slider {
+            height: 550px;
+        }
+
+        .carousel-item {
+            margin-bottom: 63px;
+            width: 100% !important;
+        }
+
+        .about-area {
+            height: 300px;
+            margin-top: 250px;
+            margin-left: 560px;
+            padding-bottom: 50px;
+        }
+
+        .about-area1 {
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-top: 50px;
+            padding-top: 200px;
+        }
+
+        .about-area2 {
+            margin-top: 100px;
+            margin-left: 10px;
+            margin-bottom: 50PX;
+        }
+
+        .about-area3 {
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .section-header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .section-header h5 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1rem;
+        }
+
+        .card.overview {
+            background-color: black;
+            color: white;
+        }
+
+        .card.inclusions {
+            background-color: black;
+            color: white;
+        }
+
+        .card.itinerary {
+            background-color: black;
+            color: white;
+        }
+
+        .card.exclusions {
+            background-color: black;
+            color: white;
+        }
+
+        .card.highlights {
+            background-color: black;
+            color: white;
+        }
+
+        .card.accommodation {
+            background-color: black;
+            color: white;
+        }
+
+        .card.pricing {
+            background-color: black;
+            color: white;
+        }
+
+        .card.booking-info {
+            background-color: black;
+            color: white;
+        }
+
+        .card.faq {
+            background-color: black;
+            color: white;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .animated-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .animated-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img class="logo" src="TOUR IMAGE/YATRA PATH.jpeg " alt="" height="50px">
+            <a class="navbar-brand" href="#">
+                <h3>Yatra Path</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="yatra_new.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DESTINATION.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#contact">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <DIv class="row"></DIv>
+    <div class="col-md-12 col-sm-12 slider m-0 p-0">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="TOUR IMAGE/paris2.jpg" class="image1" alt="..." height="700px" width="100%">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div data-aos="fade-up" data-aos-duration="3000">
+
+                            <h1><B><SPan style="color: WHITE;"> PARIS</SPan></B></h1>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <DIv class="row about-area1">
+                <h1><b>
+                        <span style="color: #fff;">
+                            <center>ABOUT PARIS</center>
+                        </span>
+                    </b></h1>
+            </DIv>
+        </div>
+
+    </div>
+    <div class="row top mt-5  ">
+        <div class="col-md-6 col-sm-12">
+            <div class="firstcard">
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <img src="TOUR IMAGE/paris3.jpg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div data-aos="fade-down">
+                <h5>
+                    <CEnter><b><i><span style="color:rgb(86, 19, 202)">AN OVERVIEW OF PARIS</span></i></b></center>
+                </h5>
+            </div>
+            <br>
+            <div data-aos="fade-left">
+                <P><span style="color: #fff;">
+                        Paris, often referred to as "The City of Light," is a global icon of romance, art, and culture.
+                        Renowned for its timeless elegance and historical significance, Paris is celebrated for its
+                        stunning architecture, world-class museums, and charming streetscapes. The city’s heart beats in
+                        the historic center, where the majestic Notre-Dame Cathedral and the Gothic Sainte-Chapelle
+                        stand testament to Paris’s rich religious and architectural heritage. The Eiffel Tower, an
+                        emblem of the city, offers breathtaking views and symbolizes Paris’s innovative spirit. The
+                        Louvre Museum, home to thousands of works including the Mona Lisa, exemplifies Paris’s status as
+                        a cultural capital. The city's layout, with its grand boulevards and intimate alleys, reflects a
+                        harmonious blend of old-world charm and modern vibrancy.
+
+                        Paris is also known for its vibrant neighborhoods, each with its unique character. The Marais
+                        boasts narrow medieval streets and trendy boutiques, while Montmartre, perched on a hill, offers
+                        artistic history and panoramic views. The Latin Quarter, home to the Sorbonne, brims with
+                        intellectual and literary history, while Saint-Germain-des-Prés is famed for its cafés and
+                        literary past. The city’s culinary scene is equally renowned, with Michelin-starred restaurants,
+                        classic bistros, and patisseries offering an array of gastronomic delights from flaky croissants
+                        to exquisite pastries.
+
+
+
+                    </span>
+                </P>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <DIv class="row about-area2">
+                    <div data-aos="fade-right">
+                        <h1><b>
+                                <span style="color: #fff;">
+                                    <center> BEST TIME TO VISIT </center>
+                                </span>
+                            </b></h1>
+                        <div data-aos="fade-right">
+
+
+                            <P><span style="color: #fff;">
+                                    The best time to visit Paris is during the spring (April to June) and fall
+                                    (September to October), when the weather is typically mild and the city is at its
+                                    most picturesque. In spring, Paris blossoms with vibrant flowers and pleasant
+                                    temperatures ranging from 10°C to 20°C (50°F to 68°F), making it ideal for leisurely
+                                    strolls through gardens like the Luxembourg Gardens and along the Seine. The city's
+                                    outdoor cafés and markets come alive, and the moderate weather is perfect for
+                                    sightseeing and exploring neighborhoods without the intense heat of summer or the
+                                    chill of winter.
+
+                                    Fall offers a similar appeal, with cooler temperatures between 10°C and 18°C (50°F
+                                    to 64°F), and the added bonus of beautiful autumn foliage in the city's parks and
+                                    along its boulevards. The cultural calendar is in full swing with events like Paris
+                                    Fashion Week and the start of the opera season, and the city is less crowded
+                                    compared to the summer peak season.
+
+                                    Summer (June to August) is also popular, with long days and a lively atmosphere, but
+                                    it can be quite hot and crowded, especially around major attractions. Winter
+                                    (December to February) brings a cozy charm with festive holiday decorations and
+                                    fewer tourists, but temperatures can drop below freezing and there’s a chance of
+                                    rain or snow. Overall, spring and fall offer the best combination of comfortable
+                                    weather, fewer crowds, and vibrant cultural experiences.
+                                </span> </P>
+
+                        </div>
+                    </div>
+                </DIv>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <DIv class="row about-area3">
+                    <div data-aos="fade-left">
+                        <h1><b><span style="color: #fff;">
+                                    BEST PLACES TO VISIT
+                                </span> </b></h1>
+                        <span style="color: #fff;">
+                            <Ul>
+                                <li>
+                                    Eiffel Tower
+                                </li>
+                                <li>
+                                    Montmartre
+                                </li>
+                                <li>
+                                    Notre-Dame Cathedral
+                                </li>
+                                <li>
+                                    Arc de Triomphe
+                                </li>
+                                <li>
+                                    Luxembourg Gardens
+                                </li>
+                                <li>
+                                    Tuileries Gardens
+                                </li>
+
+                                <li>
+                                    Seine River Cruises
+                                </li>
+                                <li>
+                                    Top of the Montparnasse Tower
+                                </li>
+                                <li>
+                                    Palace of Versailles
+                                </li>
+                                <li>
+                                    Musée d'Orsay
+                                </li>
+                                <li>
+                                    Champs-Élysées
+                                </li>
+                                <LI>
+                                    Pont Neuf
+                                </LI>
+                                <LI>
+                                    Place des Vosges
+                                </LI>
+                                <LI>
+                                    Pont Alexandre III
+                                </LI>
+                                <LI>
+                                    Palais Garnier (Opera House)
+                                </LI>
+                                <LI>
+                                    Parc des Buttes-Chaumont
+                                </LI>
+                                <LI>
+                                    La Défense
+                                </LI>
+                                <LI>
+                                    Galeries Lafayette Rooftop
+                                </LI>
+                                <LI>
+                                    Centre Pompidou
+                                </LI>
+                                <LI>
+                                    Île Saint-Louis
+                                </LI>
+
+                            </Ul>
+                        </span>
+                    </div>
+                </DIv>
+            </div>
+        </div>
+
+
+        <br>
+
+
+        <div class="col-md-12 col-sm-12 ml-5 mr-5">
+            <div data-aos="fade-up">
+                <h1><B>
+                        <CEnter><span style="color: #fff;"> THINGS TO DO IN </span>
+
+
+                            <B><span style="color:rgb(86, 19, 202)">PARIS</SPAN></B>
+                        </CEnter>
+                    </B>
+                </h1>
+            </div>
+            <br>
+            <span style="color: #fff;">
+                <ul>
+                    <div data-aos="zoom-out">
+
+
+                        <li>
+
+                            Ascend to the observation decks for stunning views of Paris, enjoy a meal at one of its
+                            restaurants, or simply marvel at its illuminated beauty at night.
+
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Discover one of the world’s largest and most famous art museums, home to masterpieces like
+                            <B><span style="color:rgb(86, 19, 202)">the Mona Lisa, the Venus de Milo, and countless
+                                    other works.</span></B>
+
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+                            Wander the artistic neighborhood known for its charming streets,<B><span
+                                    style="color:rgb(86, 19, 202)"> the Basilica of Sacré-Cœur,
+                                    and the lively Place du Tertre </span></B> artists display their work.
+
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Explore the <B><span style="color:rgb(86, 19, 202)">Gothic architecture of
+                                    Notre-Dame</span></B>, and, despite ongoing restoration, appreciate
+                            the exterior and its position on<B><span style="color:rgb(86, 19, 202)"> Île de la
+                                    Cité.</span></B>
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Enjoy a peaceful stroll or a leisurely afternoon in these beautifully landscaped gardens,
+                            featuring fountains, statues, and the <B><span style="color:rgb(86, 19, 202)">picturesque
+                                    Palais du Luxembourg.</span></B>
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Experience the vibrancy of this famous avenue, filled with shops, cafés, and landmarks,
+                            leading up to the <B><span style="color:rgb(86, 19, 202)">Arc de Triomphe.</span></B>
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Visit this museum housed in a former railway station, known for its impressive collection of
+                            Impressionist and Post-Impressionist masterpieces.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Enjoy a boat tour along the Seine River to see Paris’s landmarks from a unique perspective,
+                            including the <B><span style="color:rgb(86, 19, 202)">Eiffel Tower, Notre-Dame, and the
+                                    Louvre.</span></B>
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Take a day trip to this<B><span style="color:rgb(86, 19, 202)"> opulent palace with its
+                                    grand Hall of Mirrors, expansive gardens,
+                                    and the beautiful Grand and Petit Trianon.</span></B>
+
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Explore this <B><span style="color:rgb(86, 19, 202)">modern art museum </span></B> for its
+                            striking architecture and extensive collection
+                            of contemporary art, as well as its rooftop views of Paris.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Wander through this historic district, known for its lively atmosphere, <B><span
+                                    style="color:rgb(86, 19, 202)">historic sites like
+                                    the Panthéon, and the Sorbonne University.</span></B>
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Relax in one of the classic cafés of this elegant neighborhood, such as <B><span
+                                    style="color:rgb(86, 19, 202)">Café de Flore or Les
+                                    Deux Magots, and soak in Parisian café culture.</span></B>
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Explore this vibrant neighborhood with its historic architecture, <B><span
+                                    style="color:rgb(86, 19, 202)">trendy boutiques, art
+                                    galleries, and the beautiful Place des Vosges.</span></B> </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Admire works by the sculptor<B><span style="color:rgb(86, 19, 202)"> Auguste
+                                    Rodin</span></B> in this museum housed in a charming mansion with
+                            lovely gardens.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
+
+                            Take a guided tour of this <B><span style="color:rgb(86, 19, 202)">opulent opera
+                                    house,</span></B> known for its stunning architecture, ornate
+                            interiors, and rich cultural history.
+                        </li>
+                    </div>
+                    <br>
+
+
+
+                </ul>
+            </span>
+        </div>
+
+
+        <br>
+
+
+        <div class="container mt-5">
+
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card overview animated-card">
+                        <div class="section-header">
+                            <div data-aos="flip-left">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>
+                                        <center>Tour Overview</center>
+                                    </h1>
+                                </span>
+                                <center>
+                                    <h5>Paris Adventure</h5>
+                                </center>
+                                <center>
+                                    <p><strong>Tagline:</strong> Fall in Love with the City of Lights</p>
+                                    <p><strong>Duration:</strong> 6 Days, 5 Nights
+                                    </p>
+                                    <b><p class="price">₹ 150,264 (Flexible payment plans available)</p></b>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card inclusions animated-card">
+                        <div class="section-header">
+                            <div data-aos="zoom-in-up">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>Inclusions</h1>
+                                </span>
+                                <p><strong>Accommodation:</strong> 4-Star hotel stay in central Paris</p>
+                                <p><strong>Meals:</strong> Daily breakfast included</p>
+                                <p><strong>Transport:</strong> Airport transfers and local transportation passes
+                                    (metro/bus)</p>
+                                <p><strong>Activities:</strong> Eiffel Tower visit (with summit access), Guided tour of
+                                    the Louvre Museum,
+                                    Seine River cruise,v</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card itinerary animated-card">
+                        <div class="section-header">
+                            <div data-aos="flip-right">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>Itinerary</h1>
+                                </span>
+                                <p><strong>Day 1:</strong> Arrival in Paris & Welcome Dinner at a local French
+                                    restaurant
+                                </p>
+                                <p><strong>Day 2:</strong> Eiffel Tower visit and Seine River cruise</p>
+                                <p><strong>Day 3:</strong> Full-day Louvre Museum and Tuileries Garden exploration</p>
+                                <p><strong>Day 4:</strong> Visit to Montmartre and Sacré-Cœur, walking tour of the Latin
+                                    Quarter</p>
+                                <p><strong>Day 5:</strong> Versailles Palace and Gardens day trip</p>
+                                <p><strong>Day 6:</strong> Last-minute shopping and departure</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card exclusions animated-card">
+                        <div class="section-header">
+                            <div data-aos="flip-left">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>
+                                        <center>Exclusions</center>
+                                    </h1>
+                                </span>
+                                <center>
+                                    <p><strong>Personal Expenses:</strong> Shopping, tips, and other personal costs</p>
+                                    <p><strong>Flights:</strong>International and domestic flights not included</p>
+                                    <p><strong>Travel Insurance:</strong> Optional, but highly recommended</p>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card highlights animated-card">
+                        <div class="section-header">
+                            <div data-aos="zoom-in-up">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>Special Highlights</h1>
+                                </span>
+                                <p><strong>Romantic Vibes:</strong> Explore Parisian cafes and stroll along the Seine
+                                </p>
+                                <p><strong>Historical Landmarks:</strong> See the Notre-Dame Cathedral, Arc de Triomphe,
+                                    and the Pantheon</p>
+                                <p><strong>Art & Culture:</strong> Marvel at masterpieces like the Mona Lisa and Venus
+                                    de Milo at the Louvre</p>
+                                    <p><strong>French Cuisine:</strong>  Taste French delicacies, from croissants to escargot
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card accommodation animated-card">
+                        <div class="section-header">
+                            <div data-aos="flip-right">
+                                <span style="color:rgb(86, 19, 202))">
+                                    <h1>Accommodation Details</h1>
+                                </span>
+                                <p><strong>Type:</strong> Stay in a charming, centrally located 4-Star hotel</p>
+                                <p><strong>Amenities:</strong>  Complimentary breakfast, free Wi-Fi, rooftop terrace with Eiffel Tower view</p>
+                                <p><strong>Special:</strong> Walking distance to iconic attractions like the Louvre and Notre-Dame</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card pricing animated-card">
+                        <div class="section-header">
+                            <div data-aos="flip-left">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>
+                                        <center>Pricing & Payment Plans</center>
+                                    </h1>
+                                </span>
+                                <center>
+                                    <p><strong>Price per person:</strong> ₹ 150,264</p>
+
+                                    <p><strong>Payment Options:</strong> Credit card, online payment,
+                                        Installment plans available for up to 6 months</p>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card booking-info animated-card">
+                        <div class="section-header">
+                            <div data-aos="zoom-in-up">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>
+                                        <center>Booking Information</center>
+                                    </h1>
+                                </span>
+                                <p><strong>How to Book:</strong> Call (123) 456-7890 or book online</p>
+                                <p><strong>Booking Deadline:</strong> 10 days before tour date</p>
+                                <p><strong>Cancellation Policy:</strong> Full refund if canceled 30 days in advance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card faq animated-card">
+                        <div class="section-header">
+                            <div data-aos="flip-right">
+                                <span style="color:rgb(86, 19, 202)">
+                                    <h1>FAQs</h1>
+                                </span>
+                                <p><strong>Q:</strong> Is this tour suitable for first-time visitors to Paris?</p>
+                                <p><strong>A:</strong> Yes, this tour is perfect for both first-time visitors and seasoned travelers.
+                                </p>
+                                <p><strong>Q:</strong>What should I pack for the trip?</p>
+                                <p><strong>A:</strong> Comfortable walking shoes, a light jacket, and an umbrella for unpredictable weather.</p>
+                                <p><strong>Q:</strong>Are meals other than breakfast included?</p>
+                                <p><strong>A:</strong>Only breakfast is included; however, we provide recommendations for meals at authentic Parisian restaurants.
+                                </p>
+                                <p><strong>Q:</strong>Can this tour accommodate dietary restrictions?</p>
+                                <p><strong>A:</strong> Yes, we can cater to dietary preferences with prior notice.
+                                </p>
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-dark text-white text-center py-3">
+                <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
+            </footer>
+
+
+            <script>
+
+
+                AOS.init();
+            </script>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
