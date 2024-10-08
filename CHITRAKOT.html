@@ -13,145 +13,208 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        {
             margin: 0;
             padding: 0;
-            background-color: black;
-        }
-        
-        .header-top {
-            height: 95px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-            background-color: #fff
-        }
-        .navbar {
-            background-color: black;
+            box-sizing: border-box;
         }
 
-        .navbar-nav .nav-link:hover {
-            color:darkcyan ;
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: #fff;
         }
-        
-        .navbar-brand h3 {
-            font-family: 'Times New Roman', Times, serif;
+
+        header {
+            position: relative;
+            height: 100vh;
+            text-align: center;
         }
-        
-        .logo {
-            padding-right: 30px;
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 2em;
+            z-index: 100;
         }
-        
-        
-        .slider {
-            height: 550px;
+
+        .logo-container {
+            display: flex;
+            align-items: center;
         }
-        
-        .carousel-item {
-            margin-bottom: 63px;
-            width: 100% !important;
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
         }
+
+        .logo-name {
+            font-size: 1.5em;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 1em;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: darkcyan;
+        }
+
+        .header-content {
+            position: relative;
+            width: 100%;
+        }
+
+        .header-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .header-text h1 {
+            font-size: 3em;
+        }
+
+        .header-text p {
+            margin-top: 1em;
+            font-size: 1.5em;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1.5em;
+            padding: 0.8em 2em;
+            background-color: darkcyan;
+            color: black;
+            text-decoration: none;
+            s font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: rgb(28, 103, 126);
+            text-emphasis-color: black;
+        }
+
         .about-area {
             height: 300px;
             margin-top: 250px;
             margin-left: 560px;
             padding-bottom: 50px;
         }
-        .about-area1{margin-bottom: 20px;
+
+        .about-area1 {
+            margin-bottom: 20px;
             margin-left: 10px;
             margin-top: 50px;
             padding-top: 200px;
         }
-        
-        .about-area2{
+
+        .about-area2 {
             margin-top: 100px;
             margin-left: 10px;
             margin-bottom: 50PX;
         }
-        
-        .about-area3{
+
+        .about-area3 {
             margin-left: 200px;
             margin-top: 100px;
         }
 
+        .section {
+            padding: 4em 2em;
+            background-color: black;
+            text-align: center;
+        }
 
-        body {
-            background-color: black;
+        .section-heading {
+            font-size: 2.5em;
             color: white;
-            font-family: 'Arial', sans-serif;
+            margin-bottom: 2em;
         }
-        .container {
-            margin-top: 30px;
+
+        .section-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2em;
+            text-align: left;
         }
-        .card {
-            padding: 20px;
+
+        .section-img {
+            max-width: 600px;
             border-radius: 10px;
-            margin-bottom: 30px;
         }
-        .section-header h1 {
-            font-size: 2rem;
-            font-weight: bold;
+
+        .package-row,
+        .budget-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 2em;
         }
-        .section-header h5 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        .section-header p {
-            font-size: 1rem;
-        }
-        .card.overview {
+
+        .package-card,
+        .budget-card,
+        .highlight-card,
+        .itinerary-card {
             background-color: black;
-            color: white;
+            padding: 2em;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            width: 30%;
         }
-        .card.inclusions {
-            background-color: black;
-            color: white;
+
+        .package-card:hover,
+        .budget-card:hover,
+        .highlight-card:hover,
+        .itinerary-card:hover {
+            transform: translateY(-10px);
         }
-        .card.itinerary {
-            background-color: black;
-            color: white;
+
+        .package-img,
+        .budget-img,
+        .highlight-img,
+        .itinerary-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1em;
         }
-        .card.exclusions {
-            background-color: black;
-            color: white;
-        }
-        .card.highlights {
-            background-color: black;
-            color: white;
-        }
-        .card.accommodation {
-            background-color: black;
-            color: white;
-        }
-        .card.pricing {
-            background-color: black;
-            color: white;
-        }
-        .card.booking-info {
-            background-color: black;
-            color: white;
-        }
-        .card.faq {
-            background-color: black;
-            color: white;
-        }
-       
-        .price {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .animated-card {
-            transition: transform 0.3s ease-in-out;
-        }
-        .animated-card:hover {
-            transform: scale(1.05);
-        }
+
+
         footer {
             background-color: #212121;
             color: #fff;
             padding: 20px 0;
         }
-       
-        
     </style>
 
 
@@ -159,57 +222,47 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <img class="logo" src="logo.jpg " alt="" height="50px">
-            <a class="navbar-brand" href="#">
-                <h3>Yatra Path</h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="yatra_new.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="DESTINATION.html">Destination</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#contact">Contact us</a></li>
-                </ul>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Explore Chitrakot" class="logo-img">
+                <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
-        </div>
-    </nav>
-    <DIv class="row"></DIv>
-    <div class="col-md-12 col-sm-12 slider m-0 p-0">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="chitrakot waterfalls.jpg" class="image1" alt="..." height="700px" width="100%">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div data-aos="fade-up"
-     data-aos-duration="3000">
-                        <h1><B><SPan style="color: WHITE;"> CHITRAKOT WATERFALLS</SPan></B></h1>
-                        </div>
+            <ul class="nav-links">
+                <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="yatra_new.html#about">About us</a></li>
+                <li><a href="DESTINATION.html#destinations">Destination</a></li>
+                <li><a href="CHITRAKOT.html#packages">Packages</a></li>
+                <li><a href="CHITRAKOT.html#packages">Details</a></li>
+                <li><a href="yatra_new.html#services">Services</a></li>
+                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="yatra_new.html#contact us">Contact us</a></li>
+            </ul>
+        </nav>
 
-                    </div>
-
+        <div class="header-content" id="home">
+            <img src="chitrakot waterfalls.jpg" alt="Chitrakot Waterfalls" class="header-img">
+            <div class="header-text">
+                <div data-aos="fade-up" data-aos-duration="3000">
+                    <h1><b>
+                            <center>Discover the Majesty of Chitrakot Waterfalls</center>
+                        </b></h1>
+                    <p>Exclusive travel packages offering an unforgettable waterfall experience.</p>
+                    <a href="#packages" class="btn">View Packages</a>
                 </div>
-
             </div>
-
         </div>
-    </div>
-    </div>
+    </header>
+
+
     <br>
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <DIv class="row about-area1">
                 <h1><b>
-                        <span style="color: white;"><center>ABOUT CHITRAKOT</center></span>
+                        <span style="color: white;">
+                            <center>ABOUT CHITRAKOT</center>
+                        </span>
                     </b></h1>
             </DIv>
         </div>
@@ -219,7 +272,7 @@
         <div class="col-md-6 col-sm-12">
             <div class="firstcard">
                 <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <img src="chitra5.jpg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
+                    <img src="TOUR IMAGE/chitra5.jpg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
                 </div>
             </div>
         </div>
@@ -232,25 +285,36 @@
             </div>
             <br>
             <div data-aos="fade-left">
-                <span style="color: #fff;"><P>
-                    Chitrakot, often referred to as the "Niagara of India," is one of the most stunning natural
-                    attractions in India, located in the Bastar district of Chhattisgarh. The majestic waterfall plunges
-                    from a height of around 29 meters (95 feet) into the Indravati River, creating a breathtaking
-                    horseshoe-shaped cascade that is particularly striking during the monsoon season. During this
-                    period, the waterfall swells dramatically, spreading to a width of nearly 300 meters, making it the
-                    widest waterfall in India. The sound of the gushing water, the mist rising from the falls, and the
-                    lush greenery surrounding the area create a mesmerizing atmosphere for visitors. The dense forests,
-                    rich in flora and fauna, provide a picturesque backdrop, adding to the charm of the location.Beyond
-                    its natural splendor, Chitrakot holds deep cultural and spiritual significance. According to Hindu
-                    mythology, the area is associated with the epic Ramayana, as it is believed that Lord Rama, along
-                    with his wife Sita and brother Lakshman, spent a significant part of their exile in this region.
-                    This connection to the Ramayana has made Chitrakot an important pilgrimage site for devotees. The
-                    nearby temples and religious sites, such as the Ramghat and Hanuman Dhara, attract pilgrims
-                    throughout the year, seeking blessings and spiritual solace.The combination of natural grandeur and
-                    spiritual importance makes Chitrakot a unique destination.
+                <span style="color: #fff;">
+                    <P>
+                        Chitrakot, often referred to as the "Niagara of India," is one of the most stunning natural
+                        attractions in India, located in the Bastar district of Chhattisgarh. The majestic waterfall
+                        plunges
+                        from a height of around 29 meters (95 feet) into the Indravati River, creating a breathtaking
+                        horseshoe-shaped cascade that is particularly striking during the monsoon season. During this
+                        period, the waterfall swells dramatically, spreading to a width of nearly 300 meters, making it
+                        the
+                        widest waterfall in India. The sound of the gushing water, the mist rising from the falls, and
+                        the
+                        lush greenery surrounding the area create a mesmerizing atmosphere for visitors. The dense
+                        forests,
+                        rich in flora and fauna, provide a picturesque backdrop, adding to the charm of the
+                        location.Beyond
+                        its natural splendor, Chitrakot holds deep cultural and spiritual significance. According to
+                        Hindu
+                        mythology, the area is associated with the epic Ramayana, as it is believed that Lord Rama,
+                        along
+                        with his wife Sita and brother Lakshman, spent a significant part of their exile in this region.
+                        This connection to the Ramayana has made Chitrakot an important pilgrimage site for devotees.
+                        The
+                        nearby temples and religious sites, such as the Ramghat and Hanuman Dhara, attract pilgrims
+                        throughout the year, seeking blessings and spiritual solace.The combination of natural grandeur
+                        and
+                        spiritual importance makes Chitrakot a unique destination.
 
 
-                </P></span>
+                    </P>
+                </span>
             </div>
         </div>
         <div class="row">
@@ -258,87 +322,93 @@
                 <DIv class="row about-area2">
                     <div data-aos="fade-right">
                         <span style="color: #fff;">
-                        <h1><b>
-                                <center> BEST TIME TO VISIT </center>
-                            </b></h1>
+                            <h1><b>
+                                    <center> BEST TIME TO VISIT </center>
+                                </b></h1>
                         </span>
                         <div data-aos="fade-right">
                             <span style="color: #fff;">
 
-                            <P>
-                                The best time to visit Chitrakot is during the monsoon and post-monsoon season,
-                                typically between
-                                July and October. During this period, the Indravati River is at its fullest, and the
-                                waterfall
-                                expands to its maximum width, creating a breathtaking spectacle with powerful cascades
-                                and mist. The
-                                lush greenery around the falls is also at its most vibrant during the monsoon, enhancing
-                                the natural
-                                beauty of the region.
-                                <br>
+                                <P>
+                                    The best time to visit Chitrakot is during the monsoon and post-monsoon season,
+                                    typically between
+                                    July and October. During this period, the Indravati River is at its fullest, and the
+                                    waterfall
+                                    expands to its maximum width, creating a breathtaking spectacle with powerful
+                                    cascades
+                                    and mist. The
+                                    lush greenery around the falls is also at its most vibrant during the monsoon,
+                                    enhancing
+                                    the natural
+                                    beauty of the region.
+                                    <br>
 
-                                If you prefer a more tranquil experience, the winter months from November to February
-                                are also a
-                                great time to visit. The weather is pleasant and cool, and while the waterfall may not
-                                be as full as
-                                during the monsoon, it still offers a serene and beautiful environment for sightseeing
-                                and photography.
-                                <br>
+                                    If you prefer a more tranquil experience, the winter months from November to
+                                    February
+                                    are also a
+                                    great time to visit. The weather is pleasant and cool, and while the waterfall may
+                                    not
+                                    be as full as
+                                    during the monsoon, it still offers a serene and beautiful environment for
+                                    sightseeing
+                                    and photography.
+                                    <br>
 
-                                Visiting during the summer months (March to June) is generally not recommended due to
-                                the high
-                                temperatures and reduced water flow in the falls, which can diminish the overall
-                                experience.
-                            </P>
+                                    Visiting during the summer months (March to June) is generally not recommended due
+                                    to
+                                    the high
+                                    temperatures and reduced water flow in the falls, which can diminish the overall
+                                    experience.
+                                </P>
                             </span>
                         </div>
-                        </div>
                     </div>
-                </DIv>
-           
+                </div>
+            </DIv>
+
             <div class="col-md-6 col-sm-12">
                 <DIv class="row about-area3">
                     <span style="color: #fff;">
-                    <div data-aos="fade-left">
-                        <h1><b>
-                                BEST PLACES TO VISIT
-                            </b></h1>
-                        <Ul>
-                            <li>
-                                Chitrakot Waterfalls
-                            </li>
-                            <li>
-                                Tirathgarh Waterfalls
-                            </li>
-                            <li>
-                                Kanger Valley National Park
-                            </li>
-                            <li>
-                                Kailash and Kotumsar Caves
-                            </li>
-                            <li>
-                                Danteshwari Temple
-                            </li>
-                            <li>
-                                Barsur Temples
-                            </li>
-                            <li>
-                                Narayanpal Temple
-                            </li>
-                            <li>
-                                Chitradhara Waterfall
-                            </li>
-                            <li>
-                                Bastar Palace
-                            </li>
-                            <li>
-                                Anthropological Museum
-                            </li>
+                        <div data-aos="fade-left">
+                            <h1><b>
+                                    BEST PLACES TO VISIT
+                                </b></h1>
+                            <Ul>
+                                <li>
+                                    Chitrakot Waterfalls
+                                </li>
+                                <li>
+                                    Tirathgarh Waterfalls
+                                </li>
+                                <li>
+                                    Kanger Valley National Park
+                                </li>
+                                <li>
+                                    Kailash and Kotumsar Caves
+                                </li>
+                                <li>
+                                    Danteshwari Temple
+                                </li>
+                                <li>
+                                    Barsur Temples
+                                </li>
+                                <li>
+                                    Narayanpal Temple
+                                </li>
+                                <li>
+                                    Chitradhara Waterfall
+                                </li>
+                                <li>
+                                    Bastar Palace
+                                </li>
+                                <li>
+                                    Anthropological Museum
+                                </li>
 
-                        </Ul>
-                    </div>
+                            </Ul>
+                        </div>
 
-                   
+
                 </DIv>
             </div>
         </div>
@@ -349,312 +419,270 @@
 
         <div class="col-md-12 col-sm-12 ml-5 mr-5">
             <div data-aos="fade-up">
-                <span style="color: #fff;"> <h1><B>
-                        <CEnter> THINGS TO DO IN <B><SPAN style="color: DARKCYAN;">CHITRAKOT</SPAN></B> </CEnter>
-                    </B>
-                </h1></span>
+                <span style="color: #fff;">
+                    <h1><B>
+                            <CEnter> THINGS TO DO IN <B><SPAN style="color: DARKCYAN;">CHITRAKOT</SPAN></B> </CEnter>
+                        </B>
+                    </h1>
+                </span>
             </div>
             <br>
             <span style="color: #fff;">
-            <ul>
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <ul>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 
-                   
-                    <li>
 
-                        The main attraction of the area, <B><span style="color: darkcyan;">Chitrakot
-                                Falls</span></B> offers a breathtaking view,
-                        especially
-                        during the monsoon when the water volume is at its peak. You can admire the falls from
-                        various viewpoints and platforms.
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
-                    <li>
+                            The main attraction of the area, <B><span style="color: darkcyan;">Chitrakot
+                                    Falls</span></B> offers a breathtaking view,
+                            especially
+                            during the monsoon when the water volume is at its peak. You can admire the falls from
+                            various viewpoints and platforms.
 
-                        <B><span style="color: darkcyan;"> Take a boat ride in the pool at the base of the
-                                falls</span></B>, especially during the
-                        post-monsoon season
-                        when the water levels are stable. It’s a unique way to experience the grandeur of the falls up
-                        close, feeling the mist and hearing the roar of the water.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <li>
+                            <B><span style="color: darkcyan;"> Take a boat ride in the pool at the base of the
+                                    falls</span></B>, especially during the
+                            post-monsoon season
+                            when the water levels are stable. It’s a unique way to experience the grandeur of the falls
+                            up
+                            close, feeling the mist and hearing the roar of the water.
 
-                        A visit to the nearby <B><span style="color: darkcyan;">Tirathgarh Waterfalls</span></B>, known
-                        for its multi-tiered cascades, is a
-                        must. The
-                        surrounding dense forests make it a perfect spot for picnics and photography.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
-                    <li>
+                            A visit to the nearby <B><span style="color: darkcyan;">Tirathgarh Waterfalls</span></B>,
+                            known
+                            for its multi-tiered cascades, is a
+                            must. The
+                            surrounding dense forests make it a perfect spot for picnics and photography.
 
-                        <B><span style="color: darkcyan;">Embark on a trekking adventure in the Kanger Valley National
-                                Park</span></B>. The park is rich in
-                        biodiversity, offering lush green trails, scenic landscapes, and the chance to spot wildlife.
-                        It’s also home to caves that you can explore.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <li>
+                            <B><span style="color: darkcyan;">Embark on a trekking adventure in the Kanger Valley
+                                    National
+                                    Park</span></B>. The park is rich in
+                            biodiversity, offering lush green trails, scenic landscapes, and the chance to spot
+                            wildlife.
+                            It’s also home to caves that you can explore.
 
-                        <B><span style="color: darkcyan;">Visit Kailash and Kotumsar Caves</span></B> and explore these
-                        famous limestone caves located in the
-                        Kanger Valley National Park. The stunning
-                        stalactite and stalagmite formations inside these caves make for an exciting adventure.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
-                    <li>
+                            <B><span style="color: darkcyan;">Visit Kailash and Kotumsar Caves</span></B> and explore
+                            these
+                            famous limestone caves located in the
+                            Kanger Valley National Park. The stunning
+                            stalactite and stalagmite formations inside these caves make for an exciting adventure.
 
-                        <b><span style="color: darkcyan;">Explore Tribal Culture at Anthropological
-                                Museum.</span></b>Learn about the rich tribal culture and heritage of the Bastar region
-                        by visiting the
-                        Anthropological Museum in Jagdalpur. The museum showcases artifacts, tools, and traditional
-                        crafts of the local tribal communities.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <li>
+                            <b><span style="color: darkcyan;">Explore Tribal Culture at Anthropological
+                                    Museum.</span></b>Learn about the rich tribal culture and heritage of the Bastar
+                            region
+                            by visiting the
+                            Anthropological Museum in Jagdalpur. The museum showcases artifacts, tools, and traditional
+                            crafts of the local tribal communities.
 
-                        Pay a visit to the <b><span style="color: darkcyan;">ancient Danteshwari Temple in Dantewada,
-                                one of the 52 Shakti Peethas</span></b>. This
-                        temple, dedicated to Goddess Danteshwari, is a significant pilgrimage site for Hindus.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
-                    <li>
+                            Pay a visit to the <b><span style="color: darkcyan;">ancient Danteshwari Temple in
+                                    Dantewada,
+                                    one of the 52 Shakti Peethas</span></b>. This
+                            temple, dedicated to Goddess Danteshwari, is a significant pilgrimage site for Hindus.
 
-                        Chitrakot is a <b><span style="color: darkcyan;"> photographer's paradise </span></b> its
-                        stunning waterfalls, lush forests, vibrant
-                        wildlife, and beautiful landscapes. Whether you’re capturing the grandeur of the falls or the
-                        peaceful forest trails, photography is a must-do activity.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <li>
+                            Chitrakot is a <b><span style="color: darkcyan;"> photographer's paradise </span></b> its
+                            stunning waterfalls, lush forests, vibrant
+                            wildlife, and beautiful landscapes. Whether you’re capturing the grandeur of the falls or
+                            the
+                            peaceful forest trails, photography is a must-do activity.
 
-                        Visit the ancient <b><span style="color: darkcyan;">Narayanpal Temple</span></b>, situated on
-                        the banks of the Indravati River, to
-                        appreciate
-                        its beautiful architecture and historical significance.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
-                    <li>
+                            Visit the ancient <b><span style="color: darkcyan;">Narayanpal Temple</span></b>, situated
+                            on
+                            the banks of the Indravati River, to
+                            appreciate
+                            its beautiful architecture and historical significance.
 
-                        <b><span style="color: darkcyan;">The Bastar region is home to various indigenous
-                                tribes</span></b>. Engage in cultural exchange,
-                        learn about
-                        their customs, art, and traditional lifestyles, and experience local festivals if you visit
-                        during the right time of year.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <li>
+                            <b><span style="color: darkcyan;">The Bastar region is home to various indigenous
+                                    tribes</span></b>. Engage in cultural exchange,
+                            learn about
+                            their customs, art, and traditional lifestyles, and experience local festivals if you visit
+                            during the right time of year.
 
-                        Buy <b><span style="color: darkcyan;">authentic tribal handicrafts, including artifacts,
-                                jewelry, and traditional
-                                textiles</span></b>, from
-                        local markets or craft centers in the region. Bastar is known for its unique tribal art forms
-                        like wrought iron craft, woodcraft, and terracotta items.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
-                    <li>
+                            Buy <b><span style="color: darkcyan;">authentic tribal handicrafts, including artifacts,
+                                    jewelry, and traditional
+                                    textiles</span></b>, from
+                            local markets or craft centers in the region. Bastar is known for its unique tribal art
+                            forms
+                            like wrought iron craft, woodcraft, and terracotta items.
 
-                        <b><span style="color: darkcyan;"> Tour the historical Bastar Palace in Jagdalpur, which offers
-                                a glimpse into the royal
-                                heritage
-                                of the Bastar kings</span></b>. The palace grounds and museum display artifacts and
-                        historical
-                        items from
-                        the region’s past.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
-                    <li>
+                            <b><span style="color: darkcyan;"> Tour the historical Bastar Palace in Jagdalpur, which
+                                    offers
+                                    a glimpse into the royal
+                                    heritage
+                                    of the Bastar kings</span></b>. The palace grounds and museum display artifacts and
+                            historical
+                            items from
+                            the region’s past.
 
-                        Spend a peaceful day relaxing by the waterfalls, listening to the soothing sounds of nature, and
-                        taking in the scenic views. It's an ideal place to unwind and rejuvenate amidst nature.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
+                        <li>
 
-                    </li>
-                </div>
-                <br>
-                <div data-aos="zoom-out">
+                            Spend a peaceful day relaxing by the waterfalls, listening to the soothing sounds of nature,
+                            and
+                            taking in the scenic views. It's an ideal place to unwind and rejuvenate amidst nature.
 
-                    <li>
-                        <b><span style="color: darkcyan;">Picnic by Chitradhara Waterfall</span></b>located near
-                        Jagdalpur, Chitradhara Waterfall is a
-                        smaller, tranquil spot perfect for picnics
-                        and relaxing in nature with friends or family.
+                        </li>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-out">
 
-                    </li>
-                </div>
-            </ul></span>
+                        <li>
+                            <b><span style="color: darkcyan;">Picnic by Chitradhara Waterfall</span></b>located near
+                            Jagdalpur, Chitradhara Waterfall is a
+                            smaller, tranquil spot perfect for picnics
+                            and relaxing in nature with friends or family.
+
+                        </li>
+                    </div>
+                </ul>
+            </span>
         </div>
 
 
         <br>
 
-        <div class="container mt-5">
+        
+        <section id="packages" class="section packages">
+            <h2 class="section-heading">Our Travel Packages</h2>
 
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card overview animated-card">
-                        <div class="section-header">
-                            <div data-aos="flip-left">
-                                <span style="color: rgb(120, 219, 219);">    <h1><center>Tour Overview</center></h1></span>
-                                <center><h5>Chitrakot Waterfalls Adventure</h5></center>
-                                <center>
-                                    <p><strong>Tagline:</strong> India's Niagara Falls Adventure</p>
-                                    <p><strong>Duration:</strong> 3 Days, 2 Nights</p>
-                                    <b><p class="price">Price:₹ 54,262 (Flexible payment plans)</p></b>
-                                </center>
-                            </div>
-                        </div>
+            <div class="package-row">
+                <div class="package-card">
+                    <div data-aos="zoom-in">
+                        <img src="scenicchitrakot.jpg" alt="Scenic Waterfall Tour" class="package-img" height="260px">
+                        <h3>Scenic Waterfall Tour</h3>
+                        <p>Experience the awe-inspiring beauty of Chitrakot Waterfalls with guided tours and luxurious
+                            accommodations in this 3-day package.</p>
+                        <a href="destination_book.html" class="btn">Book Now</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card inclusions animated-card">
-                        <div class="section-header">
-                            <div data-aos="zoom-in-up">
-                                <span style="color: rgb(120, 219, 219);">    <h1>Inclusions</h1></span>
-                                <p><strong>Accommodation:</strong> Riverside eco-lodge</p>
-                                <p><strong>Meals:</strong> Breakfast, lunch & dinner</p>
-                                <p><strong>Transport:</strong> Private car for local transfers</p>
-                                <p><strong>Guided Tour:</strong> Professional nature guide</p>
-                                <p><strong>Boating:</strong> Boat ride near the waterfalls</p>
-                            </div>
-                        </div>
+
+                <div class="package-card">
+                    <div data-aos="zoom-in">
+                        <img src="campchitrakot.jpg" alt="Waterfall Camping Adventure"
+                            class="package-img">
+                        <h3>Waterfall Camping Adventure</h3>
+                        <p>Embark on a thrilling camping adventure near the majestic falls, perfect for nature lovers
+                            and adventure seekers.</p>
+                        <a href="destination_book.html" class="btn">Book Now</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card itinerary animated-card">
-                        <div class="section-header">
-                            <div data-aos="flip-right">
-                                <span style="color: rgb(120, 219, 219);">    <h1>Itinerary</h1></span>
-                                <p><strong>Day 1:</strong> Arrival & Sunset at Chitrakot</p>
-                                <p><strong>Day 2:</strong> Waterfall trek & boating adventure</p>
-                                <p><strong>Day 3:</strong> Free day for local sightseeing & departure</p>
-                            </div>
-                        </div>
+
+                <div class="package-card">
+                    <div data-aos="zoom-in">
+                        <img src="luxurychitrakot.jpg" alt="Luxury Waterfall Retreat" class="package-img"
+                            height="230px">
+                        <h3>Luxury Waterfall Retreat</h3>
+                        <p>Enjoy a luxury retreat with exclusive access to serene spots near the falls, including
+                            top-notch accommodations and services.</p>
+                        <a href="destination_book.html" class="btn">Book Now</a>
                     </div>
                 </div>
             </div>
-        
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card exclusions animated-card">
-                        <div class="section-header">
-                            <div data-aos="flip-left">
-                                <span style="color: rgb(120, 219, 219);">    <h1><center>Exclusions</center></h1></span>
-                                <center>
-                                    <p><strong>Personal Expenses:</strong> Shopping, tips, etc.</p>
-                                    <p><strong>Flights:</strong> Not included in package</p>
-                                    <p><strong>Travel Insurance:</strong> Optional, but recommended</p>
-                                </center>
-                            </div>
-                        </div>
+
+            <br>
+
+            <div class="package-row">
+                <div class="budget-card">
+                    <div data-aos="zoom-in">
+                        <img src="budgetchitrakot.jpg" alt="Budget Waterfall Package" class="budget-img">
+                        <h3>Budget Waterfall Package</h3>
+                        <p>Explore the stunning landscapes of Chitrakot Waterfalls with our affordable package.
+                            <strong>Price: INR. 54,262</strong></p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card highlights animated-card">
-                        <div class="section-header">
-                            <div data-aos="zoom-in-up">
-                                <span style="color: rgb(120, 219, 219);">    <h1>Special Highlights</h1></span>
-                                <p><strong>Waterfall Trek:</strong> Explore the terrain around Chitrakot Falls</p>
-                                <p><strong>Boat Ride:</strong> Scenic boat ride close to the falls</p>
-                                <p><strong>Sunset Views:</strong> Stunning sunsets over the falls</p>
-                            </div>
-                        </div>
+
+                <div class="highlight-card">
+                    <div data-aos="zoom-in">
+                        <img src="highlightchitrakot.webp" alt="Special Highlights" class="budget-img">
+                        <h3>Special Highlights</h3>
+                        <ul>
+                            <li>Guided Trekking to Scenic Spots</li>
+                            <li>Complimentary Breakfast & Dinner</li>
+                            <li>Photography Tours with Local Guides</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card accommodation animated-card">
-                        <div class="section-header">
-                            <div data-aos="flip-right">
-                                <span style="color: rgb(120, 219, 219);">    <h1>Accommodation Details</h1></span>
-                                <p><strong>Lodging:</strong> Eco-friendly cabins near the waterfalls</p>
-                                <p><strong>Amenities:</strong> Bonfire nights, nature trails</p>
-                                <p><strong>Special:</strong> Riverside views & star-gazing</p>
-                            </div>
-                        </div>
+
+                <div class="itinerary-card">
+                    <div data-aos="zoom-in">
+                        <img src="itinarychitrakot.webp" alt="Itinerary" class="budget-img">
+                        <h3>Itinerary</h3>
+                        <p><strong>Day 1:</strong> Arrival at Chitrakot Waterfalls, guided sightseeing, and forest camp.
+                        </p>
+                        <p><strong>Day 2:</strong> Full-day exploration, trekking, and a boat ride near the falls.</p>
+                        <p><strong>Day 3:</strong> Morning relaxation, photography sessions, and departure.</p>
                     </div>
                 </div>
             </div>
-        
-           
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card pricing animated-card">
-                        <div class="section-header">
-                            <div data-aos="flip-left">
-                                <span style="color: rgb(120, 219, 219);">    <h1><center>Pricing & Payment Plans</center></h1></span>
-                                <center>
-                                    <p><strong>Price per person:</strong> ₹ 54,262</p>
-                                    
-                                    <p><strong>Payment Options:</strong> Credit card, online payment</p>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card booking-info animated-card">
-                        <div class="section-header">
-                            <div data-aos="zoom-in-up">
-                                <span style="color: rgb(120, 219, 219);">    <h1><center>Booking Information</center></h1></span>
-                                <p><strong>How to Book:</strong> Call (987) 654-3210 or book online</p>
-                                <p><strong>Booking Deadline:</strong> 5 days before tour date</p>
-                                <p><strong>Cancellation Policy:</strong> Full refund if canceled 15 days in advance</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card faq animated-card">
-                        <div class="section-header">
-                            <div data-aos="flip-right">
-                                <span style="color: rgb(120, 219, 219);">    <h1>FAQs</h1></span>
-                                <p><strong>Q:</strong> Is the tour family-friendly?</p>
-                                <p><strong>A:</strong> Yes, children can join the tour with supervision.</p>
-                                <p><strong>Q:</strong> What should I bring?</p>
-                                <p><strong>A:</strong> Comfortable hiking shoes, insect repellent, sunscreen.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
+        </section>
+
 
         <footer class="bg-dark text-white text-center py-3">
             <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
@@ -662,7 +690,7 @@
 
         <script>
 
-            
+
             AOS.init();
         </script>
     </div>
