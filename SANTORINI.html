@@ -13,44 +13,117 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
             background-color: black;
+            color: #fff;
         }
 
-        .header-top {
-            height: 95px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-            background-color: #fff
+        header {
+            position: relative;
+            height: 100vh;
+            text-align: center;
         }
 
-        .navbar {
-            background-color: black;
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 2em;
+            z-index: 100;
         }
 
-
-        .navbar-nav .nav-link:hover {
-            color: rgba(50, 117, 193, 0.888);
+        .logo-container {
+            display: flex;
+            align-items: center;
         }
 
-        .navbar-brand h3 {
-            font-family: 'Times New Roman', Times, serif;
+        .logo-img {
+            width: 50px;
+            height: 50px;
         }
 
-        .logo {
-            padding-right: 30px;
+        .logo-name {
+            font-size: 1.5em;
+            color: white;
+            margin-left: 10px;
         }
 
-
-        .slider {
-            height: 550px;
+        .nav-links {
+            list-style: none;
+            display: flex;
         }
 
-        .carousel-item {
-            margin-bottom: 63px;
-            width: 100% !important;
+        .nav-links li {
+            margin: 0 1em;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: darkorange;
+        }
+
+        .header-content {
+            position: relative;
+            width: 100%;
+        }
+
+        .header-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: WHITE;
+            z-index: 2;
+        }
+
+        .header-text h1 {
+            font-size: 3em;
+        }
+
+        .header-text p {
+            margin-top: 1em;
+            font-size: 1.5em;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1.5em;
+            padding: 0.8em 2em;
+            background-color: darkmagenta;
+            color: white;
+            text-decoration: none;
+            s font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: orange;
+            text-emphasis-color: black;
+            text-decoration-color: black;
         }
 
         .about-area {
@@ -79,144 +152,110 @@
         }
 
 
-        body {
+        .section {
+            padding: 4em 2em;
             background-color: black;
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 2.5em;
             color: white;
-            font-family: 'Arial', sans-serif;
+            margin-bottom: 2em;
         }
 
-        .container {
-            margin-top: 30px;
+        .section-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2em;
+            text-align: left;
         }
 
-        .card {
-            padding: 20px;
+        .section-img {
+            max-width: 600px;
             border-radius: 10px;
-            margin-bottom: 30px;
         }
 
-        .section-header h1 {
-            font-size: 2rem;
-            font-weight: bold;
+        .package-row,
+        .budget-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 2em;
         }
 
-        .section-header h5 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-
-        .section-header p {
-            font-size: 1rem;
-        }
-
-        .card.overview {
+        .package-card,
+        .budget-card,
+        .highlight-card,
+        .itinerary-card {
             background-color: black;
-            color: white;
+            padding: 2em;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            width: 30%;
         }
 
-        .card.inclusions {
-            background-color: black;
-            color: white;
+        .package-card:hover,
+        .budget-card:hover,
+        .highlight-card:hover,
+        .itinerary-card:hover {
+            transform: translateY(-10px);
         }
 
-        .card.itinerary {
-            background-color: black;
-            color: white;
+        .package-img,
+        .budget-img,
+        .highlight-img,
+        .itinerary-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1em;
         }
-
-        .card.exclusions {
-            background-color: black;
-            color: white;
-        }
-
-        .card.highlights {
-            background-color: black;
-            color: white;
-        }
-
-        .card.accommodation {
-            background-color: black;
-            color: white;
-        }
-
-        .card.pricing {
-            background-color: black;
-            color: white;
-        }
-
-        .card.booking-info {
-            background-color: black;
-            color: white;
-        }
-
-        .card.faq {
-            background-color: black;
-            color: white;
-        }
-
-        .price {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .animated-card {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .animated-card:hover {
-            transform: scale(1.05);
+        footer {
+            background-color: #212121;
+            color: #fff;
+            padding: 20px 0;
         }
     </style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <img class="logo" src="logo.jpg " alt="" height="50px">
-            <a class="navbar-brand" href="#">
-                <h3>Yatra Path</h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="yatra_new.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="DESTINATION.html">Destination</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="yatra_new.html#contact">Contact us</a></li>
-                </ul>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Explore Santorini" class="logo-img">
+                <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
-        </div>
-    </nav>
-    <DIv class="row"></DIv>
-    <div class="col-md-12 col-sm-12 slider m-0 p-0">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="SANTORINI3.jpg" class="image1" alt="..." height="700px" width="100%">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div data-aos="fade-up" data-aos-duration="3000">
-
-                            <h1><B><SPan style="color: WHITE;"> SANTORINI</SPan></B></h1>
-                        </div>
-
-                    </div>
-
+            <ul class="nav-links">
+                <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="yatra_new.html#about">About us</a></li>
+                <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
+                <li><a href="SANTORINI.html#description">Description</a></li>
+                <li><a href="SANTORINI.html#details">Details</a></li>
+                <li><a href="SANTORINI.html#activity">Activity</a></li>
+                <li><a href="SANTORINI.html#packages">Packages</a></li>
+                <li><a href="yatra_new.html#services">Services</a></li>
+                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="yatra_new.html#contact">Contact us</a></li>
+            </ul>
+        </nav>
+    
+        <div class="header-content" id="home">
+            <img src="SANTORINI3.jpg" alt="Santorini" class="header-img">
+            <div class="header-text">
+                <div data-aos="fade-up" data-aos-duration="3000">
+                    <h1><b>
+                            <center>Embrace the Beauty of Santorini</center>
+                        </b></h1>
+                    <p>Discover the serene blue-domed churches, crystal-clear waters, and captivating sunsets with our exclusive Santorini travel packages.</p>
+                    <a href="#packages" class="btn">View Packages</a>
                 </div>
-
             </div>
-
         </div>
-    </div>
-    </div>
+    </header>
+    
     <br>
+    <section id="description">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <DIv class="row about-area1">
@@ -233,17 +272,18 @@
         <div class="col-md-6 col-sm-12">
             <div class="firstcard">
                 <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <img src="SANTORINI2.jpeg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
+                    <img src="TOUR IMAGE/SANTORINI2.jpeg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-sm-12">
             <div data-aos="fade-down">
                 <h5>
-                    <CEnter><b><i><span style="color:rgba(50, 117, 193, 0.888)">AN OVERVIEW OF SANTORINI</span></i></b>
+                    <CEnter><b><i><span style="color: darkorange">AN OVERVIEW OF SANTORINI</span></i></b>
                     </center>
                 </h5>
             </div>
+            
             <br>
             <div data-aos="fade-left">
                 <P><span style="color: #fff;">
@@ -273,6 +313,9 @@
                 </P>
             </div>
         </div>
+    </section>
+        <br>
+        <section id="details">
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <DIv class="row about-area2">
@@ -383,19 +426,19 @@
                     </div>
                 </DIv>
             </div>
-        </div>
+       
 
-
+        </section>
         <br>
 
-
+<section id="activity">
         <div class="col-md-12 col-sm-12 ml-5 mr-5">
             <div data-aos="fade-up">
                 <h1><B>
                         <CEnter><span style="color: #fff;"> THINGS TO DO IN </span>
 
 
-                            <B><span style="color:rgba(50, 117, 193, 0.888)">SANTORINI</SPAN></B>
+                            <B><span style="color: darkorange">SANTORINI</SPAN></B>
                         </CEnter>
                     </B>
                 </h1>
@@ -408,10 +451,10 @@
 
                         <li>
 
-                            Experience one of the most <B><span style="color:rgba(50, 117, 193, 0.888)">breathtaking
+                            Experience one of the most <B><span style="color: darkorange">breathtaking
                                     sunsets in the world from Oia’s vantage points,</span></B>
                             where the sun dips below the horizon, casting a golden glow over the <B><span
-                                    style="color:rgba(50, 117, 193, 0.888)">caldera and the
+                                    style="color: darkorange">caldera and the
                                     Aegean
                                     Sea.</span></B>
 
@@ -421,9 +464,9 @@
                     <div data-aos="zoom-out">
                         <li>
 
-                            Spend a day at<B><span style="color:rgba(50, 117, 193, 0.888)"> Kamari or Perissa
+                            Spend a day at<B><span style="color: darkorange"> Kamari or Perissa
                                     Beach,</span></B>
-                            enjoying the distinctive <B><span style="color:rgba(50, 117, 193, 0.888)">black volcanic
+                            enjoying the distinctive <B><span style="color: darkorange">black volcanic
                                     sand,
                                     crystal-clear waters, and beachside amenities.</span></B>
 
@@ -433,7 +476,7 @@
                     <div data-aos="zoom-out">
                         <li>
                             Discover the well-preserved Minoan city buried by <B><span
-                                    style="color:rgba(50, 117, 193, 0.888)">volcanic ash, with its impressive frescoes
+                                    style="color: darkorange">volcanic ash, with its impressive frescoes
                                     and remnants</span></B> of ancient life.
 
                         </li>
@@ -443,7 +486,7 @@
                         <li>
 
                             Embark on a boat tour around the caldera, including visits to the<B><span
-                                    style="color:rgba(50, 117, 193, 0.888)"> volcanic islands of Nea
+                                    style="color: darkorange"> volcanic islands of Nea
                                     Kameni and Palea Kameni,</span></B> and swim in the natural hot springs.
                         </li>
                     </div>
@@ -451,7 +494,7 @@
                     <div data-aos="zoom-out">
                         <li>
 
-                            Visit renowned wineries like<B><span style="color:rgba(50, 117, 193, 0.888)"> Santo Wines or
+                            Visit renowned wineries like<B><span style="color: darkorange"> Santo Wines or
                                     Art Space Winery for guided tours,</span></B> wine
                             tastings, and a chance to sample Santorini’s unique wines, such as Assyrtiko and
                             Vinsanto.
@@ -461,7 +504,7 @@
                     <div data-aos="zoom-out">
                         <li>
 
-                            Enjoy a <B><span style="color:rgba(50, 117, 193, 0.888)">scenic hike along the caldera’s
+                            Enjoy a <B><span style="color: darkorange">scenic hike along the caldera’s
                                     edge, offering stunning views of the volcanic
                                     landscape</span></B>, the sea, and the island’s picturesque villages.
                         </li>
@@ -470,7 +513,7 @@
                     <div data-aos="zoom-out">
                         <li>
 
-                            Wander through <B><span style="color:rgba(50, 117, 193, 0.888)">Pyrgos’ narrow streets,
+                            Wander through <B><span style="color: darkorange">Pyrgos’ narrow streets,
                                     visit its medieval castle,</span></B> and take in panoramic
                             views of the island from its elevated position.
                         </li>
@@ -478,7 +521,7 @@
                     <br>
                     <div data-aos="zoom-out">
                         <li>
-                            Explore the <B><span style="color:rgba(50, 117, 193, 0.888)">island’s winemaking history and
+                            Explore the <B><span style="color: darkorange">island’s winemaking history and
                                     heritage in this cave museum,</span></B> complete with
                             exhibits on traditional winemaking techniques and wine tasting.
                         </li>
@@ -487,7 +530,7 @@
                     <div data-aos="zoom-out">
                         <li>
 
-                            Relax on the unique<B><span style="color:rgba(50, 117, 193, 0.888)"> red volcanic sand of
+                            Relax on the unique<B><span style="color: darkorange"> red volcanic sand of
                                     Red Beach, surrounded by dramatic red cliffs and
                                     clear blue waters.</span></B>
                         </li>
@@ -496,7 +539,7 @@
                     <div data-aos="zoom-out">
                         <li>
 
-                            Explore<B><span style="color:rgba(50, 117, 193, 0.888)"> Fira’s vibrant shops, restaurants,
+                            Explore<B><span style="color: darkorange"> Fira’s vibrant shops, restaurants,
                                     and cafes,</span></B> and take in the stunning views of the
                             caldera from its cliffside location.
                         </li>
@@ -509,198 +552,84 @@
             </span>
         </div>
 
-
+</section>
         <br>
 
 
-        <div class="container mt-5"></div>
-
-       
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card overview animated-card">
-                    <div class="section-header">
-                        <div data-aos="flip-left">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>
-                                    <center>Tour Overview</center>
-                                </h1>
-                            </span>
-                            <center>
-                                <h5>Santorini Adventure</h5>
-                            </center>
-                            <center>
-                                <p><strong>Tagline:</strong>Embrace the Magic of the Aegean Paradise</p>
-                                <p><strong>Duration:</strong> 6 Days, 5 Nights
-                                </p>
-                                <b><p class="price">₹ 183,456 (Flexible payment plans available)</p></b>
-                            </center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card inclusions animated-card">
-                    <div class="section-header">
-                        <div data-aos="zoom-in-up">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>Inclusions</h1>
-                            </span>
-                            <p><strong>Accommodation:</strong> 5-Star cliffside hotel with caldera views</p>
-                            <p><strong>Meals:</strong> Daily breakfast, 2 sunset dinners at seaside restaurants</p>
-                            <p><strong>Transport:</strong> Airport and ferry transfers, local transport between towns
-                            </p>
-                            <p><strong>Activities:</strong> Catamaran sunset cruise around the caldera,
-                                Wine tasting tour at Santorini’s top vineyards, Guided tour of Oia, Fira, and Pyrgos
-                                villages, Day trip to the volcanic islands of Nea Kameni and Palea Kameni (hot springs),
-                                Beach time at the famous Red and Black sand beaches</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card itinerary animated-card">
-                    <div class="section-header">
-                        <div data-aos="flip-right">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>Itinerary</h1>
-                            </span>
-                            <p><strong>Day 1:</strong> Arrival in Santorini, check-in at cliffside hotel, evening at leisure
-                            </p>
-                            <p><strong>Day 2:</strong> Guided tour of Oia village and sunset dinner overlooking the caldera</p>
-                            <p><strong>Day 3:</strong> Explore Fira and Pyrgos villages, visit historical sites
-                            </p>
-                            <p><strong>Day 4:</strong>Catamaran cruise around the caldera with a swimming stop at volcanic hot springs</p>
-                            <p><strong>Day 5:</strong> Wine tasting tour, beach time at the Red and Black sand beaches</p>
-                            <p><strong>Day 6:</strong> Borghese Gallery tour and Villa Borghese gardens</p>
-                            <p><strong>Day 7:</strong> Departure from Santorini</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <section id="packages" class="section packages">
+            <h2 class="section-heading">Our Travel Packages</h2>
         
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card exclusions animated-card">
-                    <div class="section-header">
-                        <div data-aos="flip-left">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>
-                                    <center>Exclusions</center>
-                                </h1>
-                            </span>
-                            <center>
-                                <p><strong>Personal Expenses:</strong> Souvenirs, additional meals, and beverages not included</p>
-                                <p><strong>Flights:</strong> International and domestic flights to/from Santorini not included</p>
-                                <p><strong>Travel Insurance:</strong> Optional, but highly recommended</p>
-                            </center>
-                        </div>
+            <div class="package-row">
+                <div class="package-card">
+                    <div data-aos="zoom-in">
+                        <img src="scenicsantorini.jpg" alt="Santorini Scenic Tour" class="package-img" height="230px">
+                        <h3>Santorini Scenic Tour</h3>
+                        <p>Explore the breathtaking beauty of Santorini, from its iconic blue-domed churches to stunning sunsets, in this 4-day scenic tour.</p>
+                        <a href="destination_book.html" class="btn">Book Now</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card highlights animated-card">
-                    <div class="section-header">
-                        <div data-aos="zoom-in-up">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>Special Highlights</h1>
-                            </span>
-                            <p><strong>Breathtaking Sunsets:</strong> Watch the famous Santorini sunset from Oia and aboard a catamaran
-                            </p>
-                            <p><strong>Volcanic Adventure:</strong> Visit the volcanic islands and swim in the natural hot springs</p>
-                            <p><strong>Exquisite Cuisine:</strong> Enjoy fresh Mediterranean seafood and Santorini’s renowned local wines</p>
-                            <p><strong>Unique Beaches:</strong> Experience the colorful Red and Black sand beaches of Santorini
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card accommodation animated-card">
-                    <div class="section-header">
-                        <div data-aos="flip-right">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>Accommodation Details</h1>
-                            </span>
-                            <p><strong>Type:</strong> Luxurious 5-Star cliffside hotel with private terraces and infinity pools</p>
-                            <p><strong>Amenities:</strong> Free Wi-Fi, infinity pool, spa, and wellness center, complimentary breakfast</p>
-                            <p><strong>Special:</strong> Panoramic views of the caldera, easy access to Oia and Fira</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card pricing animated-card">
-                    <div class="section-header">
-                        <div data-aos="flip-left">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>
-                                    <center>Pricing & Payment Plans</center>
-                                </h1>
-                            </span>
-                            <center>
-                                <p><strong>Price per person:</strong> ₹ 183,456</p>
-
-                                <p><strong>Payment Options:</strong> Credit card, Bank transfer,
-                                    Installment plans available for up to 8 months</p>
-                            </center>
-                        </div>
+                <div class="package-card">
+                    <div data-aos="zoom-in">
+                        <img src="luxurysantorini.jpg" alt="Luxury Island Escape" class="package-img" height="230px">
+                        <h3>Luxury Island Escape</h3>
+                        <p>Indulge in a luxurious escape with private beach access, fine dining, and exclusive wine tasting experiences on the island of Santorini.</p>
+                        <a href="hotel_booking.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+        
+                <div class="package-card">
+                    <div data-aos="zoom-in">
+                        <img src="adventuresantorini.webp" alt="Adventure and Culture Experience" class="package-img" height="230px">
+                        <h3>Adventure and Culture Experience</h3>
+                        <p>Experience the thrill of exploring Santorini’s volcanic landscapes, hiking trails, and immerse yourself in its rich culture and history.</p>
+                        <a href="destination_book.html" class="btn">Book Now</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card booking-info animated-card">
-                    <div class="section-header">
-                        <div data-aos="zoom-in-up">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>
-                                    <center>Booking Information</center>
-                                </h1>
-                            </span>
-                            <p><strong>How to Book:</strong> Call (123) 456-7890 or book online</p>
-                            <p><strong>Booking Deadline:</strong> 10 days before tour date</p>
-                            <p><strong>Cancellation Policy:</strong> Full refund if canceled 30 days in advance</p>
-                        </div>
+        
+            <br>
+        
+            <div class="package-row">
+                <div class="budget-card">
+                    <div data-aos="zoom-in">
+                        <img src="budgetsantorini.jpg" alt="Budget Santorini Package" class="budget-img" height="230px">
+                        <h3> Santorini Package</h3>
+                        <p>Discover the charm of Santorini on a budget with our affordable package. 
+                            <strong>Price: INR. 183,456</strong></p>
+                    </div>
+                </div>
+        
+                <div class="highlight-card">
+                    <div data-aos="zoom-in">
+                        <img src="highlightsantorini.jpg" alt="Special Highlights" class="budget-img" height="230px">
+                        <h3>Special Highlights</h3>
+                        <ul>
+                            <li>Sunset Cruise along the Caldera</li>
+                            <li>Guided Tour of Oia Village</li>
+                            <li>Exclusive Wine Tasting at Local Wineries</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="itinerary-card">
+                    <div data-aos="zoom-in">
+                        <img src="itinarysantorini.jpg" alt="Itinerary" class="budget-img" height="230px">
+                        <h3>Itinerary</h3>
+                        <p><strong>Day 1:</strong> Arrival in Santorini, check-in at cliffside hotel, evening at leisure
+                        </p>
+                        <p><strong>Day 2:</strong> Guided tour of Oia village and sunset dinner overlooking the caldera</p>
+                        <p><strong>Day 3:</strong> Explore Fira and Pyrgos villages, visit historical sites
+                        </p>
+                        <p><strong>Day 4:</strong>Catamaran cruise around the caldera with a swimming stop at volcanic hot springs</p>
+                        <p><strong>Day 5:</strong> Wine tasting tour, beach time at the Red and Black sand beaches</p>
+                        <p><strong>Day 6:</strong> Borghese Gallery tour and Villa Borghese gardens</p>
+                        <p><strong>Day 7:</strong> Departure from Santorini</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card faq animated-card">
-                    <div class="section-header">
-                        <div data-aos="flip-right">
-                            <span style="color:rgba(50, 117, 193, 0.888)">
-                                <h1>FAQs</h1>
-                            </span>
-                            <p><strong>Q:</strong> Is this tour suitable for couples or honeymooners?</p>
-                            <p><strong>A:</strong>Yes, Santorini is a top romantic destination perfect for couples and honeymooners.
-                            </p>
-                            <p><strong>Q:</strong>Do I need a car to get around the island?</p>
-                            <p><strong>A:</strong> Transport between key destinations is included, but rental cars or ATVs are available if you want to explore on your own.
-                            </p>
-                            <p><strong>Q:</strong>Are children allowed on this tour?</p>
-                            <p><strong>A:</strong>Yes, the tour is family-friendly, though some activities (like the wine tour) are tailored for adults.
-                            </p>
-                            <p><strong>Q:</strong>What should I pack for this tour?</p>
-                            <p><strong>A:</strong> Light summer clothing, swimsuits, sunglasses, and sunscreen. Don’t forget comfortable shoes for walking in the villages.
-                            </p>
-                            <p><strong>Q:</strong>When is the best time to visit Santorini?</p>
-                            <p><strong>A:</strong> The best time to visit is from May to October, with July and August being peak months for perfect beach weather.
-
-
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        </section>
+        
 
         <footer class="bg-dark text-white text-center py-3">
             <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
