@@ -124,12 +124,14 @@
             background-color: rgb(32, 78, 216);
             text-emphasis-color: white;
         }
-        .about-area {
-            height: 300px;
-            margin-top: 250px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+          .about-area {
+            height: 130px;
+
+            margin-left: 50px;
+
+            background-color: black;
         }
+
 
         .about-area1 {
             margin-bottom: 20px;
@@ -205,6 +207,40 @@
             width: 100%;
             border-radius: 10px;
             margin-bottom: 1em;
+        }
+
+         h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .blog-post {
+            margin-bottom: 50px;
+        }
+
+        .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         footer {
             background-color: #212121;
@@ -398,15 +434,16 @@
         <br>
 <section id="activity">
 
-        <div class="col-md-12 col-sm-12 ml-5 mr-5">
+         <div class="col-md-12 col-sm-12 ml-5 mr-5">
             <div data-aos="fade-up">
-                <h1>
+                <h1><B>
                         <CEnter><span style="color: #fff;"> THINGS TO DO IN </span>
 
-                            <B>
-                                <span style="color:rgb(25, 182, 182)">MALDIVES</SPAN></B>
-                        </CEnter>
+
+                            <span style="color:rgb(25, 182, 182)">MALDIVES</SPAN>
                     </B>
+                    </CEnter>
+
                 </h1>
             </div>
             <br>
@@ -416,11 +453,11 @@
 
 
                         <li>
-                            
-                                Explore
-                                    the vibrant coral reefs and marine life, including tropical fish, turtles, and
-                                    rays. Many resorts offer house reefs<B>
-                                        <span style="color:rgb(25, 182, 182)"> for snorkeling.</span></B>
+
+                            Explore
+                            the vibrant coral reefs and marine life, including tropical fish, turtles, and
+                            rays. Many resorts offer house reefs
+                            <b><span style="color:rgb(25, 182, 182)"> for snorkeling.</span></b>
 
                         </li>
                     </div>
@@ -516,8 +553,8 @@
 
                             Try traditional<B>
                                 <span style="color:rgb(25, 182, 182)"> Maldivian fishing</span></B> at sunset or charter
-                            a <B>
-                                <span style="color:rgb(25, 182, 182)">deep-sea fishing expedition.</span></B>
+                            a
+                            <span style="color:rgb(25, 182, 182)">deep-sea fishing expedition.</span>
                         </li>
                     </div>
                     <br>
@@ -604,8 +641,9 @@
                         <li>
 
                             Head to spots like the <B>
-                                <span style="color:rgb(25, 182, 182)">North Male Atoll for some world-class surfing during the surfing
-                            season, </span> between April and October.
+                                <span style="color:rgb(25, 182, 182)">North Male Atoll for some world-class surfing
+                                    during the surfing
+                                    season, </span> </B>between April and October.
                         </li>
                     </div>
                     <br>
@@ -615,6 +653,8 @@
             </span>
         </div>
 
+
+        <br>
      </section>                      
         <br>
 
@@ -696,8 +736,17 @@
             </footer>
 
 
-        <script>
-
+         <script>
+            window.addEventListener('load', () => {
+                const blogImages = document.querySelectorAll('.blog-image img');
+                blogImages.forEach((img) => {
+                    img.style.opacity = 0;
+                    setTimeout(() => {
+                        img.style.transition = "opacity 1.5s ease-in-out";
+                        img.style.opacity = 1;
+                    }, 300);
+                });
+            });
 
             AOS.init();
         </script>
