@@ -126,10 +126,11 @@
             text-decoration-color: black;
         }
         .about-area {
-            height: 300px;
-            margin-top: 250px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+            height: 130px;
+           
+            margin-left: 50px;
+           
+            background-color: black;
         }
 
         .about-area1 {
@@ -208,6 +209,41 @@
             border-radius: 10px;
             margin-bottom: 1em;
         }
+
+        h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+          }
+          
+          .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          
+          .blog-post {
+            margin-bottom: 50px;
+          }
+          
+          .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+          }
+          
+          .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
+          
         footer {
             background-color: #212121;
             color: #fff;
@@ -231,7 +267,7 @@
                 <li><a href="ROME.html#description">Description</a></li>
                 <li><a href="ROME.html#details">Details</a></li>
                 <li><a href="ROME.html#activity">Activity</a></li>
-                <li><a href="ROME.html#packages">Packages</a></li>
+                <li><a href="ROME.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
                 <li><a href="yatra_new.html#features">Features</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
@@ -680,14 +716,96 @@
                 </div>
             </div>
         </section>
+
+                     <section id="blog">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row about-area">
+                        <h1><b>
+                                <center><span style="color: white;">OUR BLOGS</span></center>
+                            </b></h1>
+                    </div>
+                </div>
+                <br>
+                <div class="blog-container">
+        
+                   
+                    <div class="blog-post">
+                        <h2>The Journey to Rome</h2>
+                        <p class="intro">
+                            Rome, the Eternal City, is steeped in history, culture, and iconic landmarks. As you arrive in Rome, you are welcomed by ancient ruins, bustling piazzas, and a vibrant atmosphere. Whether arriving by plane or train, the rich history and grandeur of Rome are immediately evident, setting the tone for an unforgettable journey.
+                        </p>
+                        <div class="blog-image">
+                            <img src="romejourney.jpg" alt="Journey to Rome">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>Discovering the Colosseum</h2>
+                        <p class="intro">
+                            The Colosseum is one of Rome’s most famous landmarks and a symbol of ancient Roman engineering. As you explore this iconic amphitheater, you can almost hear the echoes of ancient gladiatorial battles. A visit to the Colosseum transports you back in time and offers a fascinating glimpse into the grandeur of the Roman Empire.
+                        </p>
+                        <div class="blog-image">
+                            <img src="romecolossium.webp" alt="The Colosseum in Rome" width="1000px" height="10px">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>Strolling Through the Vatican City</h2>
+                        <p class="intro">
+                            Vatican City, the smallest country in the world and the heart of the Catholic Church, is a must-visit in Rome. From the awe-inspiring St. Peter's Basilica to the Sistine Chapel’s breathtaking ceiling painted by Michelangelo, Vatican City is a treasure trove of art, history, and spiritual significance.
+                        </p>
+                        <div class="blog-image">
+                            <img src="romevatican.jpg" alt="Vatican City" width="900px" height="500px">
+                        </div>
+                    </div>
+        
+                   
+                    <div class="blog-post">
+                        <h2>A Taste of Roman Street Food</h2>
+                        <p class="intro">
+                            Rome is known for its delicious street food, from traditional Roman pizza al taglio to mouthwatering supplì (fried rice balls). As you wander through Rome’s charming streets, you can savor authentic Italian flavors at every corner. Don’t miss out on the gelato, a perfect treat on a sunny day in the city.
+                        </p>
+                        <div class="blog-image">
+                            <img src="romestreetfood.jpg" alt="Roman Street Food" height="100px">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>Rome's Ancient Ruins by Night</h2>
+                        <p class="intro">
+                            Rome is a city that shines even more at night. Walking through ancient ruins like the Roman Forum and the Pantheon under the evening sky is a magical experience. The illuminated monuments and cobblestone streets create an enchanting atmosphere that transports you to a bygone era.
+                        </p>
+                        <div class="blog-image">
+                            <img src="romeruin.jpg" alt="Rome’s Ancient Ruins at Night">
+                        </div>
+                    </div>
+        
+                </div>
+        
+        </section>
+        
         
         <footer class="bg-dark text-white text-center py-3">
             <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
         </footer>
 
 
-        <script>
-
+       <script>
+            window.addEventListener('load', () => {
+                const blogImages = document.querySelectorAll('.blog-image img');
+                blogImages.forEach((img) => {
+                  img.style.opacity = 0;
+                  setTimeout(() => {
+                    img.style.transition = "opacity 1.5s ease-in-out";
+                    img.style.opacity = 1;
+                  }, 300);
+                });
+              });
 
             AOS.init();
         </script>
