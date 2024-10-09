@@ -126,10 +126,11 @@
         }
 
         .about-area {
-            height: 300px;
-            margin-top: 250px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+            height: 130px;
+           
+            margin-left: 50px;
+           
+            background-color: black;
         }
 
         .about-area1 {
@@ -209,6 +210,39 @@
             margin-bottom: 1em;
         }
 
+         h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+          }
+          
+          .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          
+          .blog-post {
+            margin-bottom: 50px;
+          }
+          
+          .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+          }
+          
+          .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
 
         footer {
             background-color: #212121;
@@ -235,7 +269,7 @@
                 <li><a href="CHITRAKOT.html#description">Description</a></li>
                 <li><a href="CHITRAKOT.html#details">Details</a></li>
                 <li><a href="CHITRAKOT.html#activity">Activity</a></li>
-                <li><a href="CHITRAKOT.html#packages">Packages</a></li>
+                <li><a href="CHITRAKOT.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
                 <li><a href="yatra_new.html#features">Features</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
@@ -690,13 +724,94 @@
             </div>
         </section>
 
+     <section id="blog">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row about-area">
+                        <h1><b>
+                                <center><span style="color: white;">OUR BLOGS</span></center>
+                            </b></h1>
+                    </div>
+                </div>
+                <br>
+            <div class="blog-container">
+        
+               
+                <div class="blog-post">
+                  <h2>The Journey to Chitrakot Waterfalls</h2>
+                  <p class="intro">
+                    The journey to Chitrakot Waterfalls, often referred to as the "Niagara of India," is an awe-inspiring experience. Located in the heart of Chhattisgarh, the drive takes you through dense forests and picturesque landscapes. The anticipation builds as you near the roaring sound of the mighty falls.
+                  </p>
+                  <div class="blog-image">
+                    <img src="chitrajourney.jpg" alt="Journey to Chitrakot Waterfalls">
+                  </div>
+                </div>
+        
+                
+                <div class="blog-post">
+                  <h2>The First View of Chitrakot Falls</h2>
+                  <p class="intro">
+                    As you reach the viewpoint, the majestic sight of Chitrakot Waterfalls takes your breath away. The waterfall, spanning nearly 300 meters in width during the monsoon, is a spectacular sight. The thundering sound of water cascading down the rocky cliffs fills the air, leaving you in awe of nature's grandeur.
+                  </p>
+                  <div class="blog-image">
+                    <img src="chitrafirstview.jpg" alt="First View of Chitrakot Waterfalls" width="1000px" height="10px">
+                  </div>
+                </div>
+        
+                
+                <div class="blog-post">
+                  <h2>Boat Ride Under the Falls</h2>
+                  <p class="intro">
+                    One of the unique experiences at Chitrakot is the thrilling boat ride that takes you close to the base of the falls. As you approach, the mist from the waterfall surrounds you, creating a magical atmosphere. It's a surreal experience as the force of the water and the sound envelop you in nature's embrace.
+                  </p>
+                  <div class="blog-image">
+                    <img src="chitraboat.jpg" alt="Boat Ride at Chitrakot Waterfalls">
+                  </div>
+                </div>
+        
+                
+                <div class="blog-post">
+                  <h2>Exploring the Surrounding Area</h2>
+                  <p class="intro">
+                    Beyond the falls, Chitrakot offers an array of natural beauty to explore. From scenic trekking trails to nearby tribal villages, the region is rich with cultural and natural wonders. The local markets are a great place to pick up souvenirs that reflect the vibrant culture of the region.
+                  </p>
+                  <div class="blog-image">
+                    <img src="chitraexplore.jpg" alt="Exploring Around Chitrakot Waterfalls">
+                  </div>
+                </div>
+        
+               
+                <div class="blog-post">
+                  <h2>The Falls at Night: A Magical Glow</h2>
+                  <p class="intro">
+                    As night falls, the beauty of Chitrakot takes on a different charm. Under the moonlight, the falls shimmer, and the surrounding area becomes tranquil and peaceful. The sound of the waterfalls remains as powerful as ever, creating an ethereal atmosphere that is perfect for reflection and relaxation.
+                  </p>
+                  <div class="blog-image">
+                    <img src="chitranightview.png" alt="Night View of Chitrakot Waterfalls">
+                  </div>
+                </div>
+        
+              </div>
+        
+        </section>
+
 
         <footer class="bg-dark text-white text-center py-3">
             <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
         </footer>
 
         <script>
-
+            window.addEventListener('load', () => {
+                const blogImages = document.querySelectorAll('.blog-image img');
+                blogImages.forEach((img) => {
+                  img.style.opacity = 0;
+                  setTimeout(() => {
+                    img.style.transition = "opacity 1.5s ease-in-out";
+                    img.style.opacity = 1;
+                  }, 300);
+                });
+              });
 
             AOS.init();
         </script>
