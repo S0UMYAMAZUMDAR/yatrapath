@@ -124,11 +124,12 @@
             background-color: rgb(42, 10, 10);
             text-emphasis-color: black;
         }
-        .about-area {
-            height: 300px;
-            margin-top: 250px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+       .about-area {
+            height: 130px;
+           
+            margin-left: 50px;
+           
+            background-color: black;
         }
 
         .about-area1 {
@@ -207,6 +208,41 @@
             border-radius: 10px;
             margin-bottom: 1em;
         }
+
+         h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+          }
+          
+          .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          
+          .blog-post {
+            margin-bottom: 50px;
+          }
+          
+          .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+          }
+          
+          .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
+          
         footer {
             background-color: #212121;
             color: #fff;
@@ -230,7 +266,7 @@
                 <li><a href="NEWYORK.html#description">Description</a></li>
                 <li><a href="NEWYORK.html#details">Details</a></li>
                 <li><a href="NEWYORK.html#activity">Activity</a></li>
-                <li><a href="NEWYORK.html#packages">Packages</a></li>
+                <li><a href="NEWYORK.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
                 <li><a href="yatra_new.html#features">Features</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
@@ -777,6 +813,79 @@
                 </div>
             </div>
         </section>
+
+     <section id="blog">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row about-area">
+                        <h1><b>
+                                <center><span style="color: white;">OUR BLOGS</span></center>
+                            </b></h1>
+                    </div>
+                </div>
+                <br>
+                <div class="blog-container">
+        
+                    
+                    <div class="blog-post">
+                        <h2>The Journey to New York City</h2>
+                        <p class="intro">
+                            New York City, the city that never sleeps, is a global hub for culture, art, and commerce. The journey to New York is exciting, as you’re greeted by the iconic skyline, yellow cabs, and the fast-paced energy of the streets. Whether arriving by plane or train, New York promises endless possibilities for exploration and adventure.
+                        </p>
+                        <div class="blog-image">
+                            <img src="newyorkjourney.jpg" alt="Journey to New York City">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>Exploring Central Park</h2>
+                        <p class="intro">
+                            Central Park, an urban oasis in the heart of New York, is perfect for a peaceful escape from the city's hustle. Whether you're enjoying a picnic, rowing a boat, or simply walking along its scenic paths, Central Park offers a serene backdrop amidst the urban jungle. The park’s changing colors through the seasons add to its charm.
+                        </p>
+                        <div class="blog-image">
+                            <img src="newyorkcentralpark.jpg" alt="Central Park in New York" width="1000px" height="10px">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>The Lights of Times Square</h2>
+                        <p class="intro">
+                            Times Square is the heart of New York’s entertainment district, known for its dazzling lights, digital billboards, and vibrant energy. As one of the most popular destinations in the world, a walk through Times Square at night is a sensory experience, where the neon lights seem to reflect the very pulse of the city.
+                        </p>
+                        <div class="blog-image">
+                            <img src="newyorktimessquare.jpg" alt="Times Square" width="900px" height="500px">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>A Taste of New York's Street Food</h2>
+                        <p class="intro">
+                            New York is famous for its street food culture. From iconic hot dog stands to food trucks serving everything from pretzels to gourmet tacos, the city offers a wide variety of flavors. Don’t miss out on trying a classic New York slice of pizza or indulging in a bagel with cream cheese from a local deli.
+                        </p>
+                        <div class="blog-image">
+                            <img src="newyorkstreetfood.jpg" alt="New York Street Food">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>New York City's Skyline at Night</h2>
+                        <p class="intro">
+                            The New York skyline is a sight to behold, especially at night. From famous observation decks like the Empire State Building or One World Observatory, you can take in breathtaking views of the city's twinkling lights and architectural landmarks. The city's beauty is undeniable as it glows against the dark sky.
+                        </p>
+                        <div class="blog-image">
+                            <img src="newyorkskyline.jpg" alt="New York Skyline at Night">
+                        </div>
+                    </div>
+        
+                </div>
+        
+        </section>
+        
         
 
             <footer class="bg-dark text-white text-center py-3">
@@ -785,7 +894,16 @@
 
 
             <script>
-
+                window.addEventListener('load', () => {
+                    const blogImages = document.querySelectorAll('.blog-image img');
+                    blogImages.forEach((img) => {
+                      img.style.opacity = 0;
+                      setTimeout(() => {
+                        img.style.transition = "opacity 1.5s ease-in-out";
+                        img.style.opacity = 1;
+                      }, 300);
+                    });
+                  });
 
                 AOS.init();
             </script>
