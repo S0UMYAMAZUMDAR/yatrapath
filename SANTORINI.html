@@ -127,12 +127,12 @@
         }
 
         .about-area {
-            height: 300px;
-            margin-top: 250px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+            height: 130px;
+           
+            margin-left: 50px;
+           
+            background-color: black;
         }
-
         .about-area1 {
             margin-bottom: 20px;
             margin-left: 10px;
@@ -210,6 +210,42 @@
             border-radius: 10px;
             margin-bottom: 1em;
         }
+
+        h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+          }
+          
+          .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          
+          .blog-post {
+            margin-bottom: 50px;
+          }
+          
+          .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+          }
+          
+          .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
+          
+
         footer {
             background-color: #212121;
             color: #fff;
@@ -229,11 +265,11 @@
             <ul class="nav-links">
                 <li><a href="yatra_new.html#home">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
-                <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
+                <li><a href="DESTINATION.html#destinations">Destination</a></li>
                 <li><a href="SANTORINI.html#description">Description</a></li>
                 <li><a href="SANTORINI.html#details">Details</a></li>
                 <li><a href="SANTORINI.html#activity">Activity</a></li>
-                <li><a href="SANTORINI.html#packages">Packages</a></li>
+                <li><a href="SANTORINI.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
                 <li><a href="yatra_new.html#features">Features</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
@@ -629,6 +665,79 @@
                 </div>
             </div>
         </section>
+
+        <section id="blog">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row about-area">
+                        <h1><b>
+                                <center><span style="color: white;">OUR BLOGS</span></center>
+                            </b></h1>
+                    </div>
+                </div>
+                <br>
+                <div class="blog-container">
+        
+                    
+                    <div class="blog-post">
+                        <h2>The Journey to Santorini</h2>
+                        <p class="intro">
+                            Santorini, a stunning Greek island in the Aegean Sea, is famous for its whitewashed buildings, crystal-clear waters, and breathtaking sunsets. Whether you arrive by plane or ferry, the island greets you with its picturesque views and a tranquil atmosphere. Santorini is the perfect escape for relaxation and discovery.
+                        </p>
+                        <div class="blog-image">
+                            <img src="santorinijourney.webp" alt="Journey to Santorini">
+                        </div>
+                    </div>
+        
+                   
+                    <div class="blog-post">
+                        <h2>Exploring Oia's Sunset</h2>
+                        <p class="intro">
+                            Oia, a beautiful village perched on the cliffs of Santorini, is world-renowned for its mesmerizing sunsets. As the sun dips below the horizon, painting the sky with vibrant shades of pink and orange, Oia becomes a magical spot for photographers and travelers alike. It’s an experience that truly captures the essence of Santorini.
+                        </p>
+                        <div class="blog-image">
+                            <img src="santorinisunset.jpg" alt="Oia Sunset in Santorini" width="1000px" height="10px">
+                        </div>
+                    </div>
+        
+                   
+                    <div class="blog-post">
+                        <h2>Strolling Along the Caldera</h2>
+                        <p class="intro">
+                            The caldera of Santorini, formed by a volcanic eruption, offers stunning views of the surrounding islands and the deep blue sea. Walking along the caldera’s edge, you’ll find charming cafes, boutique shops, and perfect spots to relax and admire the scenery. The view is a striking reminder of Santorini’s volcanic history.
+                        </p>
+                        <div class="blog-image">
+                            <img src="santorinicaldera.jpg" alt="Santorini Caldera" width="900px" height="500px">
+                        </div>
+                    </div>
+        
+                    
+                    <div class="blog-post">
+                        <h2>A Taste of Santorini’s Local Flavors</h2>
+                        <p class="intro">
+                            Santorini’s culinary scene is a blend of Mediterranean and local flavors. From fresh seafood and fava (yellow split pea puree) to the famous tomato keftedes (tomato fritters), the island is a paradise for food lovers. Paired with the local Assyrtiko wine, dining in Santorini is as picturesque as it is delicious.
+                        </p>
+                        <div class="blog-image">
+                            <img src="santorinilocalfood.png" alt="Santorini Local Food" height="100px">
+                        </div>
+                    </div>
+        
+                   
+                    <div class="blog-post">
+                        <h2>Santorini’s White-Washed Architecture</h2>
+                        <p class="intro">
+                            The white-washed buildings of Santorini, with their blue-domed roofs, are iconic. As you stroll through the narrow streets of Fira or Oia, the contrast of the white architecture against the blue sky and sea creates a striking visual harmony. The Cycladic design is a unique part of the island’s charm and beauty.
+                        </p>
+                        <div class="blog-image">
+                            <img src="santoriniwhitewash.avif" alt="White-Washed Buildings in Santorini"width="1100px">
+                        </div>
+                    </div>
+        
+                </div>
+        
+        </section>
+        
         
 
         <footer class="bg-dark text-white text-center py-3">
@@ -637,7 +746,16 @@
 
 
         <script>
-
+            window.addEventListener('load', () => {
+                const blogImages = document.querySelectorAll('.blog-image img');
+                blogImages.forEach((img) => {
+                  img.style.opacity = 0;
+                  setTimeout(() => {
+                    img.style.transition = "opacity 1.5s ease-in-out";
+                    img.style.opacity = 1;
+                  }, 300);
+                });
+              });
 
             AOS.init();
         </script>
