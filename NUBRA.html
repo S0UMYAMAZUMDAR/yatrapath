@@ -125,10 +125,11 @@
             text-emphasis-color: white;
         }
         .about-area {
-            height: 300px;
-            margin-top: 250px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+            height: 130px;
+           
+            margin-left: 50px;
+           
+            background-color: black;
         }
         .about-area1{margin-bottom: 20px;
             margin-left: 10px;
@@ -206,6 +207,41 @@
             border-radius: 10px;
             margin-bottom: 1em;
         }
+
+         h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+          }
+          
+          .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          
+          .blog-post {
+            margin-bottom: 50px;
+          }
+          
+          .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+          }
+          
+          .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
+          
         footer {
             background-color: #212121;
             color: #fff;
@@ -231,7 +267,7 @@
                 <li><a href="NUBRA.html#description">Description</a></li>
                 <li><a href="NUBRA.html#details">Details</a></li>
                 <li><a href="NUBRA.html#activity">Activity</a></li>
-                <li><a href="NUBRA.html#packages">Packages</a></li>
+                <li><a href="NUBRA.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
                 <li><a href="yatra_new.html#features">Features</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
@@ -587,14 +623,96 @@ of the highest motorable roads in the world, which offers thrilling drives and s
             </div>
         </div>
     </section>
+    <section id="blog">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="row about-area">
+                    <h1><b>
+                            <center><span style="color: white;">OUR BLOGS</span></center>
+                        </b></h1>
+                </div>
+            </div>
+            <br>
+        <div class="blog-container">
+    
+           
+            <div class="blog-post">
+              <h2>The Journey to Nubra Valley</h2>
+              <p class="intro">
+                Nubra Valley, often called the "Orchard of Ladakh," is a stunning destination that requires a thrilling drive over the Khardung La Pass, one of the highest motorable roads in the world. The route offers breathtaking views of the Himalayan landscape, making the journey as memorable as the destination itself.
+              </p>
+              <div class="blog-image">
+                <img src="nubrajourney.jpg" alt="Journey to Nubra Valley">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>The Enchanting Sand Dunes of Nubra</h2>
+              <p class="intro">
+                The unique sand dunes of Nubra Valley are a must-visit, where you can ride camels against the backdrop of the towering mountains. The contrast of the golden sands and snow-capped peaks creates a surreal landscape, making it an unforgettable experience for every traveler.
+              </p>
+              <div class="blog-image">
+                <img src="nubrasanddune.jpg" alt="Sand Dunes in Nubra Valley" width="1000px" height="10px">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>Exploring Diskit Monastery</h2>
+              <p class="intro">
+                Diskit Monastery, the oldest and largest monastery in Nubra Valley, offers a glimpse into Buddhist culture. The stunning views of the valley from the monastery's hilltop location are breathtaking. Inside, you can find beautiful statues and paintings that tell the story of Tibetan Buddhism.
+              </p>
+              <div class="blog-image">
+                <img src="nubradiskitmonastri.jpeg" alt="Diskit Monastery in Nubra Valley">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>The Beauty of Hunder Village</h2>
+              <p class="intro">
+                Hunder Village is famous for its picturesque landscapes and serene environment. The traditional Ladakhi houses, surrounded by lush fields and mountains, provide a perfect backdrop for photography. Interacting with the locals gives insight into their unique lifestyle and culture.
+              </p>
+              <div class="blog-image">
+                <img src="nubrahunder.jpg" alt="Hunder Village in Nubra Valley">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>Stargazing in Nubra Valley</h2>
+              <p class="intro">
+                The clear skies of Nubra Valley offer a spectacular view of the stars, making it a paradise for stargazers. Spend a night camping under the stars, and be mesmerized by the beauty of the cosmos, far away from the city lights. It's a magical experience that leaves you in awe of the universe.
+              </p>
+              <div class="blog-image">
+                <img src="nubrastargazing.jpg" alt="Stargazing in Nubra Valley">
+              </div>
+            </div>
+    
+          </div>
+    
+    </section>
+    
+    
     
     
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
     </footer>
 
-    <script>
-
+   <script>
+        window.addEventListener('load', () => {
+            const blogImages = document.querySelectorAll('.blog-image img');
+            blogImages.forEach((img) => {
+              img.style.opacity = 0;
+              setTimeout(() => {
+                img.style.transition = "opacity 1.5s ease-in-out";
+                img.style.opacity = 1;
+              }, 300);
+            });
+          });
 
         AOS.init();
     </script>
