@@ -124,11 +124,12 @@
             background-color: yellowgreen;
             text-emphasis-color: white;
         }
-        .about-area {
-            height: 100px;
-            margin-top: 10px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+       .about-area {
+            height: 130px;
+           
+            margin-left: 50px;
+           
+            background-color: black;
         }
         .about-area1{margin-bottom: 20px;
             margin-left: 10px;
@@ -206,6 +207,40 @@
             border-radius: 10px;
             margin-bottom: 1em;
         }
+
+        h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+          }
+          
+          .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          
+          .blog-post {
+            margin-bottom: 50px;
+          }
+          
+          .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+          }
+          
+          .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
         footer {
             background-color: #212121;
             color: #fff;
@@ -230,7 +265,7 @@
                 <li><a href="PERIYAR.html#description">Description</a></li>
                 <li><a href="PERIYAR.html#details">Details</a></li>
                 <li><a href="PERIYAR.html#activity">Activity</a></li>
-                <li><a href="PERIYAR.html#packages">Packages</a></li>
+                <li><a href="PERIYAR.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
                 <li><a href="yatra_new.html#features">Features</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
@@ -589,6 +624,77 @@
             </div>
         </div>
     </section>
+    <section id="blog">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="row about-area">
+                    <h1><b>
+                            <center><span style="color: white;">OUR BLOGS</span></center>
+                        </b></h1>
+                </div>
+            </div>
+            <br>
+        <div class="blog-container">
+    
+           
+            <div class="blog-post">
+              <h2>The Journey to Periyar National Park</h2>
+              <p class="intro">
+                Located in the Western Ghats, Periyar National Park is an enchanting destination known for its scenic beauty and rich biodiversity. The journey to Periyar takes you through lush forests, spice plantations, and rolling hills. As you approach the park, the sounds of the forest welcome you into nature's haven.
+              </p>
+              <div class="blog-image">
+                <img src="periyarjourney.jpg" alt="Journey to Periyar National Park">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>Wildlife Safari at Periyar</h2>
+              <p class="intro">
+                Periyar National Park is home to a variety of wildlife, including elephants, tigers, and numerous bird species. The highlight of any visit is the boat safari on Periyar Lake, where you can spot wildlife coming to the water's edge to drink. The serene setting makes the experience both exciting and peaceful.
+              </p>
+              <div class="blog-image">
+                <img src="periyarsafari.jpg" alt="Wildlife Safari at Periyar" width="1000px" height="10px">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>Trekking Through the Forests</h2>
+              <p class="intro">
+                For adventure seekers, Periyar offers a range of trekking options through its dense forests. Whether you choose the Border Hiking or the Bamboo Rafting experience, trekking through the untouched wilderness provides an up-close view of the park's flora and fauna. It's a true immersion in nature's beauty.
+              </p>
+              <div class="blog-image">
+                <img src="periyartrecking.jpg" alt="Trekking Through Periyar Forests">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>Exploring the Local Culture</h2>
+              <p class="intro">
+                Periyar National Park is surrounded by small villages that are rich in culture and traditions. Visiting these villages allows you to experience local customs, interact with the tribal communities, and learn about their sustainable way of living, closely tied to the forest and its resources.
+              </p>
+              <div class="blog-image">
+                <img src="periyarculture.jpg" alt="Local Culture around Periyar National Park">
+              </div>
+            </div>
+    
+           
+            <div class="blog-post">
+              <h2>Periyar at Dawn: A Tranquil Experience</h2>
+              <p class="intro">
+                Early mornings at Periyar are a treat for nature lovers. As the mist rises over the lake, the calls of birds and animals echo through the forest. The calm and serene environment, combined with the soft light of dawn, creates a magical moment that rejuvenates the soul.
+              </p>
+              <div class="blog-image">
+                <img src="periyardawn.webp" alt="Periyar National Park at Dawn">
+              </div>
+            </div>
+    
+          </div>
+    
+    </section>
     
 
     <footer class="bg-dark text-white text-center py-3">
@@ -596,7 +702,16 @@
     </footer>
 
     <script>
-
+        window.addEventListener('load', () => {
+            const blogImages = document.querySelectorAll('.blog-image img');
+            blogImages.forEach((img) => {
+              img.style.opacity = 0;
+              setTimeout(() => {
+                img.style.transition = "opacity 1.5s ease-in-out";
+                img.style.opacity = 1;
+              }, 300);
+            });
+          });
 
         AOS.init();
     </script>
