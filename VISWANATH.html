@@ -125,10 +125,11 @@
             text-emphasis-color: white;
         }
         .about-area {
-            height: 300px;
-            margin-top: 250px;
-            margin-left: 560px;
-            padding-bottom: 50px;
+            height: 130px;
+           
+            margin-left: 50px;
+           
+            background-color: black;
         }
 
         .about-area1 {
@@ -208,6 +209,40 @@
             border-radius: 10px;
             margin-bottom: 1em;
         }
+
+         h2 {
+            font-size: 28px;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+          }
+          
+          p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ccc;
+          }
+          
+          .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          
+          .blog-post {
+            margin-bottom: 50px;
+          }
+          
+          .blog-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+          }
+          
+          .blog-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          }
         footer {
             background-color: #212121;
             color: #fff;
@@ -234,7 +269,7 @@
                 <li><a href="VISWANATH.html#description">Description</a></li>
                 <li><a href="VISWANATH.html#details">Details</a></li>
                 <li><a href="VISWANATH.html#activity">Activity</a></li>
-                <li><a href="VISWANATH.html#packages">Packages</a></li>
+                <li><a href="VISWANATH.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
                 <li><a href="yatra_new.html#features">Features</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
@@ -681,6 +716,79 @@
                 </div>
             </div>
         </section>
+
+    <section id="blog">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row about-area">
+                        <h1><b>
+                                <center><span style="color: white;">OUR BLOGS</span></center>
+                            </b></h1>
+                    </div>
+                </div>
+                <br>
+            <div class="blog-container">
+        
+               
+                <div class="blog-post">
+                  <h2>The Journey to Viswanath Temple</h2>
+                  <p class="intro">
+                    Nestled in the heart of Varanasi, Viswanath Temple, dedicated to Lord Shiva, is an iconic spiritual site. The journey to this revered temple offers a glimpse of the vibrant culture and traditions of Varanasi, with narrow lanes bustling with life, shops selling religious offerings, and the scent of incense in the air.
+                  </p>
+                  <div class="blog-image">
+                    <img src="viswanathjourney.jpg" alt="Journey to Viswanath Temple">
+                  </div>
+                </div>
+        
+                
+                <div class="blog-post">
+                  <h2>The Architectural Marvel of Viswanath Temple</h2>
+                  <p class="intro">
+                    Viswanath Temple is renowned for its stunning architecture, characterized by intricate carvings and a golden spire. The temple's design reflects a blend of traditional Indian and modern architectural styles, making it a feast for the eyes and a significant spiritual symbol for millions.
+                  </p>
+                  <div class="blog-image">
+                    <img src="viswanatharchitechture.jpg" alt="Architecture of Viswanath Temple" width="1000px" height="10px">
+                  </div>
+                </div>
+        
+                
+                <div class="blog-post">
+                  <h2>A Spiritual Experience at Viswanath Temple</h2>
+                  <p class="intro">
+                    Visiting Viswanath Temple is a deeply spiritual experience, where devotees come to seek blessings and offer prayers. The ambiance is filled with chanting, ringing bells, and the sound of aarti, creating a serene atmosphere that resonates with devotion and spirituality.
+                  </p>
+                  <div class="blog-image">
+                    <img src="varanashiaarti.jpg" alt="Aarti at Viswanath Temple">
+                  </div>
+                </div>
+        
+                
+                <div class="blog-post">
+                  <h2>Exploring the Ghats of Varanasi</h2>
+                  <p class="intro">
+                    After visiting the temple, take a leisurely stroll along the ghats of Varanasi. Each ghat has its unique charm and significance, with opportunities for boat rides, witnessing the mesmerizing Ganga Aarti, and observing the local life that thrives along the riverbank.
+                  </p>
+                  <div class="blog-image">
+                    <img src="viswanathghat.jpg" alt="Ghats of Varanasi">
+                  </div>
+                </div>
+        
+                
+                <div class="blog-post">
+                  <h2>Local Cuisine and Culture Around Viswanath Temple</h2>
+                  <p class="intro">
+                    The area around Viswanath Temple is vibrant with local culture and cuisine. Savor traditional dishes like kachoris, lassi, and chaat from nearby stalls, and immerse yourself in the rich heritage of Varanasi, where history and tradition blend seamlessly with everyday life.
+                  </p>
+                  <div class="blog-image">
+                    <img src="viswanathcuisine.webp" alt="Local Cuisine near Viswanath Temple">
+                  </div>
+                </div>
+        
+              </div>
+        
+        </section>
+        
         
 
   <br>
@@ -690,8 +798,18 @@
         </footer>
 
 
-        <script>
-          
+       <script>
+            window.addEventListener('load', () => {
+                const blogImages = document.querySelectorAll('.blog-image img');
+                blogImages.forEach((img) => {
+                  img.style.opacity = 0;
+                  setTimeout(() => {
+                    img.style.transition = "opacity 1.5s ease-in-out";
+                    img.style.opacity = 1;
+                  }, 300);
+                });
+              });
+
             AOS.init();
         </script>
     </div>
