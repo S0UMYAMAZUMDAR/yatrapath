@@ -124,7 +124,7 @@
             background-color: yellowgreen;
             text-emphasis-color: white;
         }
-       .about-area {
+        .about-area {
             height: 130px;
            
             margin-left: 50px;
@@ -133,8 +133,8 @@
         }
         .about-area1{margin-bottom: 20px;
             margin-left: 10px;
-          
            
+            
         }
         
         .about-area2{
@@ -149,64 +149,88 @@
         }
         
 
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+        h2 {
             text-align: center;
-        }
-
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 30px;
         }
 
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-
-        .package-row,
-        .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-
-        .package-card,
-        .budget-card,
-        .highlight-card,
-        .itinerary-card {
+        .section, .package-section {
+            padding: 40px;
             background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
         }
 
-        .package-card:hover,
-        .budget-card:hover,
-        .highlight-card:hover,
-        .itinerary-card:hover {
+        .package-row, .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+  
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .package-img,
-        .budget-img,
-        .highlight-img,
-        .itinerary-img {
+        .package-card img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
+
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn, .package-button {
+            display: inline-block;
+            background-color: rgba(9, 125, 9, 0.796);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover, .package-button:hover {
+            background-color: yellowgreen;
+        }
+
+        
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
+
+        
 
         h2 {
             font-size: 28px;
@@ -241,6 +265,8 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
           }
+          
+
         footer {
             background-color: #212121;
             color: #fff;
@@ -259,15 +285,16 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="PERIYAR.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
-                <li><a href="PERIYAR.html#description">Description</a></li>
+                <li><a href="PERIYAR.html#descriptions">Description</a></li>
                 <li><a href="PERIYAR.html#details">Details</a></li>
                 <li><a href="PERIYAR.html#activity">Activity</a></li>
+                <li><a href="PERIYAR.html#travelpackage">Packages</a></li>
                 <li><a href="PERIYAR.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="PERIYAR.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
@@ -280,14 +307,14 @@
                             <center>Explore the Wilderness of Periyar National Park</center>
                         </b></h1>
                     <p>Exclusive wildlife packages offering an unforgettable adventure in the heart of nature.</p>
-                    <a href="#packages" class="btn">View Packages</a>
+                    <a href="#packages" class="btn">View more</a>
                 </div>
             </div>
         </div>
     </header>
     
     <br>
-    <section id="description">
+    <section id="descriptions">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <DIv class="row about-area1">
@@ -328,12 +355,16 @@
                     The park’s varied terrain, which includes dense evergreen forests, grasslands, and hilly terrain,
                     creates a unique habitat that supports a wide array of flora and fauna. Visitors can explore the
                     park through guided nature walks, boat safaris on Periyar Lake, and trekking trails that offer
-                    glimpses into the park’s rich ecosystem and stunning landscapes. </span>
+                    glimpses into the park’s rich ecosystem and stunning landscapes. The cool, mist-laden mornings and
+                    lush greenery enhance the park’s allure, making it a perfect destination for nature enthusiasts and
+                    adventure seekers alike. With its focus on conservation and eco-tourism, Periyar National Park
+                    provides an immersive experience in one of India’s most beautiful and ecologically significant
+                    regions.</span>
                 </P>
             </div>
         </div>
     </section>
-        <br>
+    <br>
     <section id="details">
 <div class="row">
         <div class="col-md-6 col-sm-12">
@@ -407,8 +438,8 @@
         </DIv>
     </div>
 </div>
-
     </section>
+
     <br>
     <section id="activity">
 
@@ -553,73 +584,73 @@
     </section>
     <br>
 
-    <section id="packages" class="section packages">
-        <h2 class="section-heading">Our Travel Packages</h2>
-    
-        <div class="package-row">
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                    <img src="highlightperiyar.jpg" alt="Scenic Wildlife Safari" class="package-img" height="260px">
-                    <h3>Scenic Wildlife Safari</h3>
-                    <p>Explore the breathtaking wilderness of Periyar National Park with guided wildlife safaris and comfortable accommodations in this 3-day package.</p>
-                    <a href="destination_book.html" class="btn">Book Now</a>
-                </div>
-            </div>
-    
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                    <img src="campperiyar.jpg" alt="Wildlife Camping Adventure" class="package-img">
-                    <h3>Wildlife Camping Adventure</h3>
-                    <p>Experience a thrilling camping adventure in the heart of the forest, perfect for wildlife enthusiasts and nature lovers.</p>
-                    <a href="destination_book.html" class="btn">Book Now</a>
-                </div>
-            </div>
-    
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                    <img src="luxuryperiyar.jpg" alt="Luxury Jungle Retreat" class="package-img" height="250px">
-                    <h3>Luxury Jungle Retreat</h3>
-                    <p>Indulge in a luxury jungle retreat with exclusive access to serene spots within the park, top-notch accommodations, and premium services.</p>
-                    <a href="hotel_booking.html" class="btn">Book Now</a>
-                </div>
-            </div>
+   
+<section id="packages" class="section">
+    <h2><b>Adventure Views</b></h2>
+    <br>
+    <div class="package-row">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="scenicperiyar.jpg" alt="Scenic Tour">
+            <h3>Scenic Tour</h3>
+            <p>Experience the breathtaking beauty of Periyar National Park on a 3-day scenic tour, exploring lush landscapes and rich wildlife.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
         </div>
-    
-        <br>
-    
-        <div class="package-row">
-            <div class="budget-card">
-                <div data-aos="zoom-in">
-                    <img src="budgetperiyar.webp" alt="Budget Wildlife Package" class="budget-img" height="230px">
-                    <h3> Wildlife Package</h3>
-                    <p>Discover the diverse flora and fauna of Periyar National Park with our affordable package.
-                        <strong>Price: INR. 42,850</strong></p>
-                </div>
-            </div>
-    
-            <div class="highlight-card">
-                <div data-aos="zoom-in">
-                    <img src="scenicperiyar.jpg" alt="Special Highlights" class="budget-img" height="230px">
-                    <h3>Special Highlights</h3>
-                    <ul>
-                        <li>Guided Jungle Trekking and Wildlife Spotting</li>
-                        <li>Boat Cruise on Periyar Lake</li>
-                        <li>Photography Tours with Experienced Guides</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="itinerary-card">
-                <div data-aos="zoom-in">
-                    <img src="itinaryperiyar.jpg" alt="Itinerary" class="budget-img" height="230px">
-                    <h3>Itinerary</h3>
-                    <p><strong>Day 1:</strong> Arrival at Periyar National Park, guided wildlife safari, and jungle camp.</p>
-                    <p><strong>Day 2:</strong> Full-day jungle trekking, boat cruise on Periyar Lake, and wildlife watching.</p>
-                    <p><strong>Day 3:</strong> Morning safari, photography sessions, and departure.</p>
-                </div>
-            </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="campperiyar.jpg" alt="Camping Adventure">
+            <h3>Camping Adventure</h3>
+            <p>Immerse yourself in a thrilling camping experience within the park, perfect for adventure lovers and nature enthusiasts.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
         </div>
-    </section>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="luxuryperiyar.jpg" alt="Luxury Escape">
+            <h3>Luxury Escape</h3>
+            <p>Enjoy a luxurious escape near Periyar Lake, with exclusive accommodations and personalized services for an unforgettable stay.</p>
+            <a href="hotel_booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="travelpackage">
+<section class="package-section">
+    <h2><b>Travel Packages</b></h2>
+    <br>
+    <div class="packages">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="itinaryperiyar.jpg" alt="3 Day Periyar Tour">
+            <h3><span style="color: yellowgreen;">3-Day Periyar Adventure</span></h3>
+            <p class="package-duration">Duration: 3 Days, 2 Nights</p>
+            <p class="package-places">Places Covered: Periyar National Park, Periyar Lake</p>
+            <p class="package-price"><span style="color: yellowgreen;">INR. 84,000</span></p>
+            <p>Explore the stunning landscapes and diverse wildlife of Periyar National Park on this thrilling 3-day trip, complete with guided safaris and scenic stays.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="highlightperiyar.jpg" alt="5 Day Periyar Tour">
+            <h3>5-Day Periyar Bliss</h3>
+            <p class="package-duration"><span style="color: yellowgreen;">Duration: 5 Days, 4 Nights</span></p>
+            <p class="package-places">Places Covered: Periyar National Park, Periyar Lake, nearby spice plantations</p>
+            <p class="package-price"><span style="color: yellowgreen;">INR. 1,90,000</span></p>
+            <p>Experience a 5-day adventure filled with scenic beauty, wildlife spotting, and cultural insights, including visits to spice plantations.</p>
+            <a href="train_book.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="budgetperiyar.webp" alt="7 Day Periyar Tour">
+            <h3><span style="color: yellowgreen;">7-Day Ultimate Periyar Experience</span></h3>
+            <p class="package-duration">Duration: 7 Days, 6 Nights</p>
+            <p class="package-places">Places Covered: Periyar National Park, Periyar Lake, Thekkady, and local villages</p>
+            <p class="package-price"><span style="color: yellowgreen;">INR. 2,70,500</span></p>
+            <p>The ultimate 7-day tour embracing the best of Kerala’s wildlife and culture, including treks, safaris, and visits to local villages.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+    </div>
+</section>
+</section>
+
+
     <section id="blog">
 
         <div class="row">
@@ -635,7 +666,7 @@
     
            
             <div class="blog-post">
-              <h2>The Journey to Periyar National Park</h2>
+              <h2><b><span style="color: yellowgreen;">The Journey to Periyar National Park</span></b></h2>
               <p class="intro">
                 Located in the Western Ghats, Periyar National Park is an enchanting destination known for its scenic beauty and rich biodiversity. The journey to Periyar takes you through lush forests, spice plantations, and rolling hills. As you approach the park, the sounds of the forest welcome you into nature's haven.
               </p>
@@ -646,7 +677,7 @@
     
            
             <div class="blog-post">
-              <h2>Wildlife Safari at Periyar</h2>
+              <h2><b><span style="color: yellowgreen;">Wildlife Safari at Periyar</span></b></h2>
               <p class="intro">
                 Periyar National Park is home to a variety of wildlife, including elephants, tigers, and numerous bird species. The highlight of any visit is the boat safari on Periyar Lake, where you can spot wildlife coming to the water's edge to drink. The serene setting makes the experience both exciting and peaceful.
               </p>
@@ -657,7 +688,7 @@
     
            
             <div class="blog-post">
-              <h2>Trekking Through the Forests</h2>
+              <h2><b><span style="color: yellowgreen;">Trekking Through the Forests</span></b></h2>
               <p class="intro">
                 For adventure seekers, Periyar offers a range of trekking options through its dense forests. Whether you choose the Border Hiking or the Bamboo Rafting experience, trekking through the untouched wilderness provides an up-close view of the park's flora and fauna. It's a true immersion in nature's beauty.
               </p>
@@ -668,7 +699,7 @@
     
            
             <div class="blog-post">
-              <h2>Exploring the Local Culture</h2>
+              <h2><b><span style="color: yellowgreen;">Exploring the Local Culture</span></b></h2>
               <p class="intro">
                 Periyar National Park is surrounded by small villages that are rich in culture and traditions. Visiting these villages allows you to experience local customs, interact with the tribal communities, and learn about their sustainable way of living, closely tied to the forest and its resources.
               </p>
@@ -679,7 +710,7 @@
     
            
             <div class="blog-post">
-              <h2>Periyar at Dawn: A Tranquil Experience</h2>
+              <h2><b><span style="color: yellowgreen;">Periyar at Dawn: A Tranquil Experience</span></b></h2>
               <p class="intro">
                 Early mornings at Periyar are a treat for nature lovers. As the mist rises over the lake, the calls of birds and animals echo through the forest. The calm and serene environment, combined with the soft light of dawn, creates a magical moment that rejuvenates the soul.
               </p>
@@ -691,6 +722,60 @@
           </div>
     
     </section>
+
+   
+<section id="faq" style="padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
+        
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellowgreen; margin: 0;">1. What is the best time to visit Periyar National Park?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">The best time to visit Periyar National Park is from October to June when the weather is pleasant and wildlife sightings are more frequent.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellowgreen; margin: 0;">2. How do I get to Periyar National Park?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Periyar National Park is located in Thekkady, Kerala. The nearest airport is Madurai, about 140 km away, while Kottayam is the closest railway station.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellowgreen; margin: 0;">3. Are there accommodations available near Periyar National Park?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, there are numerous accommodations near Periyar National Park, including luxury resorts, budget hotels, and eco-friendly lodges.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellowgreen; margin: 0;">4. Is it safe to travel to Periyar National Park?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, it is generally safe to visit Periyar National Park. However, it is advisable to follow guidelines and respect wildlife during your visit.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellowgreen; margin: 0;">5. What activities can I do at Periyar National Park?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Activities include wildlife safaris, boating on Periyar Lake, nature walks, and guided treks to experience the rich biodiversity.</p>
+        </div>
+    </div>
+</section>
+
+<section id="social-media" style="background-color: black; padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+        <h2 style="color: white;">Follow Us on Social Media</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+        </div>
+    </div>
+</section>
+
+    
     
 
     <footer class="bg-dark text-white text-center py-3">
@@ -710,6 +795,46 @@
           });
 
         AOS.init();
+
+        const faqItems = document.querySelectorAll('.faq-item h3');
+
+faqItems.forEach(item => {
+item.addEventListener('click', () => {
+const answer = item.nextElementSibling;
+answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+});
+});
+
+
+const boxShadowColor = 'rgba(9, 125, 9, 0.796)'; 
+
+const faqElements = document.querySelectorAll('.faq-item');
+
+faqElements.forEach(element => {
+element.addEventListener('mouseover', () => {
+element.style.transform = 'scale(1.02)';
+element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+});
+
+element.addEventListener('mouseout', () => {
+element.style.transform = 'scale(1)';
+element.style.boxShadow = 'none';
+});
+});
+
+
+const socialIcons = document.querySelectorAll('#social-media a');
+
+socialIcons.forEach(icon => {
+icon.addEventListener('mouseover', () => {
+icon.style.transform = 'scale(1.2)';
+});
+
+icon.addEventListener('mouseout', () => {
+icon.style.transform = 'scale(1)';
+});
+});
+       
     </script>
     </div>
     </div>
