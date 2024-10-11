@@ -151,65 +151,87 @@
             margin-top: 100px;
         }
 
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+        h2 {
             text-align: center;
-        }
-
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 30px;
         }
 
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-
-        .package-row,
-        .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-
-        .package-card,
-        .budget-card,
-        .highlight-card,
-        .itinerary-card {
+        .section, .package-section {
+            padding: 40px;
             background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
         }
 
-        .package-card:hover,
-        .budget-card:hover,
-        .highlight-card:hover,
-        .itinerary-card:hover {
+        .package-row, .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+       
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .package-img,
-        .budget-img,
-        .highlight-img,
-        .itinerary-img {
+        .package-card img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn, .package-button {
+            display: inline-block;
+            background-color: rgb(42, 10, 10);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover, .package-button:hover {
+            background-color: darkgoldenrod;
+            
+        }
+
+       
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
         h2 {
             font-size: 28px;
             color: #e0e0e0;
@@ -261,15 +283,16 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="ROME.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
-                <li><a href="ROME.html#description">Description</a></li>
+                <li><a href="ROME.html#descriptions">Description</a></li>
                 <li><a href="ROME.html#details">Details</a></li>
                 <li><a href="ROME.html#activity">Activity</a></li>
+                <li><a href="ROME.html#travelpackage">Packages</a></li>
                 <li><a href="ROME.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="ROME.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
@@ -282,442 +305,432 @@
                             <center>Unveil the History of Rome</center>
                         </b></h1>
                     <p>Exclusive travel packages that take you on a timeless journey through the Eternal City, from the Colosseum to the Vatican.</p>
-                    <a href="#packages" class="btn">View Packages</a>
+                    <a href="#packages" class="btn">View more</a>
                 </div>
             </div>
         </div>
     </header>
     
     <br>
-    <section id="description">
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <DIv class="row about-area1">
-                <h1><b>
-                        <span style="color: #fff;">
-                            <center>ABOUT ROME</center>
-                        </span>
-                    </b></h1>
-            </DIv>
-        </div>
-
-    </div>
-    <div class="row top mt-5  ">
-        <div class="col-md-6 col-sm-12">
-            <div class="firstcard">
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <img src="ROME2.jpg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-            <div data-aos="fade-down">
-                <h5>
-                    <CEnter><b><i><span style="color:rgba(203, 125, 35, 0.888)">AN OVERVIEW OF ROME</span></i></b>
-                    </center>
-                </h5>
-            </div>
-            <br>
-            <div data-aos="fade-left">
-                <P><span style="color: #fff;">
-                        Rome, the capital of Italy, is a city steeped in history, art, and culture, earning it the
-                        nickname "The Eternal City." As one of the world’s most iconic and historically significant
-                        cities, Rome is a living museum, where ancient ruins stand alongside Renaissance palaces and
-                        modern architecture. At its heart lies the majestic Colosseum, a symbol of imperial power and
-                        grandeur, where gladiatorial contests once took place. Nearby, the Roman Forum offers a glimpse
-                        into the political and social life of ancient Rome, with its temples, basilicas, and monuments.
-                        The Vatican City, an independent enclave within Rome, is the spiritual home of the Catholic
-                        Church and houses St. Peter's Basilica, the Sistine Chapel, and countless priceless works of
-                        art.
-
-                        Rome’s streets are a mix of bustling markets, quaint cobblestone alleys, and grand piazzas
-                        adorned with fountains and statues, like the Trevi Fountain and Piazza Navona. The city’s
-                        cultural heritage is equally rich, with world-class museums, galleries, and historic sites that
-                        reflect Rome's pivotal role in shaping Western civilization. Beyond its historical significance,
-                        modern Rome thrives as a cosmopolitan city, where centuries-old traditions coexist with
-                        contemporary Italian fashion, cuisine, and art. The city’s vibrant café culture, local
-                        trattorias, and fine dining establishments offer a taste of authentic Roman life, from
-                        traditional pasta dishes like carbonara to the best gelato in Italy.
-
-
-
-                    </span>
-                </P>
-            </div>
-        </div>
-    </section>
-        <br>
-    <section id="details">
+    <section id="descriptions">
         <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <DIv class="row about-area2">
-                    <div data-aos="fade-right">
-                        <h1><b>
-                                <span style="color: #fff;">
-                                    <center> BEST TIME TO VISIT </center>
-                                </span>
-                            </b></h1>
-                        <div data-aos="fade-right">
-
-
-                            <P><span style="color: #fff;">
-                                    The best time to visit Rome is during the spring (April to June) and fall (September
-                                    to October), when the weather is pleasant, and the city is less crowded compared to
-                                    the peak summer months. In spring, Rome bursts into bloom with mild temperatures
-                                    ranging from 15°C to 25°C (59°F to 77°F), making it an ideal time to explore its
-                                    historic sites, such as the Colosseum, Roman Forum, and Vatican City, without the
-                                    intense summer heat. The city's parks, like Villa Borghese and the Roman gardens,
-                                    are lush and inviting, and outdoor cafés and piazzas come alive with locals and
-                                    visitors enjoying the comfortable climate.
-
-                                    Fall offers similar advantages, with temperatures ranging from 15°C to 22°C (59°F to
-                                    72°F) and fewer tourists, allowing for a more relaxed experience of Rome’s cultural
-                                    attractions and famous landmarks. The golden hues of autumn enhance the city’s
-                                    scenic beauty, and it’s a great time to enjoy local seasonal cuisine, like truffles
-                                    and chestnuts.
-
-                                    Summer (July to August) can be very hot, with temperatures often exceeding 30°C
-                                    (86°F), and many locals leave the city during August’s Ferragosto holiday, causing
-                                    some businesses to close. However, this period is lively with festivals and events.
-                                    Winter (November to February) is the least crowded and offers cooler weather, with
-                                    temperatures between 5°C and 15°C (41°F to 59°F), and while some rain is possible,
-                                    it's an ideal time for those looking to explore Rome’s museums and indoor
-                                    attractions at a slower pace. Holiday decorations and festivities in December add a
-                                    magical charm to the city.
-
-                                    Spring and fall provide the perfect blend of favorable weather, vibrant atmosphere,
-                                    and fewer crowds, making them the best times to experience Rome’s timeless beauty
-                                    and cultural richness.
-                                </span> </P>
-
-                        </div>
-                    </div>
+            <div class="col-md-12 col-sm-12">
+                <DIv class="row about-area1">
+                    <h1><b>
+                            <span style="color: #fff;">
+                                <center>ABOUT ROME</center>
+                            </span>
+                        </b></h1>
                 </DIv>
             </div>
+    
+        </div>
+        <div class="row top mt-5  ">
             <div class="col-md-6 col-sm-12">
-                <DIv class="row about-area3">
-                    <div data-aos="fade-left">
-                        <h1><b><span style="color: #fff;">
-                                    BEST PLACES TO VISIT
-                                </span> </b></h1>
-                        <span style="color: #fff;">
-                            <Ul>
-                                <li>
-                                    Colosseum
-                                </li>
-                                <li>
-                                    Roman Forum
-                                </li>
-                                <li>
-                                    Vatican City
-                                </li>
-                                <li>
-                                    Pantheon
-                                </li>
-                                <li>
-                                    Trevi Fountain
-                                </li>
-                                <li>
-                                    Piazza Navona
-                                </li>
-
-                                <li>
-                                    St. Peter’s Basilica
-                                </li>
-                                <li>
-                                    Sistine Chapel
-                                </li>
-                                <li>
-                                    Castel Sant'Angelo
-                                </li>
-                                <li>
-                                    Piazza di Spagna & Spanish Steps
-                                </li>
-                                <li>
-                                    Villa Borghese and Galleria Borghese
-                                </li>
-                                <LI>
-                                    Campo de' Fiori
-                                </LI>
-                                <LI>
-                                    Trastevere
-                                </LI>
-                                <LI>
-                                    Capitoline Hill and Capitoline Museums
-                                </LI>
-                                <LI>
-                                    Palatine Hill
-                                </LI>
-                                <LI>
-                                    Baths of Caracalla
-                                </LI>
-                                <LI>
-                                    Basilica di San Clemente
-                                </LI>
-                                <LI>
-                                    Piazza Venezia & Altare della Patria
-                                </LI>
-                                <LI>
-                                    Appian Way (Via Appia Antica)
-                                </LI>
-                                <LI>
-                                    Quirinal Palace
-                                </LI>
-
-                            </Ul>
+                <div class="firstcard">
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <img src="ROME2.jpg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div data-aos="fade-down">
+                    <h5>
+                        <CEnter><b><i><span style="color:rgba(203, 125, 35, 0.888)">AN OVERVIEW OF ROME</span></i></b>
+                        </center>
+                    </h5>
+                </div>
+                <br>
+                <div data-aos="fade-left">
+                    <P><span style="color: #fff;">
+                            Rome, the capital of Italy, is a city steeped in history, art, and culture, earning it the
+                            nickname "The Eternal City." As one of the world’s most iconic and historically significant
+                            cities, Rome is a living museum, where ancient ruins stand alongside Renaissance palaces and
+                            modern architecture. At its heart lies the majestic Colosseum, a symbol of imperial power and
+                            grandeur, where gladiatorial contests once took place. Nearby, the Roman Forum offers a glimpse
+                            into the political and social life of ancient Rome, with its temples, basilicas, and monuments.
+                            The Vatican City, an independent enclave within Rome, is the spiritual home of the Catholic
+                            Church and houses St. Peter's Basilica, the Sistine Chapel, and countless priceless works of
+                            art.
+    
+                            Rome’s streets are a mix of bustling markets, quaint cobblestone alleys, and grand piazzas
+                            adorned with fountains and statues, like the Trevi Fountain and Piazza Navona. The city’s
+                            cultural heritage is equally rich, with world-class museums, galleries, and historic sites that
+                            reflect Rome's pivotal role in shaping Western civilization. Beyond its historical significance,
+                            modern Rome thrives as a cosmopolitan city, where centuries-old traditions coexist with
+                            contemporary Italian fashion, cuisine, and art. The city’s vibrant café culture, local
+                            trattorias, and fine dining establishments offer a taste of authentic Roman life, from
+                            traditional pasta dishes like carbonara to the best gelato in Italy.
+    
+    
+    
                         </span>
-                    </div>
-                </DIv>
-            </div>
-        </div>
-
-    </section>
-        <br>
-
-<section id="activity">
-        <div class="col-md-12 col-sm-12 ml-5 mr-5">
-            <div data-aos="fade-up">
-                <h1><B>
-                        <CEnter><span style="color: #fff;"> THINGS TO DO IN </span>
-
-
-                            <B><span style="color:rgba(203, 125, 35, 0.888)">ROME</SPAN></B>
-                        </CEnter>
-                    </B>
-                </h1>
-            </div>
-            <br>
-            <span style="color: #fff;">
-                <ul>
-                    <div data-aos="zoom-out">
-
-
-                        <li>
-
-                            Walk through this ancient amphitheater, marvel at its architecture, and imagine the
-                            <B><span style="color:rgba(203, 125, 35, 0.888)"> gladiatorial contests and public
-                                    spectacles </span></B> took place there.
-
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Tour<B><span style="color:rgba(203, 125, 35, 0.888)">St. Peter’s Basilica, climb its dome
-                                    for panoramic views, explore the Vatican Museums,
-                                    and see Michelangelo’s stunning frescoes</span></B> in the Sistine Chapel.
-
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-                            Participate in the famous tradition of tossing a coin into this iconic<B><span
-                                    style="color:rgba(203, 125, 35, 0.888)"> Baroque fountain</span></B> to
-                            ensure your return to Rome.
-
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Stroll through the ruins of ancient temples, government buildings, and marketplaces that
-                            once formed the heart of Roman public life.
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Relax on these famous steps that lead up to the<B><span
-                                    style="color:rgba(203, 125, 35, 0.888)"> Trinità dei Monti church</span></B>, while
-                            enjoying
-                            the
-                            lively atmosphere of Piazza di Spagna below.
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Visit this remarkably preserved ancient temple, admire its awe-inspiring dome, and learn
-                            about its history as a place of worship and burial for famous figures.
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Explore this vibrant square with its stunning fountains, including<B><span
-                                    style="color:rgba(203, 125, 35, 0.888)"> Bernini’s Fountain of the
-                                    Four Rivers, and savor a traditional Roman gelato</span></B> from one of the nearby
-                            shops.
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-                            Marvel at the vast collection of art and historical treasures, including works by <B><span
-                                    style="color:rgba(203, 125, 35, 0.888)">Raphael
-                                    and Michelangelo, housed in the papal palace.</span></B>
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Stroll or cycle along this ancient Roman road, lined with ruins, tombs, and aqueducts, for a
-                            peaceful escape from the busy city.
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Explore these underground burial sites, such as<B><span
-                                    style="color:rgba(203, 125, 35, 0.888)"> Catacombs of San Callisto or San
-                                    Sebastiano,</span></B>
-                            which reveal the hidden history of early Christianity.
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Wander through the <B><span style="color:rgba(203, 125, 35, 0.888)">cobblestone streets of
-                                    this bohemian district,</span></B> filled with trendy bars,
-                            restaurants, and charming squares like <B><span
-                                    style="color:rgba(203, 125, 35, 0.888)">Piazza Santa Maria.</span></B>
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Ascend to the top of<B><span style="color:rgba(203, 125, 35, 0.888)"> St. Peter's
-                                    Basilica</span></B>
-                            for one of the best panoramic views of <B><span
-                                    style="color:rgba(203, 125, 35, 0.888)">Vatican
-                                    City and Rome’s skyline.</span></B>
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            View the incredible art collection housed in the<B><span
-                                    style="color:rgba(203, 125, 35, 0.888)"> Galleria Borghese, featuring masterpieces
-                                    by Bernini, Caravaggio, and Raphael, </span></B> within the beautiful Villa Borghese
-                            park.
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Located on <B><span style="color:rgba(203, 125, 35, 0.888)">Capitoline Hill, </span></B>
-                            museums
-                            showcase ancient Roman sculptures, Renaissance
-                            art, and the famous <B><span style="color:rgba(203, 125, 35, 0.888)">Equestrian Statue of
-                                    Marcus Aurelius.</span></B>
-                        </li>
-                    </div>
-                    <br>
-                    <div data-aos="zoom-out">
-                        <li>
-
-                            Explore the ruins of imperial palaces on this legendary hill, which also offers stunning
-                            views over the<B><span style="color:rgba(203, 125, 35, 0.888)">
-                                    < Roman Forum and Circus Maximus.</span></B>
-                        </li>
-                    </div>
-                    <br>
-
-
-
-                </ul>
-            </span>
-        </div>
-
-                </section>
-        <br>
-
-        <section id="packages" class="section packages">
-            <h2 class="section-heading">Our Travel Packages</h2>
-        
-            <div class="package-row">
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="scenicrome.jpg" alt="Rome City Tour" class="package-img" height="230px">
-                        <h3>Rome City Tour</h3>
-                        <p>Discover the rich history and architectural wonders of Rome, from the Colosseum to the Vatican, in this immersive 4-day city tour.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-        
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="luxuryrome.jpg" alt="Luxury Roman Holiday" class="package-img" height="230px">
-                        <h3>Luxury Roman Holiday</h3>
-                        <p>Indulge in a luxurious Roman holiday, featuring a private guided tour of the Vatican and gourmet dining experiences in the heart of the Eternal City.</p>
-                        <a href="hotel_booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-        
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="adventurerome.jpg" alt="Adventure and Historical Experience" class="package-img" height="230px">
-                        <h3>Adventure and Historical Experience</h3>
-                        <p>Experience the thrill of Roman history with adventurous activities and immersive tours of ancient landmarks like the Roman Forum and Palatine Hill.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        
-            <br>
-        
-            <div class="package-row">
-                <div class="budget-card">
-                    <div data-aos="zoom-in">
-                        <img src="budgetrome.jpeg" alt="Budget Rome Package" class="budget-img" height="230px">
-                        <h3> Rome Package</h3>
-                        <p>Explore the timeless beauty of Rome on a budget with our affordable package. 
-                            <strong>Price: INR.158,612</strong></p>
-                    </div>
-                </div>
-        
-                <div class="highlight-card">
-                    <div data-aos="zoom-in">
-                        <img src="highlightsrome.jpg" alt="Special Highlights" class="budget-img" height="230px">
-                        <h3>Special Highlights</h3>
-                        <ul>
-                            <li>Guided Tour of the Colosseum and Roman Forum</li>
-                            <li>Vatican Museum and Sistine Chapel Visit</li>
-                            <li>Authentic Italian Cooking Class and Dinner</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="itinerary-card">
-                    <div data-aos="zoom-in">
-                        <img src="itinaryrome.jpg" alt="Itinerary" class="budget-img" height="230px">
-                        <h3>Itinerary</h3>
-                        <p><strong>Day 1:</strong> Arrival in Rome, welcome dinner at a traditional Roman trattoria
-                        </p>
-                        <p><strong>Day 2:</strong> Full-day tour of Colosseum, Roman Forum, and Palatine Hill</p>
-                        <p><strong>Day 3:</strong> Vatican City tour including Sistine Chapel, St. Peter’s Basilica
-                        </p>
-                        <p><strong>Day 4:</strong>Visit to the Pantheon, Piazza Navona, and Trevi Fountain</p>
-                        <p><strong>Day 5:</strong> Day trip to Pompeii or free day for personal exploration</p>
-                        <p><strong>Day 6:</strong> Borghese Gallery tour and Villa Borghese gardens</p>
-                        <p><strong>Day 7:</strong> Departure and farewell</p>
-                    </div>
+                    </P>
                 </div>
             </div>
         </section>
+            <br>
+        <section id="details">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <DIv class="row about-area2">
+                        <div data-aos="fade-right">
+                            <h1><b>
+                                    <span style="color: #fff;">
+                                        <center> BEST TIME TO VISIT </center>
+                                    </span>
+                                </b></h1>
+                            <div data-aos="fade-right">
+    
+    
+                                <P><span style="color: #fff;">
+                                        The best time to visit Rome is during the spring (April to June) and fall (September
+                                        to October), when the weather is pleasant, and the city is less crowded compared to
+                                        the peak summer months. In spring, Rome bursts into bloom with mild temperatures
+                                        ranging from 15°C to 25°C (59°F to 77°F), making it an ideal time to explore its
+                                        historic sites, such as the Colosseum, Roman Forum, and Vatican City, without the
+                                        intense summer heat. The city's parks, like Villa Borghese and the Roman gardens,
+                                        are lush and inviting, and outdoor cafés and piazzas come alive with locals and
+                                        visitors enjoying the comfortable climate.
+    
+                                        Fall offers similar advantages, with temperatures ranging from 15°C to 22°C (59°F to
+                                        72°F) and fewer tourists, allowing for a more relaxed experience of Rome’s cultural
+                                        attractions and famous landmarks. The golden hues of autumn enhance the city’s
+                                        scenic beauty, and it’s a great time to enjoy local seasonal cuisine, like truffles
+                                        and chestnuts.
+    
+                                        Summer (July to August) can be very hot, with temperatures often exceeding 30°C
+                                        (86°F), and many locals leave the city during August’s Ferragosto holiday, causing
+                                        some businesses to close. However, this period is lively with festivals and events.
+                                        Winter (November to February) is the least crowded and offers cooler weather, with
+                                        temperatures between 5°C and 15°C (41°F to 59°F), and while some rain is possible,
+                                        it's an ideal time for those looking to explore Rome’s museums and indoor
+                                        attractions at a slower pace. Holiday decorations and festivities in December add a
+                                        magical charm to the city.
+    
+                                        Spring and fall provide the perfect blend of favorable weather, vibrant atmosphere,
+                                        and fewer crowds, making them the best times to experience Rome’s timeless beauty
+                                        and cultural richness.
+                                    </span> </P>
+    
+                            </div>
+                        </div>
+                    </DIv>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <DIv class="row about-area3">
+                        <div data-aos="fade-left">
+                            <h1><b><span style="color: #fff;">
+                                        BEST PLACES TO VISIT
+                                    </span> </b></h1>
+                            <span style="color: #fff;">
+                                <Ul>
+                                    <li>
+                                        Colosseum
+                                    </li>
+                                    <li>
+                                        Roman Forum
+                                    </li>
+                                    <li>
+                                        Vatican City
+                                    </li>
+                                    <li>
+                                        Pantheon
+                                    </li>
+                                    <li>
+                                        Trevi Fountain
+                                    </li>
+                                    <li>
+                                        Piazza Navona
+                                    </li>
+    
+                                    <li>
+                                        St. Peter’s Basilica
+                                    </li>
+                                    <li>
+                                        Sistine Chapel
+                                    </li>
+                                    <li>
+                                        Castel Sant'Angelo
+                                    </li>
+                                    <li>
+                                        Piazza di Spagna & Spanish Steps
+                                    </li>
+                                    <li>
+                                        Villa Borghese and Galleria Borghese
+                                    </li>
+                                    <LI>
+                                        Campo de' Fiori
+                                    </LI>
+                                    <LI>
+                                        Trastevere
+                                    </LI>
+                                    <LI>
+                                        Capitoline Hill and Capitoline Museums
+                                    </LI>
+                                    <LI>
+                                        Palatine Hill
+                                    </LI>
+                                    <LI>
+                                        Baths of Caracalla
+                                    </LI>
+                                    <LI>
+                                        Basilica di San Clemente
+                                    </LI>
+                                    <LI>
+                                        Piazza Venezia & Altare della Patria
+                                    </LI>
+                                    <LI>
+                                        Appian Way (Via Appia Antica)
+                                    </LI>
+                                    <LI>
+                                        Quirinal Palace
+                                    </LI>
+    
+                                </Ul>
+                            </span>
+                        </div>
+                    </DIv>
+                </div>
+            </div>
+    
+        </section>
+            <br>
+    
+    <section id="activity">
+            <div class="col-md-12 col-sm-12 ml-5 mr-5">
+                <div data-aos="fade-up">
+                    <h1><B>
+                            <CEnter><span style="color: #fff;"> THINGS TO DO IN </span>
+    
+    
+                                <B><span style="color:rgba(203, 125, 35, 0.888)">ROME</SPAN></B>
+                            </CEnter>
+                        </B>
+                    </h1>
+                </div>
+                <br>
+                <span style="color: #fff;">
+                    <ul>
+                        <div data-aos="zoom-out">
+    
+    
+                            <li>
+    
+                                Walk through this ancient amphitheater, marvel at its architecture, and imagine the
+                                <B><span style="color:rgba(203, 125, 35, 0.888)"> gladiatorial contests and public
+                                        spectacles </span></B> took place there.
+    
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Tour<B><span style="color:rgba(203, 125, 35, 0.888)">St. Peter’s Basilica, climb its dome
+                                        for panoramic views, explore the Vatican Museums,
+                                        and see Michelangelo’s stunning frescoes</span></B> in the Sistine Chapel.
+    
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+                                Participate in the famous tradition of tossing a coin into this iconic<B><span
+                                        style="color:rgba(203, 125, 35, 0.888)"> Baroque fountain</span></B> to
+                                ensure your return to Rome.
+    
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Stroll through the ruins of ancient temples, government buildings, and marketplaces that
+                                once formed the heart of Roman public life.
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Relax on these famous steps that lead up to the<B><span
+                                        style="color:rgba(203, 125, 35, 0.888)"> Trinità dei Monti church</span></B>, while
+                                enjoying
+                                the
+                                lively atmosphere of Piazza di Spagna below.
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Visit this remarkably preserved ancient temple, admire its awe-inspiring dome, and learn
+                                about its history as a place of worship and burial for famous figures.
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Explore this vibrant square with its stunning fountains, including<B><span
+                                        style="color:rgba(203, 125, 35, 0.888)"> Bernini’s Fountain of the
+                                        Four Rivers, and savor a traditional Roman gelato</span></B> from one of the nearby
+                                shops.
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+                                Marvel at the vast collection of art and historical treasures, including works by <B><span
+                                        style="color:rgba(203, 125, 35, 0.888)">Raphael
+                                        and Michelangelo, housed in the papal palace.</span></B>
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Stroll or cycle along this ancient Roman road, lined with ruins, tombs, and aqueducts, for a
+                                peaceful escape from the busy city.
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Explore these underground burial sites, such as<B><span
+                                        style="color:rgba(203, 125, 35, 0.888)"> Catacombs of San Callisto or San
+                                        Sebastiano,</span></B>
+                                which reveal the hidden history of early Christianity.
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Wander through the <B><span style="color:rgba(203, 125, 35, 0.888)">cobblestone streets of
+                                        this bohemian district,</span></B> filled with trendy bars,
+                                restaurants, and charming squares like <B><span
+                                        style="color:rgba(203, 125, 35, 0.888)">Piazza Santa Maria.</span></B>
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Ascend to the top of<B><span style="color:rgba(203, 125, 35, 0.888)"> St. Peter's
+                                        Basilica</span></B>
+                                for one of the best panoramic views of <B><span
+                                        style="color:rgba(203, 125, 35, 0.888)">Vatican
+                                        City and Rome’s skyline.</span></B>
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                View the incredible art collection housed in the<B><span
+                                        style="color:rgba(203, 125, 35, 0.888)"> Galleria Borghese, featuring masterpieces
+                                        by Bernini, Caravaggio, and Raphael, </span></B> within the beautiful Villa Borghese
+                                park.
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Located on <B><span style="color:rgba(203, 125, 35, 0.888)">Capitoline Hill, </span></B>
+                                museums
+                                showcase ancient Roman sculptures, Renaissance
+                                art, and the famous <B><span style="color:rgba(203, 125, 35, 0.888)">Equestrian Statue of
+                                        Marcus Aurelius.</span></B>
+                            </li>
+                        </div>
+                        <br>
+                        <div data-aos="zoom-out">
+                            <li>
+    
+                                Explore the ruins of imperial palaces on this legendary hill, which also offers stunning
+                                views over the<B><span style="color:rgba(203, 125, 35, 0.888)">
+                                        < Roman Forum and Circus Maximus.</span></B>
+                            </li>
+                        </div>
+                        <br>
+    
+    
+    
+                    </ul>
+                </span>
+            </div>
+    
+                    </section>
 
-                     <section id="blog">
+<section id="packages" class="section">
+    <h2><b>Adventure Views</b></h2>
+    <br>
+    <div class="package-row">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="scenicrome.jpg" alt="Scenic Tour">
+            <h3>Scenic Tour</h3>
+            <p>Experience the rich history of Rome on a 3-day scenic tour, exploring iconic landmarks, ancient ruins, and charming piazzas.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="adventurerome.jpg" alt="Camping Adventure">
+            <h3>Camping Adventure</h3>
+            <p>Immerse yourself in a unique camping experience in the beautiful countryside surrounding Rome, surrounded by stunning landscapes.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="luxuryrome.jpg" alt="Luxury Escape">
+            <h3>Luxury Escape</h3>
+            <p>Indulge in a luxurious getaway in Rome, featuring upscale accommodations, gourmet dining, and exclusive cultural experiences.</p>
+            <a href="hotel_booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="travelpackage">
+<section class="package-section">
+    <h2><b>Travel Packages</b></h2>
+    <br>
+    <div class="packages">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="itinaryrome.jpg" alt="3 Day Rome Tour">
+            <h3>3-Day Rome Adventure</h3>
+            <p class="package-duration"><span style="color: yellow;">Duration: 3 Days, 2 Nights</span></p>
+            <p class="package-places">Places Covered: Colosseum, Vatican City, Trevi Fountain</p>
+            <p class="package-price"><span style="color: yellow;">INR. 6,24,800</span></p>
+            <p>Explore the cultural richness of Rome on this exciting 3-day trip, including visits to famous landmarks and authentic Italian dining experiences.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="highlightsrome.jpg" alt="5 Day Rome Tour">
+            <h3>5-Day Rome Bliss</h3>
+            <p class="package-duration"><span style="color: yellow;">Duration: 5 Days, 4 Nights</span></p>
+            <p class="package-places">Places Covered: Colosseum, Vatican Museums, Piazza Navona, Trastevere</p>
+            <p class="package-price"><span style="color: yellow;">INR. 1,064,800</span></p>
+            <p>Experience a 5-day journey through the historic city of Rome, featuring cultural excursions and exquisite culinary delights.</p>
+            <a href="train_book.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="budgetrome.jpeg" alt="7 Day Rome Tour">
+            <h3>7-Day Ultimate Rome Experience</h3>
+            <p class="package-duration"><span style="color: yellow;">Duration: 7 Days, 6 Nights</span></p>
+            <p class="package-places">Places Covered: Colosseum, Vatican City, Pompeii, Tivoli Gardens, Wine Tours</p>
+            <p class="package-price"><span style="color: yellow;">INR. 1,513,600</span></p>
+            <p>Embark on the ultimate 7-day adventure, exploring the captivating culture, iconic sights, and delicious cuisine of Rome.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+    </div>
+</section>
+</section>
+
+        <section id="blog">
 
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -732,7 +745,7 @@
         
                    
                     <div class="blog-post">
-                        <h2>The Journey to Rome</h2>
+                        <h2><b><span style="color: yellow;">The Journey to Rome</span></h2>
                         <p class="intro">
                             Rome, the Eternal City, is steeped in history, culture, and iconic landmarks. As you arrive in Rome, you are welcomed by ancient ruins, bustling piazzas, and a vibrant atmosphere. Whether arriving by plane or train, the rich history and grandeur of Rome are immediately evident, setting the tone for an unforgettable journey.
                         </p>
@@ -743,7 +756,7 @@
         
                     
                     <div class="blog-post">
-                        <h2>Discovering the Colosseum</h2>
+                        <h2><b><span style="color: yellow;">Discovering the Colosseum</span></b></h2>
                         <p class="intro">
                             The Colosseum is one of Rome’s most famous landmarks and a symbol of ancient Roman engineering. As you explore this iconic amphitheater, you can almost hear the echoes of ancient gladiatorial battles. A visit to the Colosseum transports you back in time and offers a fascinating glimpse into the grandeur of the Roman Empire.
                         </p>
@@ -754,7 +767,7 @@
         
                     
                     <div class="blog-post">
-                        <h2>Strolling Through the Vatican City</h2>
+                        <h2><b><span style="color: yellow;">Strolling Through the Vatican City</span></b></h2>
                         <p class="intro">
                             Vatican City, the smallest country in the world and the heart of the Catholic Church, is a must-visit in Rome. From the awe-inspiring St. Peter's Basilica to the Sistine Chapel’s breathtaking ceiling painted by Michelangelo, Vatican City is a treasure trove of art, history, and spiritual significance.
                         </p>
@@ -765,7 +778,7 @@
         
                    
                     <div class="blog-post">
-                        <h2>A Taste of Roman Street Food</h2>
+                        <h2><b><span style="color: yellow;">A Taste of Roman Street Food</span></b></h2>
                         <p class="intro">
                             Rome is known for its delicious street food, from traditional Roman pizza al taglio to mouthwatering supplì (fried rice balls). As you wander through Rome’s charming streets, you can savor authentic Italian flavors at every corner. Don’t miss out on the gelato, a perfect treat on a sunny day in the city.
                         </p>
@@ -776,7 +789,7 @@
         
                     
                     <div class="blog-post">
-                        <h2>Rome's Ancient Ruins by Night</h2>
+                        <h2><b><span style="color: yellow;">Rome's Ancient Ruins by Night</span></b></h2>
                         <p class="intro">
                             Rome is a city that shines even more at night. Walking through ancient ruins like the Roman Forum and the Pantheon under the evening sky is a magical experience. The illuminated monuments and cobblestone streets create an enchanting atmosphere that transports you to a bygone era.
                         </p>
@@ -788,6 +801,60 @@
                 </div>
         
         </section>
+
+      
+<section id="faq" style="padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
+        
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: darkgoldenrod; margin: 0;">1. What is the best time to visit Rome?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">The best time to visit Rome is during the spring (April to June) and fall (September to October) when the weather is pleasant and the city is vibrant.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: darkgoldenrod; margin: 0;">2. How do I get to Rome?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Rome is accessible via Fiumicino Airport and Ciampino Airport, with numerous international and domestic flights available.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: darkgoldenrod; margin: 0;">3. Are there accommodations available in Rome?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, Rome offers a wide range of accommodations, from luxury hotels and boutique stays to budget hostels and charming guesthouses.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: darkgoldenrod; margin: 0;">4. Is it safe to travel to Rome?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, Rome is generally safe for tourists. However, it's advisable to remain vigilant in crowded areas and keep an eye on your belongings.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: darkgoldenrod; margin: 0;">5. What activities can I do in Rome?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Activities include visiting the Colosseum, exploring Vatican City, strolling through the Roman Forum, and enjoying authentic Italian cuisine in local trattorias.</p>
+        </div>
+    </div>
+</section>
+
+<section id="social-media" style="background-color: black; padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+        <h2 style="color: white;">Follow Us on Social Media</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+        </div>
+    </div>
+</section>
+
+
         
         
         <footer class="bg-dark text-white text-center py-3">
@@ -795,7 +862,7 @@
         </footer>
 
 
-       <script>
+        <script>
             window.addEventListener('load', () => {
                 const blogImages = document.querySelectorAll('.blog-image img');
                 blogImages.forEach((img) => {
@@ -806,10 +873,50 @@
                   }, 300);
                 });
               });
-
+    
             AOS.init();
+    
+            const faqItems = document.querySelectorAll('.faq-item h3');
+    
+    faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+    const answer = item.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+    });
+    
+    const boxShadowColor = 'yellow';
+    
+    const faqElements = document.querySelectorAll('.faq-item');
+    
+    faqElements.forEach(element => {
+    element.addEventListener('mouseover', () => {
+    element.style.transform = 'scale(1.02)';
+    element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+    });
+    
+    element.addEventListener('mouseout', () => {
+    element.style.transform = 'scale(1)';
+    element.style.boxShadow = 'none';
+    });
+    });
+    
+    
+    const socialIcons = document.querySelectorAll('#social-media a');
+    
+    socialIcons.forEach(icon => {
+    icon.addEventListener('mouseover', () => {
+    icon.style.transform = 'scale(1.2)';
+    });
+    
+    icon.addEventListener('mouseout', () => {
+    icon.style.transform = 'scale(1)';
+    });
+    });
+           
         </script>
-    </div>
+        </div>
+    
     </div>
 </body>
 
