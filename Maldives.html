@@ -124,7 +124,8 @@
             background-color: rgb(32, 78, 216);
             text-emphasis-color: white;
         }
-          .about-area {
+
+        .about-area {
             height: 130px;
 
             margin-left: 50px;
@@ -150,66 +151,88 @@
             margin-left: 200px;
             margin-top: 100px;
         }
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+
+        h2 {
             text-align: center;
-        }
-
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 30px;
         }
 
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-
-        .package-row,
-        .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-
-        .package-card,
-        .budget-card,
-        .highlight-card,
-        .itinerary-card {
+        .section, .package-section {
+            padding: 40px;
             background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
         }
 
-        .package-card:hover,
-        .budget-card:hover,
-        .highlight-card:hover,
-        .itinerary-card:hover {
+        .package-row, .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+    
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .package-img,
-        .budget-img,
-        .highlight-img,
-        .itinerary-img {
+        .package-card img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
-         h2 {
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn, .package-button {
+            display: inline-block;
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover, .package-button:hover {
+            background-color: rgb(32, 78, 216);
+        }
+
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
+
+        h2 {
             font-size: 28px;
             color: #e0e0e0;
             margin-bottom: 10px;
@@ -242,14 +265,12 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
+
         footer {
             background-color: #212121;
             color: #fff;
             padding: 20px 0;
         }
-
-
-       
     </style>
 
 </head>
@@ -262,19 +283,20 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="Maldives.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
-                <li><a href="Maldives.html#description">Description</a></li>
+                <li><a href="Maldives.html#descriptions">Description</a></li>
                 <li><a href="Maldives.html#details">Details</a></li>
                 <li><a href="Maldives.html#activity">Activity</a></li>
+                <li><a href="Maldives.html#travelpackage">Packages</a></li>
                 <li><a href="Maldives.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="Maldives.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
-    
+
         <div class="header-content" id="home">
             <img src="MAL4.jpg" alt="Maldives" class="header-img">
             <div class="header-text">
@@ -282,15 +304,16 @@
                     <h1><b>
                             <center>Discover the Serenity of Maldives</center>
                         </b></h1>
-                    <p>Exclusive travel packages offering a breathtaking getaway to the stunning beaches of Maldives.</p>
-                    <a href="#packages" class="btn">View Packages</a>
+                    <p>Exclusive travel packages offering a breathtaking getaway to the stunning beaches of Maldives.
+                    </p>
+                    <a href="#packages" class="btn">View more</a>
                 </div>
             </div>
         </div>
     </header>
-    
+
     <br>
-    <section id="description">
+    <section id="descriptions">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <DIv class="row about-area1">
@@ -343,7 +366,7 @@
             </div>
         </div>
     </section>
-        <br>
+    <br>
     <section id="details">
         <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -354,7 +377,7 @@
                                     <center> BEST TIME TO VISIT </center>
                                 </span>
                             </b></h1>
-                            <div data-aos="fade-right">
+                        <div data-aos="fade-right">
 
 
                             <P><span style="color: #fff;">
@@ -376,9 +399,6 @@
                     </div>
                 </DIv>
             </div>
-      
-            
-           
             <div class="col-md-6 col-sm-12">
                 <DIv class="row about-area3">
                     <div data-aos="fade-left">
@@ -432,9 +452,10 @@
     </section>
 
         <br>
-<section id="activity">
+        <section id="activity">
 
-         <div class="col-md-12 col-sm-12 ml-5 mr-5">
+
+        <div class="col-md-12 col-sm-12 ml-5 mr-5">
             <div data-aos="fade-up">
                 <h1><B>
                         <CEnter><span style="color: #fff;"> THINGS TO DO IN </span>
@@ -652,84 +673,76 @@
                 </ul>
             </span>
         </div>
-
-
-        <br>
-     </section>                      
-        <br>
-
-        <section id="packages" class="section packages">
-            <h2 class="section-heading">Our Travel Packages</h2>
-        
-            <div class="package-row">
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="scenicmaldives.jpg" alt="Maldives Island Tour" class="package-img" height="230px">
-                        <h3>Maldives Island Tour</h3>
-                        <p>Experience the breathtaking beauty of Maldives with guided island tours and luxurious accommodations in this 5-day package.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-        
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="campmaldives.webp" alt="Luxury Beach Resort Stay" class="package-img" height="230px">
-                        <h3>Luxury Beach Resort Stay</h3>
-                        <p>Relax and unwind in a luxury beach resort, perfect for honeymooners and those seeking tranquility amidst stunning views.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-        
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="luxurymaldives.jpeg" alt="Adventure and Water Sports" class="package-img" height="230px">
-                        <h3>Adventure and Water Sports</h3>
-                        <p>Indulge in thrilling water sports activities such as snorkeling, diving, and jet-skiing in the crystal-clear waters of the Maldives.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        
-            <br>
-        
-            <div class="package-row">
-                <div class="budget-card">
-                    <div data-aos="zoom-in">
-                        <img src="budgetmaldive.avif" alt="Budget Maldives Package" class="budget-img" height="230px">
-                        <h3> Maldives Package</h3>
-                        <p>Explore the pristine beaches of Maldives with our affordable package. 
-                            <strong>Price: INR. 125,220</strong></p>
-                    </div>
-                </div>
-        
-                <div class="highlight-card">
-                    <div data-aos="zoom-in">
-                        <img src="highlightmaldive.webp" alt="Special Highlights" class="budget-img" height="230px">
-                        <h3>Special Highlights</h3>
-                        <ul>
-                            <li>Guided Snorkeling Tours to Vibrant Coral Reefs</li>
-                            <li>Sunset Dolphin Cruise</li>
-                            <li>Cultural Experiences and Local Cuisine Tasting</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="itinerary-card">
-                    <div data-aos="zoom-in">
-                        <img src="itinarymaldive.webp" alt="Itinerary" class="budget-img" height="230px">
-                        <h3>Itinerary</h3>
-                        <p><strong>Day 1:</strong> Arrival in Maldives & Welcome Dinner</p>
-                                <p><strong>Day 2:</strong> Relax on the Beach & Spa Day</p>
-                                <p><strong>Day 3:</strong> Snorkeling Adventure</p>
-                                <p><strong>Day 4:</strong> Private Island Picnic</p>
-                                <p><strong>Day 5:</strong> Sunset Cruise with Dinner</p>
-                                <p><strong>Day 6:</strong> Departure</p>
-                    </div>
-                </div>
-            </div>
         </section>
 
-     <section id="blog">
+        <br>
+
+       
+<section id="packages" class="section">
+    <h2><b>Adventure Views</b></h2>
+    <br>
+    <div class="package-row">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="scenicmaldives.jpg" alt="Scenic Tour">
+            <h3>Scenic Tour</h3>
+            <p>Experience the stunning beauty of the Maldives on a 3-day scenic tour, exploring pristine beaches, crystal-clear waters, and vibrant coral reefs.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="campmaldives.webp" alt="Camping Adventure">
+            <h3>Camping Adventure</h3>
+            <p>Immerse yourself in a unique camping experience on a private island in the Maldives, perfect for adventure enthusiasts and nature lovers.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="luxurymaldives.jpeg" alt="Luxury Escape">
+            <h3>Luxury Escape</h3>
+            <p>Indulge in a luxurious getaway in the Maldives, featuring exclusive accommodations, spa treatments, and tailored services for an unforgettable experience.</p>
+            <a href="hotel_booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="travelpackage">
+<section class="package-section">
+    <h2><b>Travel Packages</b></h2>
+    <br>
+    <div class="packages">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="itinarymaldive.webp" alt="3 Day Maldives Tour">
+            <h3>3-Day Maldives Adventure</h3>
+            <p class="package-duration"><span style="color: blue;">Duration: 3 Days, 2 Nights</span></p>
+            <p class="package-places">Places Covered: Male, Maafushi Island, Snorkeling Spots</p>
+            <p class="package-price"><span style="color: blue;">INR. 2,55,000</span></p>
+            <p>Explore the tropical paradise of the Maldives on this exciting 3-day trip, including snorkeling, beach relaxation, and local cuisine.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="highlightmaldive.webp" alt="5 Day Maldives Tour">
+            <h3>5-Day Maldives Bliss</h3>
+            <p class="package-duration"><span style="color: blue;">Duration: 5 Days, 4 Nights</span></p>
+            <p class="package-places">Places Covered: Male, Maafushi Island, Coral Reefs, Sandbanks</p>
+            <p class="package-price"><span style="color: blue;">INR.3,70,000</span></p>
+            <p>Experience a 5-day journey through the breathtaking landscapes of the Maldives, featuring snorkeling adventures and sunset cruises.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="budgetmaldive.avif" alt="7 Day Maldives Tour">
+            <h3>7-Day Ultimate Maldives Experience</h3>
+            <p class="package-duration"><span style="color: blue;">Duration: 7 Days, 6 Nights</span></p>
+            <p class="package-places">Places Covered: Male, Maafushi Island, Sun Siyam Iru Fushi, Diving Spots</p>
+            <p class="package-price"><span style="color: blue;">INR. 5,90,000</span></p>
+            <p>Embark on the ultimate 7-day adventure, exploring the enchanting beauty of the Maldives with diving excursions and cultural experiences.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+    </div>
+</section>
+</section>
+        <section id="blog">
 
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -744,7 +757,7 @@
 
                    
                     <div class="blog-post">
-                        <h2>The Journey to the Maldives</h2>
+                        <h2><b><span style="color: blue;">The Journey to the Maldives</span></b></h2>
                         <p class="intro">
                             The Maldives, an archipelago in the Indian Ocean, is a paradise known for its crystal-clear
                             waters, white sandy beaches, and overwater villas. The journey to the Maldives starts with a
@@ -758,7 +771,7 @@
 
                     
                     <div class="blog-post">
-                        <h2>Exploring the Stunning Beaches of the Maldives</h2>
+                        <h2><b><span style="color: blue;">Exploring the Stunning Beaches of the Maldives</span></b></h2>
                         <p class="intro">
                             The Maldives is home to some of the most pristine beaches in the world. Whether you're
                             relaxing on a private island or enjoying a sunset walk along the shore, the powdery white
@@ -772,7 +785,7 @@
 
                     
                     <div class="blog-post">
-                        <h2>Luxurious Water Villas and Resorts</h2>
+                        <h2><b><span style="color: blue;">Luxurious Water Villas and Resorts</span></b></h2>
                         <p class="intro">
                             One of the highlights of visiting the Maldives is staying in an overwater villa. Imagine
                             waking up to the sound of waves and stepping out onto your private deck overlooking the
@@ -786,7 +799,7 @@
 
                    
                     <div class="blog-post">
-                        <h2>Marine Life and Underwater Adventures</h2>
+                        <h2><b><span style="color: blue;">Marine Life and Underwater Adventures</span></b></h2>
                         <p class="intro">
                             The Maldives is a haven for marine life enthusiasts. Dive into the warm waters to explore
                             vibrant coral reefs teeming with tropical fish, manta rays, and even sharks. The Maldives is
@@ -800,7 +813,7 @@
 
                    
                     <div class="blog-post">
-                        <h2>Indulging in Exquisite Maldivian Cuisine</h2>
+                        <h2><b><span style="color: blue;">Indulging in Exquisite Maldivian Cuisine</span></b></h2>
                         <p class="intro">
                             Maldivian cuisine is a delightful fusion of local seafood, tropical fruits, and spices. From
                             fresh tuna dishes to coconut curries, the flavors are a treat for the palate. Whether dining
@@ -816,27 +829,120 @@
 
         </section>
 
+
+ 
+<section id="faq" style="padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
         
-            <br>
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: rgb(32, 78, 216); margin: 0;">1. What is the best time to visit the Maldives?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">The best time to visit the Maldives is between November and April when the weather is dry and perfect for beach activities.</p>
+        </div>
 
-            <footer class="bg-dark text-white text-center py-3">
-                <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
-            </footer>
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: rgb(32, 78, 216); margin: 0;">2. How do I get to the Maldives?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">The Maldives is accessible via Velana International Airport in Male, with numerous international flights from major cities.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: rgb(32, 78, 216); margin: 0;">3. Are there accommodations available in the Maldives?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, the Maldives offers a variety of accommodations including luxury resorts, guesthouses, and boutique hotels across different islands.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: rgb(32, 78, 216); margin: 0;">4. Is it safe to travel to the Maldives?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, the Maldives is generally safe for tourists. However, it's advisable to be cautious and follow local guidelines while exploring.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: rgb(32, 78, 216); margin: 0;">5. What activities can I do in the Maldives?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Activities include snorkeling, scuba diving, island hopping, sunset cruises, and enjoying the stunning beaches and local cuisine.</p>
+        </div>
+    </div>
+</section>
+
+<section id="social-media" style="background-color: black; padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+        <h2 style="color: white;">Follow Us on Social Media</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+        </div>
+    </div>
+</section>
 
 
-         <script>
+        <br>
+
+        <footer class="bg-dark text-white text-center py-3">
+            <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
+        </footer>
+
+
+        <script>
             window.addEventListener('load', () => {
                 const blogImages = document.querySelectorAll('.blog-image img');
                 blogImages.forEach((img) => {
-                    img.style.opacity = 0;
-                    setTimeout(() => {
-                        img.style.transition = "opacity 1.5s ease-in-out";
-                        img.style.opacity = 1;
-                    }, 300);
+                  img.style.opacity = 0;
+                  setTimeout(() => {
+                    img.style.transition = "opacity 1.5s ease-in-out";
+                    img.style.opacity = 1;
+                  }, 300);
                 });
-            });
-
+              });
+    
             AOS.init();
+    
+            const faqItems = document.querySelectorAll('.faq-item h3');
+    
+    faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+    const answer = item.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+    });
+    
+   
+    const boxShadowColor = 'darkblue'; 
+    
+    const faqElements = document.querySelectorAll('.faq-item');
+    
+    faqElements.forEach(element => {
+    element.addEventListener('mouseover', () => {
+    element.style.transform = 'scale(1.02)';
+    element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+    });
+    
+    element.addEventListener('mouseout', () => {
+    element.style.transform = 'scale(1)';
+    element.style.boxShadow = 'none';
+    });
+    });
+    
+    
+    const socialIcons = document.querySelectorAll('#social-media a');
+    
+    socialIcons.forEach(icon => {
+    icon.addEventListener('mouseover', () => {
+    icon.style.transform = 'scale(1.2)';
+    });
+    
+    icon.addEventListener('mouseout', () => {
+    icon.style.transform = 'scale(1)';
+    });
+    });
+           
         </script>
     </div>
     </div>
