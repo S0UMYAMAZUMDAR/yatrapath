@@ -149,56 +149,91 @@
             margin-top: 100px;
         }
 
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+        
+        h2 {
             text-align: center;
-        }
-        
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
-        }
-        
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-        
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        
-        .package-row, .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-        
-        .package-card, .budget-card, .highlight-card, .itinerary-card {
-            background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
-        }
-        
-        .package-card:hover, .budget-card:hover, .highlight-card:hover, .itinerary-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .package-img, .budget-img, .highlight-img, .itinerary-img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            margin-bottom: 30px;
         }
 
-         h2 {
+        .section, .package-section {
+            padding: 40px;
+            background-color: black;
+        }
+
+        .package-row, .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+      
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .package-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn, .package-button {
+            display: inline-block;
+            background-color: darkgoldenrod;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover, .package-button:hover {
+            background-color: yellow;
+        }
+
+       
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
+
+        
+
+        h2 {
             font-size: 28px;
             color: #e0e0e0;
             margin-bottom: 10px;
@@ -232,6 +267,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
           }
           
+
         footer {
             background-color: #212121;
             color: #fff;
@@ -251,15 +287,16 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="MARINE.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
                 <li><a href="MARINE.html#description">Description</a></li>
                 <li><a href="MARINE.html#details">Details</a></li>
                 <li><a href="MARINE.html#activity">Activity</a></li>
+                <li><a href="MARINE.html#travelpackage">Packages</a></li>
                 <li><a href="MARINE.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="MARINE.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
@@ -272,7 +309,7 @@
 
                 <h1><B><CEnter>Discover the Charm of Marine Drive</CEnter></B></h1>
                 <p>Exclusive travel packages that cater to your every desire.</p>
-                <a href="#packages" class="btn">View Packages</a>
+                <a href="#packages" class="btn">View more</a>
             </div>
             </div>
         </div>
@@ -325,7 +362,7 @@
             </div>
         </div>
     </section>
-        <br>
+    <br>
     <section id="details">
 
         <div class="row">
@@ -522,6 +559,7 @@
 
                 </li>
             </div>
+            
             <br>
             
         </ul></span>
@@ -531,74 +569,72 @@
     <br>
 
    
-<section id="packages" class="section packages">
-    <h2 class="section-heading">Our Travel Packages</h2>
+    <section id="packages" class="section">
+        <h2><b>Adventure Views</b></h2>
+        <br>
+        <div class="package-row">
+            <div class="package-card" data-aos="zoom-in">
+                <img src="scenicmarine.jpg" alt="Scenic Marine Drive">
+                <h3>Scenic Marine Drive Tour</h3>
+                <p>Discover the beauty of Marine Drive at sunset with this 1-day tour, offering mesmerizing views of the Arabian Sea.</p>
+                <a href="destination_book.html" class="btn">Book Now</a>
+            </div>
     
-    <div class="package-row">
-        <div class="package-card">
-            <div data-aos="zoom-in">
-                <img src="scenicmarine.jpg" alt="Scenic Drive" class="package-img"> 
-                <h3>Scenic Drive</h3>
-                <p>Experience the breathtaking views of Marine Drive on this 3-day scenic drive with guided trips and luxurious stays.</p>
+            <div class="package-card" data-aos="zoom-in">
+                <img src="marinedriveevewalk.jpg" alt="Night Drive Experience">
+                <h3>Night Drive Experience</h3>
+                <p>Experience the vibrant nightlife along Marine Drive with a late-night tour. Perfect for those who enjoy the city lights.</p>
                 <a href="destination_book.html" class="btn">Book Now</a>
             </div>
-        </div>
-        
-        <div class="package-card">
-            <div data-aos="zoom-in">
-                <img src="beachmarine.jpg" alt="Beach Camping Adventure" class="package-img"> 
-                <h3>Beach Camping Adventure</h3>
-                <p>Experience a thrilling beach camping adventure under the stars. Perfect for adventure seekers.</p>
-                <a href="destination_book.html" class="btn">Book Now</a>
-            </div>
-        </div>
-
-        <div class="package-card">
-            <div data-aos="zoom-in">
-                <img src="luxurymarine.jpg" alt="Luxury Escape" class="package-img" height="230px"> 
-                <h3>Luxury Escape</h3>
-                <p>Indulge in a premium luxury escape with exclusive access to beachfront resorts and high-end services.</p>
+    
+            <div class="package-card" data-aos="zoom-in">
+                <img src="luxurymarine.jpg" alt="Luxury Stay at Marine Drive">
+                <h3>Luxury Stay at Marine Drive</h3>
+                <p>Indulge in a luxurious stay at a 5-star hotel with exclusive sea-facing rooms and premium amenities on Marine Drive.</p>
                 <a href="hotel_booking.html" class="btn">Book Now</a>
             </div>
         </div>
-    </div>
+    </section>
     
-    <br>
+    <section id="travelpackage">
+    <section class="package-section">
+        <h2><b> Travel Packages</b></h2>
+        <br>
+        <div class="packages">
+            <div class="package-card" data-aos="zoom-in">
+                <img src="highlightmarine.jpg" alt="1 Day Marine Drive Tour">
+                <h3>3-Day Marine Drive Escape</h3>
+                <p class="package-duration"><span style="color: darkgoldenrod;">Duration: 3 Day 2 Night</span></p>
+                <p class="package-places">Places Covered: Marine Drive, Nariman Point, Chowpatty Beach</p>
+                <p class="package-price"><span style="color: darkgoldenrod;">INR. 64,000</span></p>
+                <p>Explore Marine Drive and nearby attractions with a full-day guided tour. Perfect for a quick getaway in Mumbai.</p>
+                <a href="airplane_booking.html" class="package-button">Book Now</a>
+            </div>
     
-    <div class="package-row">
-        <div class="budget-card">
-            <div data-aos="zoom-in">
-                <img src="budgetmarine.jpg" alt="Budget Package" class="budget-img"> 
-                <h3> Beach Package</h3>
-                <p>Experience the coastal beauty of Marine Drive with our affordable beach package. <strong>Price:INR 20,908.65</strong></p>
+            <div class="package-card" data-aos="zoom-in">
+                <img src="budgetmarine.jpg" alt="2 Day Romantic Marine Drive">
+                <h3>5-Day Romantic Marine Drive Getaway</h3>
+                <p class="package-duration"><span style="color: darkgoldenrod;">Duration: 5 Days, 4 Night</span></p>
+                <p class="package-places">Places Covered: Marine Drive, Gateway of India, Colaba</p>
+                <p class="package-price"><span style="color: darkgoldenrod;">INR. 1,75,000</span></p>
+                <p>A romantic 2-day escape at Marine Drive with a luxurious stay and a candlelit dinner overlooking the sea.</p>
+                <a href="train_book.html" class="package-button">Book Now</a>
+            </div>
+    
+            <div class="package-card" data-aos="zoom-in">
+                <img src="itinarymarine.jpg" alt="3 Day Marine Drive Tour">
+                <h3>7-Day Weekend at Marine Drive</h3>
+                <p class="package-duration"><span style="color: darkgoldenrod;">Duration: 7 Days, 6 Nights</span></p>
+                <p class="package-places">Places Covered: Marine Drive, Elephanta Caves, Juhu Beach</p>
+                <p class="package-price"><span style="color: darkgoldenrod;">INR. 2,55,000</span></p>
+                <p>A perfect weekend getaway exploring the best of Mumbai, including Marine Drive, Elephanta Caves, and more.</p>
+                <a href="airplane_booking.html" class="package-button">Book Now</a>
             </div>
         </div>
-        
-        <div class="highlight-card">
-            <div data-aos="zoom-in">
-                <img src="highlightmarine.jpg" alt="Special Highlights" class="budget-img"> 
-                <h3>Special Highlights</h3>
-                <ul>
-                    <li>Guided Tours to Local Attractions</li>
-                    <li>Complimentary Breakfast & Evening Snacks</li>
-                    <li>Photography Workshops with Professionals</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="itinerary-card">
-            <div data-aos="zoom-in">
-                <img src="itinarymarine.jpg" alt="Itinerary" class="budget-img"> 
-                <h3>Itinerary</h3>
-                <p><strong>Day 1:</strong> Arrival at Marine Drive, sightseeing, and beachfront camp.</p>
-                <p><strong>Day 2:</strong> Full-day exploration, water sports, and local cuisine tasting.</p>
-                <p><strong>Day 3:</strong> Relaxation, photography sessions, and departure.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="blog">
+    </section>
+    </section>
+    
+<section id="blog">
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -612,7 +648,7 @@
     <div class="blog-container">
 
         <div class="blog-post">
-          <h2>The Drive Along Marine Drive</h2>
+          <h2><b><span style="color: darkgoldenrod;">The Drive Along Marine Drive</span></b></h2>
           <p class="intro">
             Known as the Queen's Necklace, Marine Drive is a spectacular arc-shaped boulevard that offers one of the best scenic drives in Mumbai. The cool breeze and the glistening Arabian Sea on one side, and the bustling city on the other, make the drive along this road an unforgettable experience.
           </p>
@@ -622,7 +658,7 @@
         </div>
 
         <div class="blog-post">
-          <h2>The Iconic Sunset at Marine Drive</h2>
+          <h2><b><span style="color: darkgoldenrod;">The Iconic Sunset at Marine Drive</span></b></h2>
           <p class="intro">
             As the sun sets, Marine Drive transforms into one of the most romantic spots in Mumbai. Watching the orange sun dip below the horizon, casting its golden hue across the calm sea, is a sight that mesmerizes everyone. Whether you're seated on the promenade or walking along, the serenity of this moment is unmatched.
           </p>
@@ -632,7 +668,7 @@
         </div>
 
         <div class="blog-post">
-          <h2>Evening Walks Along Marine Drive</h2>
+          <h2><b><span style="color: darkgoldenrod;">Evening Walks Along Marine Drive</span></b></h2>
           <p class="intro">
             An evening stroll along Marine Drive is an experience that Mumbaikars cherish. As the city lights begin to twinkle, the view resembles a necklace of pearls, hence the name Queen's Necklace. The cool breeze from the sea, combined with the lively atmosphere, makes for a perfect evening escape from the city's hustle.
           </p>
@@ -642,7 +678,7 @@
         </div>
 
         <div class="blog-post">
-          <h2>Exploring the Local Culture</h2>
+          <h2><b><span style="color: darkgoldenrod;">Exploring the Local Culture</span></b></h2>
           <p class="intro">
             Marine Drive isn't just a scenic spot—it's the heart of Mumbai's cultural scene. From street performers to food vendors selling Mumbai's famous bhel puri and vada pav, the area is alive with the vibrancy of the city. The juxtaposition of modern high-rises and local street culture is a testament to Mumbai’s spirit.
           </p>
@@ -652,7 +688,7 @@
         </div>
 
         <div class="blog-post">
-          <h2>The Night View: A Glittering Cityscape</h2>
+          <h2><b><span style="color: darkgoldenrod;">The Night View: A Glittering Cityscape</span></b></h2>
           <p class="intro">
             As night falls, Marine Drive lights up with the glow of the city's skyline. The bustling traffic slows down, and the street lights create a dazzling reflection on the Arabian Sea. The city takes on a peaceful yet vibrant energy, making it a perfect time to enjoy a quiet moment or a late-night walk.
           </p>
@@ -666,24 +702,117 @@
 </section>
 
 
+<section id="faq" style="padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
+        
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">1. What is the best time to visit Marine Drive?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Marine Drive can be visited throughout the year, but the best time is during the winter months from November to February when the weather is pleasant for outdoor activities.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">2. How do I get to Marine Drive?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Marine Drive is located in South Mumbai and is well-connected by public transport. You can take a local train to Churchgate or hire a taxi from any part of Mumbai.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">3. Are there accommodations available near Marine Drive?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, there are several luxury hotels and budget accommodations near Marine Drive, including sea-facing hotels that offer stunning views of the Arabian Sea.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">4. Is it safe to visit Marine Drive at night?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, Marine Drive is generally safe for night visits. The area is well-lit and patrolled by police, making it a popular spot for evening strolls and late-night drives.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">5. What activities can I do at Marine Drive?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">You can enjoy a peaceful walk along the promenade, watch the sunset, go for a jog, or simply relax by the Arabian Sea. Marine Drive is also close to attractions like Chowpatty Beach and Nariman Point.</p>
+        </div>
+    </div>
+</section>
+
+<section id="social-media" style="background-color: black; padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+        <h2 style="color: white;">Follow Us on Social Media</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
     </footer>
     
-     <script>
-                window.addEventListener('load', () => {
-                    const blogImages = document.querySelectorAll('.blog-image img');
-                    blogImages.forEach((img) => {
-                      img.style.opacity = 0;
-                      setTimeout(() => {
-                        img.style.transition = "opacity 1.5s ease-in-out";
-                        img.style.opacity = 1;
-                      }, 300);
-                    });
-                  });
+    <script>
+        window.addEventListener('load', () => {
+            const blogImages = document.querySelectorAll('.blog-image img');
+            blogImages.forEach((img) => {
+              img.style.opacity = 0;
+              setTimeout(() => {
+                img.style.transition = "opacity 1.5s ease-in-out";
+                img.style.opacity = 1;
+              }, 300);
+            });
+          });
 
-                AOS.init();
-            </script>
+        AOS.init();
+
+        const faqItems = document.querySelectorAll('.faq-item h3');
+
+faqItems.forEach(item => {
+item.addEventListener('click', () => {
+const answer = item.nextElementSibling;
+answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+});
+});
+
+
+const boxShadowColor = 'darkgoldenrod'; 
+
+const faqElements = document.querySelectorAll('.faq-item');
+
+faqElements.forEach(element => {
+element.addEventListener('mouseover', () => {
+element.style.transform = 'scale(1.02)';
+element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+});
+
+element.addEventListener('mouseout', () => {
+element.style.transform = 'scale(1)';
+element.style.boxShadow = 'none';
+});
+});
+
+
+const socialIcons = document.querySelectorAll('#social-media a');
+
+socialIcons.forEach(icon => {
+icon.addEventListener('mouseover', () => {
+icon.style.transform = 'scale(1.2)';
+});
+
+icon.addEventListener('mouseout', () => {
+icon.style.transform = 'scale(1)';
+});
+});
+       
+    </script>
     </div>
     </div>
 </body>
