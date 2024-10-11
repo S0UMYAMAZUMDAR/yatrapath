@@ -151,66 +151,90 @@
             margin-top: 100px;
         }
 
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+        h2 {
             text-align: center;
-        }
-
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 30px;
         }
 
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-
-        .package-row,
-        .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-
-        .package-card,
-        .budget-card,
-        .highlight-card,
-        .itinerary-card {
+        .section, .package-section {
+            padding: 40px;
             background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
         }
 
-        .package-card:hover,
-        .budget-card:hover,
-        .highlight-card:hover,
-        .itinerary-card:hover {
+        .package-row, .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+        
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .package-img,
-        .budget-img,
-        .highlight-img,
-        .itinerary-img {
+        .package-card img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
-         h2 {
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn, .package-button {
+            display: inline-block;
+            background-color: darkcyan;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover, .package-button:hover {
+            background-color: rgb(28, 103, 126);
+        }
+
+       
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
+
+        
+
+        h2 {
             font-size: 28px;
             color: #e0e0e0;
             margin-bottom: 10px;
@@ -243,6 +267,8 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
           }
+          
+
 
         footer {
             background-color: #212121;
@@ -263,15 +289,16 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-               <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="CHITRAKOT.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
-                <li><a href="CHITRAKOT.html#description">Description</a></li>
+                <li><a href="CHITRAKOT.html#descriptions">Description</a></li>
                 <li><a href="CHITRAKOT.html#details">Details</a></li>
                 <li><a href="CHITRAKOT.html#activity">Activity</a></li>
+                <li><a href="CHITRAKOT.html#travelpackage">Packages</a></li>
                 <li><a href="CHITRAKOT.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="CHITRAKOT.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
@@ -284,7 +311,7 @@
                             <center>Discover the Majesty of Chitrakot Waterfalls</center>
                         </b></h1>
                     <p>Exclusive travel packages offering an unforgettable waterfall experience.</p>
-                    <a href="#packages" class="btn">View Packages</a>
+                    <a href="#packages" class="btn">View more</a>
                 </div>
             </div>
         </div>
@@ -292,7 +319,7 @@
 
 
     <br>
-    <section id="description">
+    <SECtion id="descriptions">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <DIv class="row about-area1">
@@ -355,7 +382,7 @@
             </div>
         </div>
     </section>
-        <br>
+    <br>
     <section id="details">
         <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -452,10 +479,10 @@
                 </DIv>
             </div>
         </div>
-
     </section>
+
         <br>
-    <section id="activity">
+        <section id="activity">
 
 
         <div class="col-md-12 col-sm-12 ml-5 mr-5">
@@ -645,86 +672,79 @@
                 </ul>
             </span>
         </div>
-    </section>
 
+        </section>
         <br>
 
+
         
-        <section id="packages" class="section packages">
-            <h2 class="section-heading">Our Travel Packages</h2>
+      
+<section id="packages" class="section">
+    <h2><b>Adventure Views</b></h2>
+    <br>
+    <div class="package-row">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="scenicchitrakot.jpg" alt="Scenic Tour">
+            <h3>Scenic Tour</h3>
+            <p>Witness the grandeur of Chitrakote Waterfalls on a 3-day scenic tour, exploring the majestic landscapes and serene environment.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
 
-            <div class="package-row">
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="scenicchitrakot.jpg" alt="Scenic Waterfall Tour" class="package-img" height="280px">
-                        <h3>Scenic Waterfall Tour</h3>
-                        <p>Experience the awe-inspiring beauty of Chitrakot Waterfalls with guided tours and luxurious
-                            accommodations in this 3-day package.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
+        <div class="package-card" data-aos="zoom-in">
+            <img src="campchitrakot.jpg" alt="Camping Adventure">
+            <h3>Camping Adventure</h3>
+            <p>Immerse yourself in a thrilling camping experience by the waterfalls, perfect for adventure lovers and nature enthusiasts.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
 
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="campchitrakot.jpg" alt="Waterfall Camping Adventure"
-                            class="package-img">
-                        <h3>Waterfall Camping Adventure</h3>
-                        <p>Embark on a thrilling camping adventure near the majestic falls, perfect for nature lovers
-                            and adventure seekers.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
+        <div class="package-card" data-aos="zoom-in">
+            <img src="luxurychitrakot.jpg" alt="Luxury Escape">
+            <h3>Luxury Escape</h3>
+            <p>Enjoy a luxurious escape near Chitrakote Falls, with exclusive accommodations and personalized services to make your stay unforgettable.</p>
+            <a href="hotel_booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</section>
 
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="luxurychitrakot.jpg" alt="Luxury Waterfall Retreat" class="package-img"
-                            height="230px">
-                        <h3>Luxury Waterfall Retreat</h3>
-                        <p>Enjoy a luxury retreat with exclusive access to serene spots near the falls, including
-                            top-notch accommodations and services.</p>
-                        <a href="hotel_booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-            </div>
+<section id="travelpackage">
+<section class="package-section">
+    <h2><b>Travel Packages</b></h2>
+    <br>
+    <div class="packages">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="itinarychitrakot.webp" alt="3 Day Chitrakote Tour">
+            <h3>3-Day Chitrakote Adventure</h3>
+            <p class="package-duration"><span style="color: darkcyan;">Duration: 3 Days, 2 Nights</span></p>
+            <p class="package-places">Places Covered: Jagdalpur, Chitrakote Waterfalls</p>
+            <p class="package-price"><span style="color: darkcyan;">INR. 59,000</span></p>
+            <p>Explore the awe-inspiring beauty of Chitrakote Waterfalls on this short yet exhilarating 3-day trip, with guided visits and scenic stays.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
 
-            <br>
+        <div class="package-card" data-aos="zoom-in">
+            <img src="highlightchitrakot.webp" alt="5 Day Chitrakote Tour">
+            <h3>5-Day Chitrakote Bliss</h3>
+            <p class="package-duration"><span style="color: darkcyan;">Duration: 5 Days, 4 Nights</span></p>
+            <p class="package-places">Places Covered: Jagdalpur, Tirathgarh Falls, Chitrakote Waterfalls, Kanger Valley National Park</p>
+            <p class="package-price"><span style="color: darkcyan;">INR. 1,15,000</span></p>
+            <p>Experience a 5-day adventure through the scenic landscapes of Bastar, covering Chitrakote Waterfalls, Tirathgarh Falls, and Kanger Valley National Park.</p>
+            <a href="train_book.html" class="package-button">Book Now</a>
+        </div>
 
-            <div class="package-row">
-                <div class="budget-card">
-                    <div data-aos="zoom-in">
-                        <img src="budgetchitrakot.jpg" alt="Budget Waterfall Package" class="budget-img">
-                        <h3> Waterfall Package</h3>
-                        <p>Explore the stunning landscapes of Chitrakot Waterfalls with our affordable package.
-                            <strong>Price: INR. 54,262</strong></p>
-                    </div>
-                </div>
+        <div class="package-card" data-aos="zoom-in">
+            <img src="budgetchitrakot.jpg" alt="7 Day Chitrakote Tour">
+            <h3>7-Day Ultimate Chitrakote Experience</h3>
+            <p class="package-duration"><span style="color: darkcyan;">Duration: 7 Days, 6 Nights</span></p>
+            <p class="package-places">Places Covered: Jagdalpur, Chitrakote Waterfalls, Tirathgarh Falls, Kanger Valley National Park, Tribal Villages</p>
+            <p class="package-price"><span style="color: darkcyan;">INR. 1,95,000</span></p>
+            <p>The ultimate 7-day tour encompassing the best of Chhattisgarh’s nature and culture, including the Chitrakote Falls and nearby tribal villages.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+    </div>
+</section>
+</section>
 
-                <div class="highlight-card">
-                    <div data-aos="zoom-in">
-                        <img src="highlightchitrakot.webp" alt="Special Highlights" class="budget-img">
-                        <h3>Special Highlights</h3>
-                        <ul>
-                            <li>Guided Trekking to Scenic Spots</li>
-                            <li>Complimentary Breakfast & Dinner</li>
-                            <li>Photography Tours with Local Guides</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="itinerary-card">
-                    <div data-aos="zoom-in">
-                        <img src="itinarychitrakot.webp" alt="Itinerary" class="budget-img">
-                        <h3>Itinerary</h3>
-                        <p><strong>Day 1:</strong> Arrival at Chitrakot Waterfalls, guided sightseeing, and forest camp.
-                        </p>
-                        <p><strong>Day 2:</strong> Full-day exploration, trekking, and a boat ride near the falls.</p>
-                        <p><strong>Day 3:</strong> Morning relaxation, photography sessions, and departure.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-     <section id="blog">
+        <section id="blog">
 
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -739,7 +759,7 @@
         
                
                 <div class="blog-post">
-                  <h2>The Journey to Chitrakot Waterfalls</h2>
+                  <h2><b><span style="color: darkcyan;">The Journey to Chitrakot Waterfalls</span></b></h2>
                   <p class="intro">
                     The journey to Chitrakot Waterfalls, often referred to as the "Niagara of India," is an awe-inspiring experience. Located in the heart of Chhattisgarh, the drive takes you through dense forests and picturesque landscapes. The anticipation builds as you near the roaring sound of the mighty falls.
                   </p>
@@ -750,7 +770,7 @@
         
                 
                 <div class="blog-post">
-                  <h2>The First View of Chitrakot Falls</h2>
+                  <h2><b><span style="color: darkcyan;">The First View of Chitrakot Falls</span></b></h2>
                   <p class="intro">
                     As you reach the viewpoint, the majestic sight of Chitrakot Waterfalls takes your breath away. The waterfall, spanning nearly 300 meters in width during the monsoon, is a spectacular sight. The thundering sound of water cascading down the rocky cliffs fills the air, leaving you in awe of nature's grandeur.
                   </p>
@@ -761,7 +781,7 @@
         
                 
                 <div class="blog-post">
-                  <h2>Boat Ride Under the Falls</h2>
+                  <h2><b><span style="color: darkcyan;">Boat Ride Under the Falls</span></b></h2>
                   <p class="intro">
                     One of the unique experiences at Chitrakot is the thrilling boat ride that takes you close to the base of the falls. As you approach, the mist from the waterfall surrounds you, creating a magical atmosphere. It's a surreal experience as the force of the water and the sound envelop you in nature's embrace.
                   </p>
@@ -772,7 +792,7 @@
         
                 
                 <div class="blog-post">
-                  <h2>Exploring the Surrounding Area</h2>
+                  <h2><b><span style="color: darkcyan;">Exploring the Surrounding Area</span></b></h2>
                   <p class="intro">
                     Beyond the falls, Chitrakot offers an array of natural beauty to explore. From scenic trekking trails to nearby tribal villages, the region is rich with cultural and natural wonders. The local markets are a great place to pick up souvenirs that reflect the vibrant culture of the region.
                   </p>
@@ -783,7 +803,7 @@
         
                
                 <div class="blog-post">
-                  <h2>The Falls at Night: A Magical Glow</h2>
+                  <h2><b><span style="color: darkcyan;">The Falls at Night: A Magical Glow</span></b></h2>
                   <p class="intro">
                     As night falls, the beauty of Chitrakot takes on a different charm. Under the moonlight, the falls shimmer, and the surrounding area becomes tranquil and peaceful. The sound of the waterfalls remains as powerful as ever, creating an ethereal atmosphere that is perfect for reflection and relaxation.
                   </p>
@@ -795,6 +815,62 @@
               </div>
         
         </section>
+
+        <section id="faq" style="padding: 20px;">
+            <div style="width: 90%; max-width: 1200px; margin: auto;">
+                <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
+                
+                <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                    <h3 style="cursor: pointer; color: darkcyan; margin: 0;">1. What is the best time to visit Chitrakote Waterfalls?</h3>
+                    <p style="display: none; margin-top: 10px; color: #ecf0f1;">The best time to visit Chitrakote Waterfalls is between July and October during the monsoon season when the waterfalls are in full flow.</p>
+                </div>
+        
+                <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                    <h3 style="cursor: pointer; color: darkcyan; margin: 0;">2. How do I get to Chitrakote Waterfalls?</h3>
+                    <p style="display: none; margin-top: 10px; color: #ecf0f1;">Chitrakote Waterfalls is located in the Bastar district of Chhattisgarh. The nearest airport is in Raipur, from where you can take a taxi or bus to Jagdalpur and then to the falls.</p>
+                </div>
+        
+                <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                    <h3 style="cursor: pointer; color: darkcyan; margin: 0;">3. Are there accommodations available near Chitrakote Waterfalls?</h3>
+                    <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, there are several accommodation options near Chitrakote Waterfalls, including resorts, guesthouses, and camps.</p>
+                </div>
+        
+                <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                    <h3 style="cursor: pointer; color: darkcyan; margin: 0;">4. Is it safe to travel to Chitrakote Waterfalls?</h3>
+                    <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, it is generally safe to visit Chitrakote Waterfalls. However, travelers should be cautious during monsoon season due to slippery areas near the waterfalls.</p>
+                </div>
+        
+                <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                    <h3 style="cursor: pointer; color: darkcyan; margin: 0;">5. What activities can I do at Chitrakote Waterfalls?</h3>
+                    <p style="display: none; margin-top: 10px; color: #ecf0f1;">Activities include boating, sightseeing, trekking, and photography. You can also visit nearby attractions like Tirathgarh Falls and Kanger Valley National Park.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="social-media" style="background-color: black; padding: 20px;">
+            <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+                <h2 style="color: white;">Follow Us on Social Media</h2>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+                    <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                        <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+                    </a>
+                    <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                        <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+                    </a>
+                    <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                        <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+                    </a>
+                    <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                        <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    
+        
+        
 
 
         <footer class="bg-dark text-white text-center py-3">
@@ -814,6 +890,45 @@
               });
 
             AOS.init();
+
+            const faqItems = document.querySelectorAll('.faq-item h3');
+
+faqItems.forEach(item => {
+item.addEventListener('click', () => {
+    const answer = item.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+});
+});
+
+const boxShadowColor = 'rgb(28, 103, 126)'; 
+
+const faqElements = document.querySelectorAll('.faq-item');
+
+faqElements.forEach(element => {
+element.addEventListener('mouseover', () => {
+    element.style.transform = 'scale(1.02)';
+    element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+});
+
+element.addEventListener('mouseout', () => {
+    element.style.transform = 'scale(1)';
+    element.style.boxShadow = 'none';
+});
+});
+
+
+const socialIcons = document.querySelectorAll('#social-media a');
+
+socialIcons.forEach(icon => {
+icon.addEventListener('mouseover', () => {
+    icon.style.transform = 'scale(1.2)';
+});
+
+icon.addEventListener('mouseout', () => {
+    icon.style.transform = 'scale(1)';
+});
+});
+           
         </script>
     </div>
     </div>
