@@ -149,66 +149,91 @@
         }
         
 
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+        h2 {
             text-align: center;
-        }
-
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 30px;
         }
 
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-
-        .package-row,
-        .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-
-        .package-card,
-        .budget-card,
-        .highlight-card,
-        .itinerary-card {
+        .section, .package-section {
+            padding: 40px;
             background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
         }
 
-        .package-card:hover,
-        .budget-card:hover,
-        .highlight-card:hover,
-        .itinerary-card:hover {
+        .package-row, .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+       
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .package-img,
-        .budget-img,
-        .highlight-img,
-        .itinerary-img {
+        .package-card img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
-         h2 {
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn, .package-button {
+            display: inline-block;
+            background-color: rgba(9, 125, 9, 0.796);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover, .package-button:hover {
+            background-color: rgb(50, 77, 146);
+        }
+
+       
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
+
+        
+
+        
+        h2 {
             font-size: 28px;
             color: #e0e0e0;
             margin-bottom: 10px;
@@ -242,6 +267,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
           }
           
+
         footer {
             background-color: #212121;
             color: #fff;
@@ -261,35 +287,36 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-               <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="NUBRA.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
-                <li><a href="NUBRA.html#description">Description</a></li>
+                <li><a href="NUBRA.html#descriptions">Description</a></li>
                 <li><a href="NUBRA.html#details">Details</a></li>
                 <li><a href="NUBRA.html#activity">Activity</a></li>
+                <li><a href="NUBRA.html#travelpackage">Packages</a></li>
                 <li><a href="NUBRA.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="NUBRA.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
     
         <div class="header-content" id="home">
-            <img src="NU3.jpg" alt="Nubra Valley" class="header-img">
+            <img src="NU3.jpg " alt="Nubra Valley" class="header-img">
             <div class="header-text">
                 <div data-aos="fade-up" data-aos-duration="3000">
                     <h1><b>
                             <center>Discover the Serenity of Nubra Valley</center>
                         </b></h1>
                     <p>Exclusive travel packages offering an unforgettable journey through the mesmerizing landscapes of Nubra Valley.</p>
-                    <a href="#packages" class="btn">View Packages</a>
+                    <a href="#packages" class="btn">View more</a>
                 </div>
             </div>
         </div>
     </header>
     
     <br>
-    <section id="description">
+    <section id="descriptions">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <DIv class="row about-area1">
@@ -342,9 +369,8 @@ of the highest motorable roads in the world, which offers thrilling drives and s
         </div>
     </section>
         <br>
-    <section id="details">
+        <section id="details">
 <div class="row">
-   
         <div class="col-md-6 col-sm-12">
             <DIv class="row about-area2">
                 <div data-aos="fade-down">
@@ -411,10 +437,11 @@ of the highest motorable roads in the world, which offers thrilling drives and s
         </DIv>
     </div>
 </div>
+        </section>
 
-    </section>
     <br>
-<section id="activity">
+    <section id="activity">
+
 
     <div class="col-md-12 col-sm-12 ml-5 mr-5">
         <div data-aos="fade-up">
@@ -551,78 +578,76 @@ of the highest motorable roads in the world, which offers thrilling drives and s
         </ul></span>
     </div>
 
-</section>
+    </section>
     <br>
 
-    <section id="packages" class="section packages">
-        <h2 class="section-heading">Our Travel Packages</h2>
     
-        <div class="package-row">
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                    <img src="scenicnubra.webp" alt="Scenic Valley Tour" class="package-img" height="230px">
-                    <h3>Scenic Valley Tour</h3>
-                    <p>Discover the stunning landscapes of Nubra Valley with guided tours and comfortable accommodations in this 3-day package.</p>
-                    <a href="destination_book.html" class="btn">Book Now</a>
-                </div>
-            </div>
-    
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                    <img src="campnubra.jpg" alt="Desert Camping Adventure" class="package-img"height="230px">
-                    <h3>Desert Camping Adventure</h3>
-                    <p>Experience a thrilling camping adventure in the cold desert of Nubra Valley, perfect for adventure seekers and nature lovers.</p>
-                    <a href="destination_book.html" class="btn">Book Now</a>
-                </div>
-            </div>
-    
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                    <img src="luxurynubra.jpg" alt="Luxury Mountain Retreat" class="package-img" height="230px">
-                    <h3>Luxury Mountain Retreat</h3>
-                    <p>Enjoy a luxury retreat amidst the serene mountains of Nubra Valley, with top-notch accommodations and breathtaking views.</p>
-                    <a href="hotel_booking.html" class="btn">Book Now</a>
-                </div>
-            </div>
+<section id="packages" class="section">
+    <h2><b>Adventure Views</b></h2>
+    <br>
+    <div class="package-row">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="scenicnubra.webp" alt="Scenic Tour">
+            <h3>Scenic Tour</h3>
+            <p>Experience the breathtaking landscapes of Nubra Valley on a 3-day scenic tour, exploring sand dunes, valleys, and rich cultural heritage.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
         </div>
-    
-        <br>
-    
-        <div class="package-row">
-            <div class="budget-card">
-                <div data-aos="zoom-in">
-                    <img src="budgetnubra.jpg" alt="Budget Nubra Package" class="budget-img" height="230px">
-                    <h3> Nubra Package</h3>
-                    <p>Explore the beauty of Nubra Valley with our affordable package.
-                        <strong>Price: INR. 66,784</strong></p>
-                </div>
-            </div>
-    
-            <div class="highlight-card">
-                <div data-aos="zoom-in">
-                    <img src="highlightnubra.jpg" alt="Special Highlights" class="budget-img" height="230px">
-                    <h3>Special Highlights</h3>
-                    <ul>
-                        <li>Guided Camel Safari in the Sand Dunes</li>
-                        <li>Visit to Diskit Monastery and Maitreya Buddha</li>
-                        <li>Photography Tours in the Cold Desert</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="itinerary-card">
-                <div data-aos="zoom-in">
-                    <img src="itinarynubra.jpeg" alt="Itinerary" class="budget-img" height="230px">
-                    <h3>Itinerary</h3>
-                    <p><strong>Day 1:</strong> Arrival in Leh & Acclimatization</p>
-                    <p><strong>Day 2:</strong> Nubra Valley via Khardung La Pass</p>
-                    <p><strong>Day 3:</strong> Explore Diskit Monastery & Hunder Sand Dunes</p>
-                    <p><strong>Day 4:</strong> Visit Panamik Hot Springs</p>
-                    <p><strong>Day 5:</strong> Return to Leh & Departure</p>
-                </div>
-            </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="campnubra.jpg" alt="Camping Adventure">
+            <h3>Camping Adventure</h3>
+            <p>Immerse yourself in an unforgettable camping experience in Nubra Valley, perfect for adventure seekers and nature lovers.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
         </div>
-    </section>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="luxurynubra.jpg" alt="Luxury Escape">
+            <h3>Luxury Escape</h3>
+            <p>Indulge in a luxurious getaway in Nubra Valley, with exclusive accommodations and tailored services for a memorable experience.</p>
+            <a href="hotel_booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="travelpackage">
+<section class="package-section">
+    <h2><b>Travel Packages</b></h2>
+    <br>
+    <div class="packages">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="itinarynubra.jpeg" alt="3 Day Nubra Tour">
+            <h3>3-Day Nubra Adventure</h3>
+            <p class="package-duration"><span style="color: green;">Duration: 3 Days, 2 Nights</span></p>
+            <p class="package-places">Places Covered: Nubra Valley, Diskit Monastery, Hunder Sand Dunes</p>
+            <p class="package-price"><span style="color: green;">INR. 1,00,000</span></p>
+            <p>Explore the stunning landscapes and unique culture of Nubra Valley on this exciting 3-day trip, including visits to monasteries and sand dunes.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="highlightnubra.jpg" alt="5 Day Nubra Tour">
+            <h3>5-Day Nubra Bliss</h3>
+            <p class="package-duration"><span style="color: green;">Duration: 5 Days, 4 Nights</span></p>
+            <p class="package-places">Places Covered: Nubra Valley, Diskit Monastery, Hunder Sand Dunes, Turtuk Village</p>
+            <p class="package-price"><span style="color: green;">INR. 2,05,000</span></p>
+            <p>Experience a 5-day journey through the enchanting landscapes of Nubra Valley, visiting picturesque villages and historical sites.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="budgetnubra.jpg" alt="7 Day Nubra Tour">
+            <h3>7-Day Ultimate Nubra Experience</h3>
+            <p class="package-duration"><span style="color: green;">Duration: 7 Days, 6 Nights</span></p>
+            <p class="package-places">Places Covered: Nubra Valley, Pangong Lake, Diskit Monastery, Hunder Sand Dunes, Turtuk Village</p>
+            <p class="package-price"><span style="color: green;">INR. 3,24,,998</span></p>
+            <p>Embark on the ultimate 7-day adventure, exploring the diverse landscapes of Nubra Valley and nearby attractions, including a visit to the iconic Pangong Lake.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+    </div>
+</section>
+</section>
+
+
     <section id="blog">
 
         <div class="row">
@@ -638,7 +663,7 @@ of the highest motorable roads in the world, which offers thrilling drives and s
     
            
             <div class="blog-post">
-              <h2>The Journey to Nubra Valley</h2>
+              <h2><b><span style="color: green;">The Journey to Nubra Valley</span></b></h2>
               <p class="intro">
                 Nubra Valley, often called the "Orchard of Ladakh," is a stunning destination that requires a thrilling drive over the Khardung La Pass, one of the highest motorable roads in the world. The route offers breathtaking views of the Himalayan landscape, making the journey as memorable as the destination itself.
               </p>
@@ -649,7 +674,7 @@ of the highest motorable roads in the world, which offers thrilling drives and s
     
            
             <div class="blog-post">
-              <h2>The Enchanting Sand Dunes of Nubra</h2>
+              <h2><b><span style="color: green;">The Enchanting Sand Dunes of Nubra</span></b></h2>
               <p class="intro">
                 The unique sand dunes of Nubra Valley are a must-visit, where you can ride camels against the backdrop of the towering mountains. The contrast of the golden sands and snow-capped peaks creates a surreal landscape, making it an unforgettable experience for every traveler.
               </p>
@@ -660,7 +685,7 @@ of the highest motorable roads in the world, which offers thrilling drives and s
     
            
             <div class="blog-post">
-              <h2>Exploring Diskit Monastery</h2>
+              <h2><b><span style="color: green;">Exploring Diskit Monastery</span></b></h2>
               <p class="intro">
                 Diskit Monastery, the oldest and largest monastery in Nubra Valley, offers a glimpse into Buddhist culture. The stunning views of the valley from the monastery's hilltop location are breathtaking. Inside, you can find beautiful statues and paintings that tell the story of Tibetan Buddhism.
               </p>
@@ -671,7 +696,7 @@ of the highest motorable roads in the world, which offers thrilling drives and s
     
            
             <div class="blog-post">
-              <h2>The Beauty of Hunder Village</h2>
+              <h2><b><span style="color: green;">The Beauty of Hunder Village</span></b></h2>
               <p class="intro">
                 Hunder Village is famous for its picturesque landscapes and serene environment. The traditional Ladakhi houses, surrounded by lush fields and mountains, provide a perfect backdrop for photography. Interacting with the locals gives insight into their unique lifestyle and culture.
               </p>
@@ -682,7 +707,7 @@ of the highest motorable roads in the world, which offers thrilling drives and s
     
            
             <div class="blog-post">
-              <h2>Stargazing in Nubra Valley</h2>
+              <h2><b><span style="color: green;">Stargazing in Nubra Valley</span></b></h2>
               <p class="intro">
                 The clear skies of Nubra Valley offer a spectacular view of the stars, making it a paradise for stargazers. Spend a night camping under the stars, and be mesmerized by the beauty of the cosmos, far away from the city lights. It's a magical experience that leaves you in awe of the universe.
               </p>
@@ -694,6 +719,57 @@ of the highest motorable roads in the world, which offers thrilling drives and s
           </div>
     
     </section>
+
+    <section id="faq" style="padding: 20px;">
+        <div style="width: 90%; max-width: 1200px; margin: auto;">
+            <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: rgba(9, 125, 9, 0.796); margin: 0;">1. What is the best time to visit Nubra Valley?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">The best time to visit Nubra Valley is between May and September when the weather is pleasant and the valley is accessible.</p>
+            </div>
+    
+            <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: rgba(9, 125, 9, 0.796); margin: 0;">2. How do I get to Nubra Valley?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Nubra Valley is accessible via Khardung La Pass from Leh. You can reach Leh by flight or road, and then travel to Nubra Valley by taxi or bus.</p>
+            </div>
+    
+            <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: rgba(9, 125, 9, 0.796); margin: 0;">3. Are there accommodations available in Nubra Valley?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, there are several accommodation options in Nubra Valley, including guesthouses, hotels, and unique tented camps.</p>
+            </div>
+    
+            <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: rgba(9, 125, 9, 0.796); margin: 0;">4. Is it safe to travel to Nubra Valley?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, it is generally safe to visit Nubra Valley. However, travelers should acclimatize to the altitude and be cautious while driving on mountain roads.</p>
+            </div>
+    
+            <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: rgba(9, 125, 9, 0.796); margin: 0;">5. What activities can I do in Nubra Valley?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Activities include camel rides on sand dunes, visiting monasteries, trekking, and exploring local villages. Don't miss the stunning views of the mountains and valleys.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="social-media" style="background-color: black; padding: 20px;">
+        <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+            <h2 style="color: white;">Follow Us on Social Media</h2>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+                <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+                <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+                <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+                <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+            </div>
+        </div>
+    </section>
     
     
     
@@ -702,7 +778,7 @@ of the highest motorable roads in the world, which offers thrilling drives and s
         <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
     </footer>
 
-   <script>
+    <script>
         window.addEventListener('load', () => {
             const blogImages = document.querySelectorAll('.blog-image img');
             blogImages.forEach((img) => {
@@ -715,6 +791,46 @@ of the highest motorable roads in the world, which offers thrilling drives and s
           });
 
         AOS.init();
+
+        const faqItems = document.querySelectorAll('.faq-item h3');
+
+faqItems.forEach(item => {
+item.addEventListener('click', () => {
+const answer = item.nextElementSibling;
+answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+});
+});
+
+
+const boxShadowColor = 'rgb(50, 77, 146)'; 
+
+const faqElements = document.querySelectorAll('.faq-item');
+
+faqElements.forEach(element => {
+element.addEventListener('mouseover', () => {
+element.style.transform = 'scale(1.02)';
+element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+});
+
+element.addEventListener('mouseout', () => {
+element.style.transform = 'scale(1)';
+element.style.boxShadow = 'none';
+});
+});
+
+
+const socialIcons = document.querySelectorAll('#social-media a');
+
+socialIcons.forEach(icon => {
+icon.addEventListener('mouseover', () => {
+icon.style.transform = 'scale(1.2)';
+});
+
+icon.addEventListener('mouseout', () => {
+icon.style.transform = 'scale(1)';
+});
+});
+       
     </script>
     </div>
     </div>
