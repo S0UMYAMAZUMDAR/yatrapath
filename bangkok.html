@@ -124,13 +124,14 @@
             background-color: rgb(86, 11, 113);
             text-emphasis-color: black;
         }
-       .about-area {
+        .about-area {
             height: 130px;
            
             margin-left: 50px;
            
             background-color: black;
         }
+
         .about-area1 {
             margin-bottom: 20px;
             margin-left: 10px;
@@ -150,65 +151,87 @@
         }
 
 
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+        h2 {
             text-align: center;
-        }
-
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
+            margin-bottom: 30px;
         }
 
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-
-        .package-row,
-        .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-
-        .package-card,
-        .budget-card,
-        .highlight-card,
-        .itinerary-card {
+        .section, .package-section {
+            padding: 40px;
             background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
         }
 
-        .package-card:hover,
-        .budget-card:hover,
-        .highlight-card:hover,
-        .itinerary-card:hover {
+        .package-row, .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+     
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .package-img,
-        .budget-img,
-        .highlight-img,
-        .itinerary-img {
+        .package-card img {
             width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn, .package-button {
+            display: inline-block;
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover, .package-button:hover {
+            background-color: rgb(86, 11, 113);
+            
+        }
+
+       
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
         h2 {
             font-size: 28px;
             color: #e0e0e0;
@@ -260,15 +283,16 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-               <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="bangkok.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
-                <li><a href="bangkok.html#description">Description</a></li>
+                <li><a href="bangkok.html#descriptions">Description</a></li>
                 <li><a href="bangkok.html#details">Details</a></li>
                 <li><a href="bangkok.html#activity">Activity</a></li>
+                <li><a href="bangkok.html#travelpackage">Packages</a></li>
                 <li><a href="bangkok.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="bangkok.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
@@ -281,14 +305,14 @@
                             <center>Experience the Vibrancy of Bangkok</center>
                         </b></h1>
                     <p>Exclusive travel packages offering an unforgettable journey through the cultural heart of Thailand.</p>
-                    <a href="#packages" class="btn">View Packages</a>
+                    <a href="#packages" class="btn">View more</a>
                 </div>
             </div>
         </div>
     </header>
     
     <br>
-    <section id="description">
+    <section id="descriptions">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <DIv class="row about-area1">
@@ -341,7 +365,7 @@
             </div>
         </div>
     </section>
-        <br>
+    <br>
     <section id="details">
         <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -443,9 +467,8 @@
 
     </section>
         <br>
-
 <section id="activity">
-       <div class="col-md-12 col-sm-12 ml-5 mr-5">
+        <div class="col-md-12 col-sm-12 ml-5 mr-5">
             <div data-aos="fade-up">
                 <h1><B>
                         <CEnter><span style="color: #fff;"> THINGS TO DO IN </span>
@@ -711,77 +734,73 @@
 </section>
         <br>
 
-        <section id="packages" class="section packages">
-            <h2 class="section-heading">Our Travel Packages</h2>
-        
-            <div class="package-row">
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="scenicbangkok.jpeg" alt="Bangkok City Tour" class="package-img" height="230px">
-                        <h3>Bangkok City Tour</h3>
-                        <p>Discover the vibrant culture and stunning landmarks of Bangkok in this immersive 4-day city tour.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-        
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="luxurybangkok.jpg" alt="Luxury River Cruise" class="package-img" height="230px">
-                        <h3>Luxury River Cruise</h3>
-                        <p>Sail along the Chao Phraya River while enjoying gourmet dining and breathtaking views of the city.</p>
-                        <a href="hotel_booking.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-        
-                <div class="package-card">
-                    <div data-aos="zoom-in">
-                        <img src="campbangkok.jpg" alt="Adventure and Cultural Experience" class="package-img" height="230px">
-                        <h3>Adventure and Cultural Experience</h3>
-                        <p>Engage in thrilling activities and discover the rich culture of Bangkok with guided tours and experiences.</p>
-                        <a href="destination_book.html" class="btn">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        
-            <br>
-        
-            <div class="package-row">
-                <div class="budget-card">
-                    <div data-aos="zoom-in">
-                        <img src="budgetbangkok.webp" alt="Budget Bangkok Package" class="budget-img" height="230px">
-                        <h3> Bangkok Package</h3>
-                        <p>Explore the best of Bangkok on a budget with our affordable package. 
-                            <strong>Price: INR.100,176</strong></p>
-                    </div>
-                </div>
-        
-                <div class="highlight-card">
-                    <div data-aos="zoom-in">
-                        <img src="highlightbangkok.jpg" alt="Special Highlights" class="budget-img" height="230px">
-                        <h3>Special Highlights</h3>
-                        <ul>
-                            <li>Guided Tours of Grand Palace and Wat Pho</li>
-                            <li>Floating Market Experience</li>
-                            <li>Thai Cooking Class and Dinner</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="itinerary-card">
-                    <div data-aos="zoom-in">
-                        <img src="itinarybangkok.jpg" alt="Itinerary" class="budget-img" height="230px">
-                        <h3>Itinerary</h3>
-                        <p><strong>Day 1:</strong> Arrival in Bangkok & Welcome Dinner</p>
-                        <p><strong>Day 2:</strong> Grand Palace & Wat Pho Tour</p>
-                        <p><strong>Day 3:</strong> Floating Market Experience</p>
-                        <p><strong>Day 4:</strong> Chinatown Food Tour</p>
-                        <p><strong>Day 5:</strong> Departure</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
+<section id="packages" class="section">
+    <h2><b>Adventure Views</b></h2>
+    <br>
+    <div class="package-row">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="scenicbangkok.jpeg" alt="Scenic Tour">
+            <h3>Scenic Tour</h3>
+            <p>Experience the vibrant culture of Bangkok on a 3-day scenic tour, exploring majestic temples, bustling markets, and delightful street food.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
 
-     <section id="blog">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="campbangkok.jpg" alt="Camping Adventure">
+            <h3>Camping Adventure</h3>
+            <p>Immerse yourself in an unforgettable camping experience just outside Bangkok, surrounded by nature and adventure.</p>
+            <a href="destination_book.html" class="btn">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="luxurybangkok.jpg" alt="Luxury Escape">
+            <h3>Luxury Escape</h3>
+            <p>Indulge in a luxurious getaway in Bangkok, featuring upscale accommodations, fine dining, and exclusive experiences.</p>
+            <a href="hotel_booking.html" class="btn">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="travelpackage">
+<section class="package-section">
+    <h2><b>Travel Packages</b></h2>
+    <br>
+    <div class="packages">
+        <div class="package-card" data-aos="zoom-in">
+            <img src="itinarybangkok.jpg" alt="3 Day Bangkok Tour">
+            <h3>3-Day Bangkok Adventure</h3>
+            <p class="package-duration"><span style="color: yellow;">Duration: 3 Days, 2 Nights</span></p>
+            <p class="package-places">Places Covered: Grand Palace, Wat Pho, Chatuchak Market</p>
+            <p class="package-price"><span style="color: yellow;">INR. 1,40,000</span></p>
+            <p>Explore the cultural richness of Bangkok on this exciting 3-day trip, including visits to famous landmarks and local dining experiences.</p>
+            <a href="train_book.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="highlightbangkok.jpg" alt="5 Day Bangkok Tour">
+            <h3>5-Day Bangkok Bliss</h3>
+            <p class="package-duration"><span style="color: yellow;">Duration: 5 Days, 4 Nights</span></p>
+            <p class="package-places">Places Covered: Grand Palace, Ayutthaya, Floating Markets, Chinatown</p>
+            <p class="package-price"><span style="color: yellow;">INR. 2,85,850</span></p>
+            <p>Experience a 5-day journey through the enchanting city of Bangkok, featuring cultural excursions and culinary delights.</p>
+            <a href="airplane_booking.html" class="package-button">Book Now</a>
+        </div>
+
+        <div class="package-card" data-aos="zoom-in">
+            <img src="budgetbangkok.webp" alt="7 Day Bangkok Tour">
+            <h3>7-Day Ultimate Bangkok Experience</h3>
+            <p class="package-duration"><span style="color: yellow;">Duration: 7 Days, 6 Nights</span></p>
+            <p class="package-places">Places Covered: Grand Palace, Ayutthaya, Thai Cooking Class, Night Markets</p>
+            <p class="package-price"><span style="color: yellow;">INR. 3,90,000</span></p>
+            <p>Embark on the ultimate 7-day adventure, exploring the vibrant culture and delicious cuisine of Bangkok.</p>
+            <a href="train_book.html" class="package-button">Book Now</a>
+        </div>
+    </div>
+</section>
+</section>
+
+        <section id="blog">
 
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -796,7 +815,7 @@
         
                     
                     <div class="blog-post">
-                        <h2>The Journey to Bangkok</h2>
+                        <h2><b><span style="color: yellow;">The Journey to Bangkok</span></b></h2>
                         <p class="intro">
                             Bangkok, the bustling capital of Thailand, is a city that blends modern skyscrapers with traditional temples. The journey to Bangkok is an adventure in itself, with its vibrant streets, colorful markets, and the famous tuk-tuks weaving through traffic. As you land, the city's energy welcomes you for an unforgettable experience.
                         </p>
@@ -807,7 +826,7 @@
         
                     
                     <div class="blog-post">
-                        <h2>Exploring Bangkok's Iconic Temples</h2>
+                        <h2><b><span style="color: yellow;">Exploring Bangkok's Iconic Temples</span></b></h2>
                         <p class="intro">
                             Bangkok is known for its beautiful temples, such as Wat Arun, Wat Phra Kaew, and Wat Pho. These temples showcase the rich cultural heritage and stunning architecture of Thailand. From the towering spires of Wat Arun to the famous Reclining Buddha at Wat Pho, each temple offers a glimpse into the city's spiritual heart.
                         </p>
@@ -818,7 +837,7 @@
         
                    
                     <div class="blog-post">
-                        <h2>The Bustling Markets of Bangkok</h2>
+                        <h2><b><span style="color: yellow;">The Bustling Markets of Bangkok</span></b></h2>
                         <p class="intro">
                             No visit to Bangkok is complete without exploring its vibrant markets. Whether it’s the colorful stalls of Chatuchak Weekend Market, the floating markets, or the street food vendors, Bangkok’s markets offer everything from unique souvenirs to delicious local delicacies. The lively atmosphere is a treat for the senses.
                         </p>
@@ -829,7 +848,7 @@
         
                    
                     <div class="blog-post">
-                        <h2>A Taste of Bangkok's Street Food</h2>
+                        <h2><b><span style="color: yellow;">A Taste of Bangkok's Street Food</span></b></h2>
                         <p class="intro">
                             Bangkok is a food lover’s paradise, especially when it comes to street food. From Pad Thai and Som Tum to skewered meats and mango sticky rice, the city’s streets are filled with mouth-watering dishes. Whether you’re grabbing a quick bite from a food cart or dining at a night market, the flavors of Bangkok are sure to leave a lasting impression.
                         </p>
@@ -840,7 +859,7 @@
         
                     
                     <div class="blog-post">
-                        <h2>Bangkok’s Vibrant Nightlife</h2>
+                        <h2><b><span style="color: yellow;">Bangkok’s Vibrant Nightlife</span></b></h2>
                         <p class="intro">
                             Bangkok’s nightlife is as diverse as the city itself. From rooftop bars with breathtaking views to energetic nightclubs and live music venues, there’s something for everyone. Whether you prefer a quiet evening sipping cocktails or dancing the night away, Bangkok offers an exciting and unforgettable nightlife experience.
                         </p>
@@ -852,13 +871,68 @@
                 </div>
         
         </section>
+
+       
+<section id="faq" style="padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
+        
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">1. What is the best time to visit Bangkok?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">The best time to visit Bangkok is between November and February when the weather is cooler and drier.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">2. How do I get to Bangkok?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Bangkok is accessible via Suvarnabhumi Airport and Don Mueang International Airport, with numerous international flights from around the world.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">3. Are there accommodations available in Bangkok?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, Bangkok offers a wide range of accommodations, from luxury hotels and boutique guesthouses to budget hostels.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">4. Is it safe to travel to Bangkok?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, Bangkok is generally safe for tourists. However, it's advisable to stay cautious, avoid overly crowded areas, and follow local guidelines.</p>
+        </div>
+
+        <div class="faq-item" style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+            <h3 style="cursor: pointer; color: yellow; margin: 0;">5. What activities can I do in Bangkok?</h3>
+            <p style="display: none; margin-top: 10px; color: #ecf0f1;">Activities include visiting the Grand Palace, exploring local markets, taking a boat ride on the Chao Phraya River, and enjoying street food.</p>
+        </div>
+    </div>
+</section>
+
+<section id="social-media" style="background-color: black; padding: 20px;">
+    <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+        <h2 style="color: white;">Follow Us on Social Media</h2>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+            <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+            </a>
+        </div>
+    </div>
+</section>
+
+
+        
         
         <footer class="bg-dark text-white text-center py-3">
             <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
         </footer>
 
 
-         <script>
+        <script>
             window.addEventListener('load', () => {
                 const blogImages = document.querySelectorAll('.blog-image img');
                 blogImages.forEach((img) => {
@@ -869,8 +943,48 @@
                   }, 300);
                 });
               });
-
+    
             AOS.init();
+    
+            const faqItems = document.querySelectorAll('.faq-item h3');
+    
+    faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+    const answer = item.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+    });
+    
+    
+    const boxShadowColor = 'rgb(86, 11, 113)'; 
+    
+    const faqElements = document.querySelectorAll('.faq-item');
+    
+    faqElements.forEach(element => {
+    element.addEventListener('mouseover', () => {
+    element.style.transform = 'scale(1.02)';
+    element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+    });
+    
+    element.addEventListener('mouseout', () => {
+    element.style.transform = 'scale(1)';
+    element.style.boxShadow = 'none';
+    });
+    });
+    
+    
+    const socialIcons = document.querySelectorAll('#social-media a');
+    
+    socialIcons.forEach(icon => {
+    icon.addEventListener('mouseover', () => {
+    icon.style.transform = 'scale(1.2)';
+    });
+    
+    icon.addEventListener('mouseout', () => {
+    icon.style.transform = 'scale(1)';
+    });
+    });
+           
         </script>
     </div>
     </div>
