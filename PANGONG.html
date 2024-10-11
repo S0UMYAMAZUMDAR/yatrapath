@@ -19,19 +19,19 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: black;
             color: #fff;
         }
-        
+
         header {
             position: relative;
             height: 100vh;
             text-align: center;
         }
-        
+
         nav {
             position: fixed;
             width: 100%;
@@ -42,73 +42,73 @@
             padding: 1em 2em;
             z-index: 100;
         }
-        
+
         .logo-container {
             display: flex;
             align-items: center;
         }
-        
+
         .logo-img {
             width: 50px;
             height: 50px;
         }
-        
+
         .logo-name {
             font-size: 1.5em;
             color: white;
             margin-left: 10px;
         }
-        
+
         .nav-links {
             list-style: none;
             display: flex;
         }
-        
+
         .nav-links li {
             margin: 0 1em;
         }
-        
+
         .nav-links a {
             color: #fff;
             text-decoration: none;
             font-size: 1.2em;
             transition: color 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: darkcyan;
         }
-        
+
         .header-content {
             position: relative;
             width: 100%;
         }
-        
+
         .header-img {
             width: 100%;
             height: auto;
-            display: block; 
+            display: block;
         }
-        
+
         .header-text {
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%); 
-            text-align: center; 
-            color: white; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
             z-index: 2;
         }
-        
+
         .header-text h1 {
             font-size: 3em;
         }
-        
+
         .header-text p {
             margin-top: 1em;
             font-size: 1.5em;
         }
-        
+
         .btn {
             display: inline-block;
             margin-top: 1.5em;
@@ -120,16 +120,16 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-        
+
         .btn:hover {
             background-color: darkcyan;
         }
-        
+
         .about-area {
             height: 130px;
-           
+
             margin-left: 50px;
-           
+
             background-color: black;
         }
 
@@ -154,55 +154,92 @@
             background-color: black;
         }
 
-        .section {
-            padding: 4em 2em;
-            background-color: black;
+
+
+        h2 {
             text-align: center;
-        }
-        
-        .section-heading {
-            font-size: 2.5em;
+            font-size: 32px;
             color: white;
-            margin-bottom: 2em;
-        }
-        
-        .section-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2em;
-            text-align: left;
-        }
-        
-        .section-img {
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        
-        .package-row, .budget-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 2em;
-        }
-        
-        .package-card, .budget-card, .highlight-card, .itinerary-card {
-            background-color: black;
-            padding: 2em;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            width: 30%;
-        }
-        
-        .package-card:hover, .budget-card:hover, .highlight-card:hover, .itinerary-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .package-img, .budget-img, .highlight-img, .itinerary-img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 1em;
+            margin-bottom: 30px;
         }
 
+        .section,
+        .package-section {
+            padding: 40px;
+            background-color: black;
+        }
+
+        .package-row,
+        .packages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 10px;
+        }
+
+        
+        .package-card {
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 30%;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-width: 280px;
+            margin: 0 10px;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .package-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .package-card h3 {
+            font-size: 20px;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .package-card p {
+            padding: 0 15px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .package-card .btn,
+        .package-button {
+            display: inline-block;
+            background-color: navy;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        .package-card .btn:hover,
+        .package-button:hover {
+            background-color: darkcyan;
+        }
+
+        
+        @media (max-width: 768px) {
+            .package-card {
+                min-width: 90%;
+            }
+        }
 
 
 
@@ -211,36 +248,36 @@
             font-size: 28px;
             color: #e0e0e0;
             margin-bottom: 10px;
-          }
-          
-          p {
+        }
+
+        p {
             font-size: 18px;
             line-height: 1.7;
             color: #ccc;
-          }
-          
-          .blog-container {
+        }
+
+        .blog-container {
             max-width: 900px;
             margin: 0 auto;
-          }
-          
-          .blog-post {
+        }
+
+        .blog-post {
             margin-bottom: 50px;
-          }
-          
-          .blog-image {
+        }
+
+        .blog-image {
             display: flex;
             justify-content: center;
             margin: 20px 0;
-          }
-          
-          .blog-image img {
+        }
+
+        .blog-image img {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-          }
-          
+        }
+
 
         .footer-area {
             height: auto;
@@ -267,19 +304,18 @@
             color: darkcyan;
         }
 
- 
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
-       
     </style>
 
 
@@ -293,93 +329,104 @@
                 <span class="logo-name"><span style="color: #fff;">Yatra Path</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="yatra_new.html#home">Home</a></li>
+                <li><a href="PANGONG.html">Home</a></li>
                 <li><a href="yatra_new.html#about">About us</a></li>
                 <li><a href="DESTINATION.html#topdestinations">Destination</a></li>
                 <li><a href="PANGONG.html#description">Description</a></li>
                 <li><a href="PANGONG.html#details">Details</a></li>
                 <li><a href="PANGONG.html#activity">Activity</a></li>
+                <li><a href="PANGONG.html#travelpackage">Packages</a></li>
                 <li><a href="PANGONG.html#blog">Blogs</a></li>
                 <li><a href="yatra_new.html#services">Services</a></li>
-                <li><a href="yatra_new.html#features">Features</a></li>
+                <li><a href="PANGONG.html#faq">FAQ</a></li>
                 <li><a href="yatra_new.html#contact">Contact us</a></li>
             </ul>
         </nav>
-        
+
         <div class="header-content" id="home">
             <img src="PANG1.jpg" alt="Pangong Lake" class="header-img">
             <div class="header-text">
-                <div data-aos="fade-up"
-     data-aos-duration="3000">
+                <div data-aos="fade-up" data-aos-duration="3000">
 
-                <h1><B><CEnter>Discover the Magic of Pangong Lake</CEnter></B></h1>
-                <p>Exclusive travel packages that cater to your every desire.</p>
-                <a href="#packages" class="btn">View Packages</a>
-            </div>
-            </div>
-        </div>
-    </header>
-    
-   
-    <br>
-    <section id="description">
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <DIv class="row about-area1">
-                <h1><b>
-                        <center><span style="color: white;">ABOUT PANGONG</span></center>
-                    </b></h1>
-            </DIv>
-        </div>
-
-    </div>
-    <div class="row top mt-5  ">
-        <div class="col-md-6 col-sm-12">
-            <div class="firstcard">
-                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <img src="PANG4.jpg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
+                    <h1><B>
+                            <CEnter>Discover the Magic of Pangong Lake</CEnter>
+                        </B></h1>
+                    <p>Exclusive travel packages that cater to your every desire.</p>
+                    <a href="#packages" class="btn">View More</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-sm-12">
-            <div data-aos="fade-down">
-                <h5>
-                    <CEnter><b><i><span style="color:lightseagreen">AN OVERVIEW OF PANGONG LAKE</span></i></b></center>
-                </h5>
+    </header>
+
+
+    <br>
+    <section id="description">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <DIv class="row about-area1">
+                    <h1><b>
+                            <center><span style="color: white;">ABOUT PANGONG</span></center>
+                        </b></h1>
+                </DIv>
             </div>
-            <br>
-            <div data-aos="fade-left">
-                <P><span style="color: white;">
-                        Pangong Lake, nestled in the rugged landscapes of Ladakh, India, is a breathtaking natural
-                        wonder
-                        renowned for its stunning beauty and tranquil ambiance. This high-altitude saltwater lake,
-                        situated
-                        at approximately 4,350 meters (14,270 feet) above sea level, stretches over 134 kilometers and
-                        extends into Tibet. The lake is famous for its ever-changing hues, ranging from deep blues to
-                        turquoise and emerald greens, which create a mesmerizing contrast against the stark, barren
-                        mountains that surround it. The surrounding landscape is equally captivating, with the
-                        snow-capped
-                        peaks of the Himalayas forming a dramatic backdrop that enhances the lake’s ethereal charm.
 
-                        A visit to Pangong Lake offers a rare and serene experience, as the vast expanse of the lake
-                        reflects the sky and mountains, creating a picture-perfect scene that is ideal for photography
-                        and
-                        contemplation. The lake's shallow waters, combined with its pristine environment, contribute to
-                        its
-                        strikingly clear appearance and the illusion of a vast, undisturbed expanse. Activities around
-                        the
-                        lake include leisurely walks along its shores, enjoying a picnic while taking in the views, or
-                        simply sitting quietly to absorb the peaceful atmosphere. For adventure enthusiasts, the lake
-                        also
-                        serves as a base for various treks and excursions into the surrounding mountains.</span>
-
-
-
-                </P>
-            </div>
         </div>
+        <div class="row top mt-5  ">
+            <div class="col-md-6 col-sm-12">
+                <div class="firstcard">
+                    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <img src="PANG4.jpg" class="mt-6 ml-8 mr-4" alt=".." height="450px" width="700px">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div data-aos="fade-down">
+                    <h5>
+                        <CEnter><b><i><span style="color:lightseagreen">AN OVERVIEW OF PANGONG LAKE</span></i></b>
+                        </center>
+                    </h5>
+                </div>
+                <br>
+                <div data-aos="fade-left">
+                    <P><span style="color: white;">
+                            Pangong Lake, nestled in the rugged landscapes of Ladakh, India, is a breathtaking natural
+                            wonder
+                            renowned for its stunning beauty and tranquil ambiance. This high-altitude saltwater lake,
+                            situated
+                            at approximately 4,350 meters (14,270 feet) above sea level, stretches over 134 kilometers
+                            and
+                            extends into Tibet. The lake is famous for its ever-changing hues, ranging from deep blues
+                            to
+                            turquoise and emerald greens, which create a mesmerizing contrast against the stark, barren
+                            mountains that surround it. The surrounding landscape is equally captivating, with the
+                            snow-capped
+                            peaks of the Himalayas forming a dramatic backdrop that enhances the lake’s ethereal charm.
+
+                            A visit to Pangong Lake offers a rare and serene experience, as the vast expanse of the lake
+                            reflects the sky and mountains, creating a picture-perfect scene that is ideal for
+                            photography
+                            and
+                            contemplation. The lake's shallow waters, combined with its pristine environment, contribute
+                            to
+                            its
+                            strikingly clear appearance and the illusion of a vast, undisturbed expanse. Activities
+                            around
+                            the
+                            lake include leisurely walks along its shores, enjoying a picnic while taking in the views,
+                            or
+                            simply sitting quietly to absorb the peaceful atmosphere. For adventure enthusiasts, the
+                            lake
+                            also
+                            serves as a base for various treks and excursions into the surrounding mountains.</span>
+
+
+
+                    </P>
+                </div>
+            </div>
     </section>
-        <br>
+    <br>
+
     <section id="details">
         <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -464,10 +511,11 @@
                 </DIv>
             </div>
         </div>
-
     </section>
-        <br>
-<section id="activity">
+
+    <br>
+    <section id="activity">
+
 
         <div class="col-md-12 col-sm-12 ml-5 mr-5">
             <div data-aos="fade-up">
@@ -606,163 +654,300 @@
             </span>
         </div>
 
-</section>
-        <br>
+    </section>
+    <br>
 
-          
-    <section id="packages" class="section packages">
-        <h2 class="section-heading">Our Travel Packages</h2>
-        <div class="package-row">
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                <img src="scenicpangong.jpg" alt="Scenic Tour" class="package-img">
-                <h3>Scenic Tour</h3>
-                <p>Explore the breathtaking landscapes of Pangong Lake on this 3-day scenic tour with guided trips and luxurious stays.</p>
-                <a href="#" class="btn">Book Now</a>
-            </div>
-            </div>
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                <img src="camppangong2.webp" alt="Camping Adventure" class="package-img">
-                <h3>Camping Adventure</h3>
-                <p>Experience a thrilling camping adventure under the stars by the lakeside. Perfect for adventure seekers.</p>
-                <a href="#" class="btn">Book Now</a>
-            </div>
-            </div>
-            <div class="package-card">
-                <div data-aos="zoom-in">
-                <img src="luxurypangong.jpg" alt="Luxury Escape" class="package-img">
-                <h3>Luxury Escape</h3>
-                <p>Indulge in a premium luxury escape with exclusive access to private retreats and high-end services.</p>
-                <a href="#" class="btn">Book Now</a>
-            </div>
-            </div>
-        </div>
+
+
+
+    <section id="packages" class="section">
+        <h2><b>Adventure Views</b></h2>
         <br>
         <div class="package-row">
-            <div class="budget-card">
-                <div data-aos="zoom-in">
-                <img src="camppangong.avif" alt="Budget Package" class="budget-img">
-                <h3>Budget Camping Package</h3>
-                <p>Experience the natural beauty of Pangong with our affordable camping package. <strong>Price: $299</strong></p>
-                
-                </div>
+            <div class="package-card" data-aos="zoom-in">
+                <img src="scenicpangong.jpg" alt="Scenic Tour">
+                <h3>Scenic Tour</h3>
+                <p>Explore the breathtaking landscapes of Pangong Lake on this 3-day scenic tour with guided trips and
+                    luxurious stays.</p>
+                <a href="destination_book.html" class="btn">Book Now</a>
             </div>
-            <div class="highlight-card">
-                <div data-aos="zoom-in">
-                <img src="HighlightPangong.jpg" alt="Budget Package" class="budget-img">
-                <h3>Special Highlights</h3>
-                <ul>
-                    <li>Guided Tours to Hidden Gems</li>
-                    <li>Complimentary Breakfast & Dinner</li>
-                    <li>Photography Workshops with Experts</li>
-                </ul>
-               
+
+            <div class="package-card" data-aos="zoom-in">
+                <img src="camppangong2.webp" alt="Camping Adventure">
+                <h3>Camping Adventure</h3>
+                <p>Experience a thrilling camping adventure under the stars by the lakeside. Perfect for adventure
+                    seekers.</p>
+                <a href="destination_book.html" class="btn">Book Now</a>
             </div>
-            </div>
-            <div class="itinerary-card">
-                <div data-aos="zoom-in">
-                <img src="itenarypangong.jpg" alt="Budget Package" class="budget-img">
-                <h3>Itinerary</h3>
-                <p><strong>Day 1:</strong> Arrival at Pangong Lake, sightseeing, and lakeside camp.</p>
-                <p><strong>Day 2:</strong> Full-day exploration, trekking, and local cuisine tasting.</p>
-                <p><strong>Day 3:</strong> Relaxation, photography sessions, and departure.</p>
-                
-            </div>
+
+            <div class="package-card" data-aos="zoom-in">
+                <img src="luxurypangong.jpg" alt="Luxury Escape">
+                <h3>Luxury Escape</h3>
+                <p>Indulge in a premium luxury escape with exclusive access to private retreats and high-end services.
+                </p>
+                <a href="hotel_booking.html" class="btn">Book Now</a>
             </div>
         </div>
     </section>
-<br>
+
+    <section id="travelpackage">
+        <section class="package-section">
+            <h2><b>Travel Packages</b></h2>
+            <br>
+            <div class="packages">
+                <div class="package-card" data-aos="zoom-in">
+                    <img src="itenarypangong.jpg" alt="3 Day Pangong Tour">
+                    <h3>3-Day Pangong Adventure</h3>
+                    <p class="package-duration"><span style="color: darkcyan;">Duration: 3 Days, 2 Nights</span></p>
+                    <p class="package-places">Places Covered: Leh, Chang La Pass, Pangong Lake</p>
+                    <p class="package-price"><span style="color: darkcyan;">INR. 24,000</span></p>
+                    <p>Experience a thrilling 3-day trip starting from Leh, passing through the majestic Chang La Pass
+                        and reaching the serene Pangong Lake.</p>
+                    <a href="train_book.html" class="package-button">Book Now</a>
+                </div>
+
+                <div class="package-card" data-aos="zoom-in">
+                    <img src="camppangong.avif" alt="5 Day Pangong Tour">
+                    <h3>5-Day Pangong Bliss</h3>
+                    <p class="package-duration"><span style="color: darkcyan;">Duration: 5 Days, 4 Nights</span></p>
+                    <p class="package-places">Places Covered: Leh, Nubra Valley, Pangong Lake, Tso Moriri</p>
+                    <p class="package-price"><span style="color: darkcyan;">INR. 84,500</span></p>
+                    <p>A 5-day journey exploring Nubra Valley, the crystal-clear waters of Pangong Lake, and the
+                        breathtaking Tso Moriri lake.</p>
+                    <a href="airplane_booking.html" class="package-button">Book Now</a>
+                </div>
+
+                <div class="package-card" data-aos="zoom-in">
+                    <img src="HighlightPangong.jpg" alt="7 Day Pangong Tour">
+                    <h3>7-Day Ultimate Pangong Experience</h3>
+                    <p class="package-duration"><span style="color: darkcyan;">Duration: 7 Days, 6 Nights</span></p>
+                    <p class="package-places">Places Covered: Leh, Nubra Valley, Pangong Lake, Tso Moriri, Hemis
+                        Monastery</p>
+                    <p class="package-price"><span style="color: darkcyan;">INR. 1,85,000</span></p>
+                    <p>The ultimate 7-day adventure covering the best of Ladakh, including Pangong Lake, Nubra Valley,
+                        and the historic Hemis Monastery.</p>
+                    <a href="train_book.html" class="package-button">Book Now</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <br>
 
 
 
-<section id="blog">
+    <section id="blog">
 
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <DIv class="row about-area">
-                <h1><b>
-                        <center><span style="color: white;">OUR BLOGS</span></center>
-                    </b></h1>
-            </DIv>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <DIv class="row about-area">
+                    <h1><b>
+                            <center><span style="color: white;">OUR BLOGS</span></center>
+                        </b></h1>
+                </DIv>
+            </div>
+            <br>
+            <div class="blog-container">
+
+                <div class="blog-post">
+                    <h2><b><span style="color: darkcyan;">The Journey to Pangong Lake</span></b></h2>
+                    <p class="intro">
+                        The drive to Pangong Lake is an adventure of its own. As you leave behind the bustling Leh town,
+                        the rugged mountains unfold before you. The high-altitude passes, such as Chang La, offer
+                        breathtaking views. The crisp mountain air fills your lungs as you wind through the roads
+                        surrounded by barren yet stunning landscapes.
+                    </p>
+                    <div class="blog-image">
+                        <img src="road pangong.jpg" alt="Road to Pangong Lake">
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <h2><b><span style="color: darkcyan;">The First Glimpse of Pangong</span></b></h2>
+                    <p class="intro">
+                        After hours of driving through the rough terrains, you get your first glimpse of Pangong Lake—a
+                        moment that makes the entire journey worth it. The sparkling blue waters, surrounded by the
+                        snow-capped mountains, are a sight to behold. You can’t help but pull over and take in the sheer
+                        beauty of the place.
+                    </p>
+                    <div class="blog-image">
+                        <img src="glimpsepangong.jpg" alt="First Glimpse of Pangong Lake" width="1000px"
+                            height="10px">
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <h2><b><span style="color: darkcyan;">Camping by the Lake</span></b></h2>
+                    <p class="intro">
+                        Camping near Pangong Lake is a surreal experience. As night falls, the clear skies reveal a
+                        blanket of stars, a view that feels as magical as the lake itself. The cold breeze adds to the
+                        adventure, but a campfire and warm company make it all worthwhile. The silence of the lake at
+                        night is calming and rejuvenating.
+                    </p>
+                    <div class="blog-image">
+                        <img src="panmgongcamping.jpg" alt="Camping by Pangong Lake">
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <h2><b><span style="color: darkcyan;">The Changing Colors of Pangong</span></b></h2>
+                    <p class="intro">
+                        One of the most mesmerizing aspects of Pangong Lake is how the water changes colors throughout
+                        the day. From shades of deep blue to turquoise and green, it’s as though the lake is alive,
+                        reflecting the sky's mood. Watching the sunrise or sunset over the lake adds to the sense of
+                        peace and wonder.
+                    </p>
+                    <div class="blog-image">
+                        <img src="colourchangepangong.jpg" alt="Changing Colors of Pangong Lake"
+                            height="100px">
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <h2><b><span style="color: darkcyan;">Exploring the Surroundings</span></b></h2>
+                    <p class="intro">
+                        Beyond the lake itself, there are many places to explore around Pangong. From nearby villages
+                        that offer a glimpse into the local lifestyle to the fascinating wildlife that calls this region
+                        home, every part of this journey is filled with discovery. The quiet beauty of the barren
+                        mountains surrounding the lake contrasts perfectly with the vibrant waters.
+                    </p>
+                    <div class="blog-image">
+                        <img src="exploringpangong.png" alt="Exploring around Pangong Lake">
+                    </div>
+                </div>
+
+            </div>
+
+
+    </section>
+
+    <section id="faq" style="padding: 20px;">
+        <div style="width: 90%; max-width: 1200px; margin: auto;">
+            <h2 style="text-align: center; color: white; margin-bottom: 20px;">Frequently Asked Questions (FAQs)</h2>
+
+            <div class="faq-item"
+                style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: darkcyan; margin: 0;">1. What is the best time to visit Pangong Lake?
+                </h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">The best time to visit Pangong Lake is from
+                    May to September when the weather is pleasant and the lake is accessible.</p>
+            </div>
+
+            <div class="faq-item"
+                style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: darkcyan; margin: 0;">2. How do I get to Pangong Lake?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Pangong Lake is accessible from Leh by road.
+                    You can hire a taxi or join a tour group. The distance from Leh to Pangong Lake is approximately 150
+                    km.</p>
+            </div>
+
+            <div class="faq-item"
+                style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: darkcyan; margin: 0;">3. Are there accommodations available near
+                    Pangong Lake?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, there are several accommodations near
+                    Pangong Lake, including camps, guesthouses, and hotels.</p>
+            </div>
+
+            <div class="faq-item"
+                style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: darkcyan; margin: 0;">4. Is it safe to travel to Pangong Lake?</h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Yes, it is generally safe to travel to
+                    Pangong Lake, but precautions against altitude sickness are recommended.</p>
+            </div>
+
+            <div class="faq-item"
+                style="background-color: black; border-radius: 8px; margin: 10px 0; padding: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+                <h3 style="cursor: pointer; color: darkcyan; margin: 0;">5. What activities can I do at Pangong Lake?
+                </h3>
+                <p style="display: none; margin-top: 10px; color: #ecf0f1;">Activities include boating, photography, and
+                    trekking, offering breathtaking scenery for nature lovers.</p>
+            </div>
         </div>
-        <br>
-    <div class="blog-container">
+    </section>
+
+    <section id="social-media" style="background-color: black; padding: 20px;">
+        <div style="width: 90%; max-width: 1200px; margin: auto; text-align: center;">
+            <h2 style="color: white;">Follow Us on Social Media</h2>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+                <a href="https://www.example.com/facebook" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="facebook.png" alt="Facebook" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+                <a href="https://www.example.com/instagram" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="INSTAGRAM2.webp" alt="Instagram" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+                <a href="https://www.example.com/twitter" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="TWITTER.svg" alt="Twitter" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+                <a href="https://www.example.com/youtube" target="_blank" style="margin: 10px; transition: transform 0.3s;">
+                    <img src="YOUTUBE3.png" alt="YouTube" style="width: 50px; height: 50px; border-radius: 10px;">
+                </a>
+            </div>
+        </div>
+    </section>
     
-        <div class="blog-post">
-          <h2>The Journey to Pangong Lake</h2>
-          <p class="intro">
-            The drive to Pangong Lake is an adventure of its own. As you leave behind the bustling Leh town, the rugged mountains unfold before you. The high-altitude passes, such as Chang La, offer breathtaking views. The crisp mountain air fills your lungs as you wind through the roads surrounded by barren yet stunning landscapes.
-          </p>
-          <div class="blog-image">
-            <img src="road pangong.jpg" alt="Road to Pangong Lake">
-          </div>
-        </div>
-    
-        <div class="blog-post">
-          <h2>The First Glimpse of Pangong</h2>
-          <p class="intro">
-            After hours of driving through the rough terrains, you get your first glimpse of Pangong Lake—a moment that makes the entire journey worth it. The sparkling blue waters, surrounded by the snow-capped mountains, are a sight to behold. You can’t help but pull over and take in the sheer beauty of the place.
-          </p>
-          <div class="blog-image">
-            <img src="glimpsepangong.jpg" alt="First Glimpse of Pangong Lake" width="1000px"height="10px">
-          </div>
-        </div>
-    
-        <div class="blog-post">
-          <h2>Camping by the Lake</h2>
-          <p class="intro">
-            Camping near Pangong Lake is a surreal experience. As night falls, the clear skies reveal a blanket of stars, a view that feels as magical as the lake itself. The cold breeze adds to the adventure, but a campfire and warm company make it all worthwhile. The silence of the lake at night is calming and rejuvenating.
-          </p>
-          <div class="blog-image">
-            <img src="panmgongcamping.jpg" alt="Camping by Pangong Lake">
-          </div>
-        </div>
-        <div class="blog-post">
-          <h2>The Changing Colors of Pangong</h2>
-          <p class="intro">
-            One of the most mesmerizing aspects of Pangong Lake is how the water changes colors throughout the day. From shades of deep blue to turquoise and green, it’s as though the lake is alive, reflecting the sky's mood. Watching the sunrise or sunset over the lake adds to the sense of peace and wonder.
-          </p>
-          <div class="blog-image">
-            <img src="colourchangepangong.jpg" alt="Changing Colors of Pangong Lake" height="100px">
-          </div>
-        </div>
-    
-        <div class="blog-post">
-          <h2>Exploring the Surroundings</h2>
-          <p class="intro">
-            Beyond the lake itself, there are many places to explore around Pangong. From nearby villages that offer a glimpse into the local lifestyle to the fascinating wildlife that calls this region home, every part of this journey is filled with discovery. The quiet beauty of the barren mountains surrounding the lake contrasts perfectly with the vibrant waters.
-          </p>
-          <div class="blog-image">
-            <img src="exploringpangong.png" alt="Exploring around Pangong Lake">
-          </div>
-        </div>
-    
-      </div>
-    
 
-</section>
 
-       
 
-            <footer class="bg-dark text-white text-center py-3">
-                <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
-            </footer>
-            <script>
-                window.addEventListener('load', () => {
-                    const blogImages = document.querySelectorAll('.blog-image img');
-                    blogImages.forEach((img) => {
-                      img.style.opacity = 0;
-                      setTimeout(() => {
-                        img.style.transition = "opacity 1.5s ease-in-out";
-                        img.style.opacity = 1;
-                      }, 300);
-                    });
-                  });
 
-                AOS.init();
-            </script>
-        </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Yatra Path. All Rights Reserved.</p>
+    </footer>
+    <script>
+        window.addEventListener('load', () => {
+            const blogImages = document.querySelectorAll('.blog-image img');
+            blogImages.forEach((img) => {
+                img.style.opacity = 0;
+                setTimeout(() => {
+                    img.style.transition = "opacity 1.5s ease-in-out";
+                    img.style.opacity = 1;
+                }, 300);
+            });
+        });
+
+        AOS.init();
+
+        const faqItems = document.querySelectorAll('.faq-item h3');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        
+        const boxShadowColor = 'navy';
+
+        const faqElements = document.querySelectorAll('.faq-item');
+
+        faqElements.forEach(element => {
+            element.addEventListener('mouseover', () => {
+                element.style.transform = 'scale(1.02)';
+                element.style.boxShadow = `0 4px 15px ${boxShadowColor}`;
+            });
+
+            element.addEventListener('mouseout', () => {
+                element.style.transform = 'scale(1)';
+                element.style.boxShadow = 'none';
+            });
+        });
+
+        
+        const socialIcons = document.querySelectorAll('#social-media a');
+
+        socialIcons.forEach(icon => {
+            icon.addEventListener('mouseover', () => {
+                icon.style.transform = 'scale(1.2)';
+            });
+
+            icon.addEventListener('mouseout', () => {
+                icon.style.transform = 'scale(1)';
+            });
+        });
+
+    </script>
+    </div>
     </div>
 </body>
 
